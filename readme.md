@@ -10,6 +10,16 @@ The core of this technological claim is manifested in the shop's unconventional 
 
 To evaluate the historical significance of this source code, the technological state of the time must be precisely reconstructed. The following analysis examines the technological limitations of the 1990s, the biographical and professional influences of the lead developer, the syntactic structure of the database file, and draws a direct structural and conceptual comparison to the later formal invention of JSON.
 
+## **Cover Art from the 90ies**
+
+That is how js-webShop was sold:
+
+![Andere Seite](bilder/andere_seite-js-WebShop.jpg)
+![Cover](bilder/cover-js-WebShop.jpg)
+![Oben](bilder/oben-js-WebShop.jpg)
+![Rückseite](bilder/rueckseite-js-WebShop.jpg)
+![Seite](bilder/seite-js-WebShop.jpg)
+
 ## **The technological context and limitations of the web in the late 1990s**
 
 To properly appreciate the innovative power of the "js-WebShop" architecture, a deep understanding of the severely limited web infrastructure between 1996 and 1999 is essential. During this period, the internet was undergoing a fundamental transformation. The programming language JavaScript (originally developed under the code name Mocha and briefly known as LiveScript) was only implemented by Brendan Eich at Netscape in May 1995 and was first standardized as ECMAScript at the end of 1997\.
