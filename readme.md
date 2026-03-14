@@ -14,11 +14,13 @@ To evaluate the historical significance of this source code, the technological s
 
 That is how js-webShop was sold:
 
-![Andere Seite](bilder/andere_seite-js-WebShop.jpg)
-![Cover](bilder/cover-js-WebShop.jpg)
-![Oben](bilder/oben-js-WebShop.jpg)
-![Rückseite](bilder/rueckseite-js-WebShop.jpg)
-![Seite](bilder/seite-js-WebShop.jpg)
+| Cover | Top View | Side View |
+|---|---|---|
+| ![Cover](bilder/cover-js-WebShop.jpg) | ![Oben](bilder/oben-js-WebShop.jpg) | ![Seite](bilder/seite-js-WebShop.jpg) |
+
+| Backside | Other Side |
+|---|---|
+| ![Rückseite](bilder/rueckseite-js-WebShop.jpg) | ![Andere Seite](bilder/andere_seite-js-WebShop.jpg) |
 
 ## **The technological context and limitations of the web in the late 1990s**
 
