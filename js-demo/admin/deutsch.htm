@@ -1,0 +1,339 @@
+<HTML>
+<BODY >
+
+<H3>Bitte einen Augenblick Geduld! Der Administration Manager bereitet sich vor.</H3>
+
+<SCRIPT>
+<!--
+var language = new Array();
+
+language['A_CONFIG_SAVE'] = "Shop abspeichern";
+
+language['A_DERR'] = "Die Demo-Version erlaubt nur 10 Artikel!";
+language['A_USE'] = "Anwenden";
+language['A_DELETE'] = "L&ouml;schen";
+language['A_INSERT'] = "Einf&uuml;gen";
+language['A_LEAVE'] = "Zur&uuml;ck";
+language['A_CHOICE'] = "Ausw&auml;hlen";
+language['A_CHANGE'] = "&Auml;ndern";
+language['A_SHOWDIR'] = "Verzeichnis durchsuchen";
+language['A_DO'] = "Bearbeiten";
+language['A_DO_MORE'] = "weiter bearbeiten";
+language['A_IF'] = "(wenn  gew&uuml;nscht)";
+language['A_UP'] = "Up";
+language['A_DOWN'] = "Down";
+
+language['A_NAME_LN'] = "Ihre Lizenznummer:";
+language['A_CHECK_LN'] = "Ihre Lizenznummer ist leider falsch, bitte nochmal versuchen";
+
+language['A_NAME_START'] = "Gleich geht's weiter ...";
+language['A_NAME_NOSTART'] = "Ihr Browser ist leider zu alt!";
+
+language['A_NOCOLOR'] = "Transparent";
+language['A_DELPAGE_ERR'] = "Keine Seite, die man l&ouml;schen kann!";
+language['A_DELPAGE_ERR2'] = "Eine Seite muss es immer geben!";
+language['A_DELPAGE_ASK'] = "Sie sind im Begriff, eine Seite zu loeschen.\n\nAlle Artikel auf dieser Seite werden geloescht!\n\nFortfahren?";
+
+language['A_DELPROD_ERR'] = "Kein Artikel, den man loeschen kann!";
+language['A_DELPROD_ERR2'] = "Einen Artikel muss es immer geben!";
+language['A_DELPROD_ASK'] = "Sie sind im Begriff, einen Artikel loeschen.\n\nFortfahren?";
+
+language['A_EDITSTART_URL'] = "Welche Seite soll beim Start gezeigt werden?";
+language['A_EDITSTART_TXT'] = "Oder nur der Inhalt des Textfeldes?";
+
+language['A_PRINT_FRAME_INS'] = "= KATALOG =";
+language['A_PRINT_FRAME_ADDP'] = "Seite einf&uuml;gen";
+language['A_PRINT_FRAME_ED_PAGE'] = "Seite bearbeiten";
+language['A_PRINT_FRAME_IMPORT'] = "Seite Importieren";
+language['A_PRINT_FRAME_ADD1'] = "Artikel eingeben";
+language['A_PRINT_FRAME_ED_ART'] = "Artikel bearbeiten";
+
+language['A_NAME_ADMIN_DES'] = "= SHOP-DESIGN =";
+language['A_NAME_ADMIN_F'] = "Schriften";
+language['A_NAME_ADMIN_NAV'] = "Grafiken";
+language['A_NAME_ADMIN_TBL'] = "Farben";
+language['A_NAME_ADMIN_TBO'] = "Rahmen";
+language['A_NAME_ADMIN_HTM'] = "Expertenmodus";
+
+language['A_NAME_ADMIN'] = "== SHOP-SETUP ==";
+language['A_NAME_ADMIN_B'] = "Shop-Daten";
+language['A_NAME_ADMIN_VOR'] = "Import-Maske";
+language['A_NAME_ADMIN_FR'] = "Versandarten";
+language['A_NAME_ADMIN_A'] = "Kundendaten";
+language['A_NAME_ADMIN_LG'] = "Liefergebiete";
+language['A_NAME_ADMIN_SZA'] = "Zahlungsweise";
+language['A_NAME_ADMIN_W'] = "W&auml;hrungen";
+language['A_NAME_ADMIN_SMW'] = "Mehrwertsteuer";
+language['A_NAME_ADMIN_VS'] = "Vorschaltseite";
+language['A_NAME_ADMIN_FT'] = "Merkmale";
+language['A_NAME_ADMIN_L'] = "Absenden";
+
+language['A_NAME_SAVE'] = "Abspeichern";
+language['A_NAME_HELP'] = "Hilfe";
+language['A_NAME_BUG'] = "Feedback";
+
+language['A_PAGE_ERR'] = "Diese Seite kann man nicht bearbeiten!";
+language['A_PAGE_ERR1'] = "Bitte waehlen Sie erst eine Seite.";
+language['A_PAGE_NAME'] = "Name";
+language['A_PAGE_URL'] = "URL";
+language['A_PAGE_BG'] = "Hintergrundbild";
+language['A_PAGE_NAV'] = "Navigationsbild";
+language['A_PAGE_NAVS'] = "Nav.bild angew&auml;hlt";
+language['A_PAGE_TT'] = "Einleitung";
+language['A_PAGE_SUM'] = "Mit Summen?";
+
+language['A_PRINT_FRAME_TOP'] = "";
+
+language['A_DEL_S'] = "<CENTER><A href='http://www.js-webShop.com' target=_new><IMG src='../gif/js-webshop.jpg' border=0></A><BR><I>Administration Manager</I><P></CENTER>";
+
+language['A_INSERT_PROD_ERR'] = "Bitte w&auml;hlen Sie erst eine Seite, auf der der Artikel angezeigt werden soll.";
+
+language['A_INSERT_PROD_TAB'] = "Tabellen";
+language['A_INSERT_PROD_FLUF'] = "K&auml;stchen";
+language['A_INSERT_PROD_BIG'] = "Grosses Bild";
+language['A_INSERT_PROD_CHECK'] = "Checkbox";
+language['A_INSERT_PROD_BILD'] = "Bild";
+language['A_INSERT_PROD_TXT'] = "Menge";
+language['A_INSERT_PROD_MENGE'] = "Mit Mengeneingabe";
+language['A_INSERT_PROD_PREISA'] = "Anzeige&nbsp;des&nbsp;errechneten&nbsp;Preises";
+language['A_INSERT_PROD_NAME'] = "Bezeichnung";
+language['A_INSERT_PROD_TITEL'] = "Kurzbeschreibung";
+language['A_INSERT_PROD_DESC'] = "Beschreibung";
+language['A_INSERT_PROD_IMAGE'] = "Bild";
+language['A_INSERT_PROD_URL'] = "URL";
+language['A_INSERT_PROD_GPREIS'] = "Grundpreis";
+language['A_INSERT_PROD_SPREIS'] = "St&uuml;ckpreis";
+language['A_INSERT_PROD_MWST'] = "MwSt-Satz ";
+language['A_INSERT_PROD_FTS']  = "Preis wird bestimmt von :  ";
+language['A_INSERT_PROD_FERTIG'] = "Eingeben";
+language['A_INSERT_PROD_DEFAULT'] = "Default-Werte setzen ";
+language['A_DO_INSERT_PAGE_NNAME'] = "Bitte einen Namen eingeben!";
+
+language['A_INSERT_PAGE_REQ'] = "Dieses Feld wird ben&ouml;tigt!";
+language['A_INSERT_PAGE_IMP'] = "Importieren:";
+language['A_INSERT_PAGE_MAKE'] = "Maske erstellen";
+language['A_INSERT_PAGE_REPL'] = "Artikel ersetzen";
+language['A_INSERT_PAGE_ADD'] = "Artikel hinzuf&uuml;gen";
+language['A_INSERT_PAGE_VOR'] = "Die Vorlage f&uuml;r Ihre Tabellenkalkulation:";
+
+language['A_IMPORT_PAGE'] = "Bitte die Tabulator-separierten Daten einf&uuml;gen:";
+language['A_IMPORT_PAGE_DO'] = "Importieren";
+language['A_IMPORT_PAGE_DONT'] = "Eingaben L&ouml;schen";
+language['A_IMPORT_PAGE_ERR'] = "Bitte erst eine Seite w&auml;hlen!";
+language['A_IMPORT_PAGE_NODATA'] = "Keine Daten gefunden!";
+language['A_IMPORT_PAGE_NOADMIN'] = "Die Adminstrationsdaten fehlen!";
+language['AA_IMPORT_PAGE_ASK_OVWR'] = "Wollen Sie die Artikel ueberschreiben?";
+language['A_IMPORT_PAGE_NOFIELDS'] = "Keine Feldbeschreibung in der 2. Zeile!";
+
+language['A_EDIT_PROD_ERR'] = "Bitte erst eine Seite waehlen!";
+language['A_EDIT_PROD'] = "Bitte w&auml;hlen Sie einen Artikel, den Sie bearbeiten m&ouml;chten.";
+language['A_EDIT_PROD_S'] = "Bitte w&auml;hlen";
+
+language['A_SAVE_TOP'] = "Abspeichern";
+language['A_SAVE_PATH'] = "Bitte geben Sie den Pfad zum Abspeichern des Shops ein: ";
+language['A_SAVE_I'] = "Startseite ";
+
+language['A_SAVE_USE_DEF1'] = "Wenn Sie diese Felder leer lassen, werde ich nach <B>";
+language['A_SAVE_USE_DEF2'] = "</B> abspeichern";
+
+language['A_DO_SAVE_DONE'] = "Abspeichern beendet. Wenn Sie den Shop testen wollen, klicken Sie bitte hier.";
+language['A_DO_SAVE_DONE_TEST'] = "Testen!";
+
+language['A_DO_SAVE_INDEX_NOSCRIPT'] = " Wenn Sie diesen Text lesen, ist JavaScript in Ihrem Browser deaktiviert. Bitte schalten Sie es ein!";
+
+language['A_DO_SAVE_INDEX_NOFRAMES'] = "Ihr Browser untrst&uuml;tzt leider keine Frames, bitte neueren installieren.";
+
+language['A_SHOW_HELP_INS'] = "Bitte w&auml;hlen Sie eine Option, um etwas einzuf&uuml;gen.";
+language['A_SHOW_HELP_DES'] = "Bitte w&auml;hlen Sie eine Option, um das Design an Ihre W&uuml;nsche anzupassen.";
+language['A_SHOW_HELP_SET'] = "Bitte w&auml;hlen Sie eine Option, um den Shop Ihren W&uuml;nschen anzupassen.";
+
+language['A_CONFIG_SYSTEM_ART'] = "Artikel";
+
+language['A_CONFIG_SYSTEM_SA_N'] = "Neues Adressfeld eingeben ";	 
+language['A_CONFIG_SYSTEM_SA_NA'] = "Adressfeld ";
+language['A_CONFIG_SYSTEM_SA_RE'] = " required (muß angegeben werden) ";
+language['A_CONFIG_SYSTEM_SA_DE'] = "Voreinstellung ";
+language['A_CONFIG_SYSTEM_SA_ERR'] = "Bitte waehlen Sie ein Feld aus.";
+
+language['A_CONFIG_SYSTEM_SA_VALI'] = "Validierung ";
+language['A_CONFIG_SYSTEM_SA_NO']   = "keine";
+language['A_CONFIG_SYSTEM_SA_TEL']  = "Telefon";
+language['A_CONFIG_SYSTEM_SA_PLZ']  = "Postleitzahl";
+language['A_CONFIG_SYSTEM_SA_MAIL'] = "eMail";
+language['A_CONFIG_SYSTEM_SA_URL']  = "URL";
+language['A_CONFIG_SYSTEM_SA_ADD']  = "Bitte ein Adressfeld eingeben.";
+
+language['A_CONFIG_SYSTEM_SB'] = "Daten von Shop und Shop-Inhaber";
+language['A_CONFIG_SYSTEM_SB_N'] = "Name des Shops";
+language['A_CONFIG_SYSTEM_SB_TITEL'] = "Titel des Shops";
+language['A_CONFIG_SYSTEM_SB_B'] = "Name";
+language['A_CONFIG_SYSTEM_SB_E'] = "eMail";
+language['A_CONFIG_SYSTEM_SB_T'] = "Telefon";
+language['A_CONFIG_SYSTEM_SB_F'] = "Fax";
+language['A_CONFIG_SYSTEM_SB_S'] = "Stra&szlig;e";
+language['A_CONFIG_SYSTEM_SB_C'] = "Stadt";
+language['A_CONFIG_SYSTEM_SB_CO'] = "Land";
+language['A_CONFIG_SYSTEM_SB_PB'] = "Seitenunterschrift";
+language['A_CONFIG_SYSTEM_SB_LU'] = "URL zum Verlassen";
+language['A_CONFIG_SYSTEM_SB_SO'] = "Sonstiges";
+
+language['A_CONFIG_SYSTEM_B'] = "Bild, zum bestellen";
+language['A_CONFIG_SYSTEM_B_A'] = "Bild, onMouseOver";
+language['A_CONFIG_SYSTEM_B_B'] = "Bild, wenn bestellt";
+language['A_CONFIG_SYSTEM_NAV'] = "Die im linken Frame benutzten Bilder";
+language['A_CONFIG_SYSTEM_NAV_LOGO'] = "Logo";
+language['A_CONFIG_SYSTEM_NAV_SEL'] = "Angew&auml;hlte Seite";
+language['A_CONFIG_SYSTEM_NAV_NSEL'] = "Nicht angew. Seite";
+language['A_CONFIG_SYSTEM_NAV_BG'] = "Hintergrundbild rechts";
+language['A_CONFIG_SYSTEM_NAV_NBG'] = "Hintergrundbild links";
+language['A_CONFIG_SYSTEM_NAV_LEAVE'] = "Verlassen";
+language['A_CONFIG_SYSTEM_NAV_SEARCH'] = "Suchen";
+language['A_CONFIG_SYSTEM_NAV_GOLEFT'] = "Pfeil nach links";
+language['A_CONFIG_SYSTEM_NAV_GORIGHT'] = "Pfeil nach rechts";
+language['A_CONFIG_SYSTEM_NAV_START'] = "Startseite";
+language['A_CONFIG_SYSTEM_NAV_STARTS'] = "Startseite angew&auml;hlt";
+language['A_CONFIG_SYSTEM_NAV_BASKET'] = "Warenkorb";
+language['A_CONFIG_SYSTEM_NAV_BASKETS'] = "Warenkorb angew&auml;hlt";
+language['A_CONFIG_SYSTEM_NAV_DATA'] = "Kundendaten";
+language['A_CONFIG_SYSTEM_NAV_DATAS'] = "Kundendaten angew&auml;hlt";
+language['A_CONFIG_SYSTEM_NAV_SEND'] = "Abschicken-Seite";
+language['A_CONFIG_SYSTEM_NAV_SENDS'] = "Abschicken angew&auml;hlt";
+language['A_CONFIG_SYSTEM_NAV_S_ON'] = "Status Vorschaltseite On";
+language['A_CONFIG_SYSTEM_NAV_S_OFF'] = "Status Vorschaltseite Off";
+language['A_CONFIG_SYSTEM_NAV_COOKIE'] = "Kundendaten Abspeichern";
+
+language['A_CONFIG_SYSTEM_SW_N']  = "Neue W&auml;hrung eingeben";
+language['A_CONFIG_SYSTEM_SW_NA'] = "W&auml;hrung: ";
+language['A_CONFIG_SYSTEM_SW_EUNA'] = "Euro-W&auml;hrungen";
+language['A_CONFIG_SYSTEM_SW_U']  = "Umrechnung: ";
+language['A_CONFIG_SYSTEM_SW_H']  = "Heimatw&auml;hrung: ";
+language['A_CONFIG_SYSTEM_SW_EUB'] = "EU-W&auml;hrungen eingeben";
+language['A_CONFIG_SYSTEM_SW_EUY'] = "Bin im Euroland";
+language['A_CONFIG_SYSTEM_SW_EUN'] = "Bin nicht im Euroland";
+language['A_CONFIG_SYSTEM_SW_EUEIN'] = "1 Euro = ";
+language['A_CONFIG_SYSTEM_SW_EUERR'] = "Bitte nur Ziffern sowie Punkt oder Komma eingeben.";
+language['A_CONFIG_SYSTEM_SW_EUCLICK'] = "Bitte 'Euro bearbeiten' anklicken!";
+language['A_CONFIG_SYSTEM_SW_EUFIX'] = "Wird als Basis eine aussereuropaeische Waehrung gewaehlt,\n werden die EU-Waehrungen nicht mehr angezeigt!";
+language['A_CONFIG_SYSTEM_SW_EUBASE'] = "Bitte waehlen Sie als Basis (Heimatwaehrung) eine der EWU-Waehrungen.\nEine sinnvolle Umrechnung ist sonst nicht moeglich.";
+
+language['A_CONFIG_SYSTEM_SL'] = "Angaben zum Abschicken von Bestellungen";
+language['A_CONFIG_SYSTEM_SL_A'] = "Action";
+language['A_CONFIG_SYSTEM_SL_E'] = "Encoding";
+language['A_CONFIG_SYSTEM_SL_MAIL'] = "Mail";
+language['A_CONFIG_SYSTEM_SL_CGI'] = "CGI-BIN";
+language['A_CONFIG_SYSTEM_SL_OWN'] = "Eigenes";
+language['A_CONFIG_SYSTEM_SL_COM'] = "Kundenkommentare";
+language['A_CONFIG_SYSTEM_SL_ZI'] = "Zus&auml;tzlicher INPUT";
+language['A_CONFIG_SYSTEM_SL_ZIT'] = "Typ";
+language['A_CONFIG_SYSTEM_SL_ZIN'] = "Name";
+language['A_CONFIG_SYSTEM_SL_ZIV'] = "Value";
+language['A_CONFIG_SYSTEM_SL_ASK'] = "Bitte das Encoding eingeben";
+language['A_CONFIG_SYSTEM_SL_EVA'] = "JavaScript zur Ausf&uuml;hrung";
+
+language['A_CONFIG_SYSTEM_SF'] = "Schriftarten, -farben und -gr&ouml;ssen";
+language['A_CONFIG_SYSTEM_SF_W'] = "Bitte w&auml;hlen";
+language['A_CONFIG_SYSTEM_SF_B'] = "Flie&szlig;text (Artikel)";
+language['A_CONFIG_SYSTEM_SF_N'] = "Navigation links";
+language['A_CONFIG_SYSTEM_SF_NH'] = "Navigation links Sonderseiten";
+language['A_CONFIG_SYSTEM_SF_S'] = "Seiten&uuml;berschrift";
+language['A_CONFIG_SYSTEM_SF_E'] = "Einleitungstext der Seiten";
+language['A_CONFIG_SYSTEM_SF_F'] = "Schriftart(en)";
+language['A_CONFIG_SYSTEM_SF_G'] = "Gr&ouml;&szlig;e";
+language['A_CONFIG_SYSTEM_SF_C'] = "Farbe";
+language['A_CONFIG_SYSTEM_SF_A'] = "Absenden";
+language['A_CONFIG_SYSTEM_SF_PLEASE'] = "Bitte ausw&auml;hlen!";
+language['A_CONFIG_SYSTEM_SF_ALERT'] = "Bitte waehlen Sie eine Schriftart.";
+
+language['A_CONFIG_SYSTEM_HTM_E'] = "Expertenmodus HTML &auml;ndern";
+language['A_CONFIG_SYSTEM_HTM_PT'] = " PageTop ";
+language['A_CONFIG_SYSTEM_HTM_PS'] = " PageSummen ";
+language['A_CONFIG_SYSTEM_HTM_PB'] = " PageBottom ";
+language['A_CONFIG_SYSTEM_HTM_NPT'] = " NavPageTop ";
+language['A_CONFIG_SYSTEM_HTM_NPB'] = " NavPageBottom ";
+
+language['A_CONFIG_SYSTEM_FEST'] = " festlegen"; 
+language['A_CONFIG_SYSTEM_SELC'] = " zum Selektieren "; 
+language['A_CONFIG_SYSTEM_NEU'] = "neue "; 
+language['A_CONFIG_SYSTEM_HIN'] = " eingeben";
+
+language['A_CONFIG_SYSTEM_SFR_N'] = "Neue Versandart eingeben";
+language['A_CONFIG_SYSTEM_SFR_Z'] = "Zuschlag "; 
+language['A_CONFIG_SYSTEM_SFR_ZF'] = "Zuschlagsfrei ab  ";
+language['A_CONFIG_SYSTEM_SFR_NA'] = "Versandart ";
+language['A_CONFIG_SYSTEM_SFR_B'] = "Bitte eine Versandart eingeben.";
+
+language['A_CONFIG_SYSTEM_SLG_N'] = "Neues Liefergebiet eingeben";
+language['A_CONFIG_SYSTEM_SLG_NA'] = "Liefergebiet ";
+language['A_CONFIG_SYSTEM_SLG_B'] = "Bitte ein Liefergebiet eingeben.";
+language['A_CONFIG_SYSTEM_SLG_M'] = "Mehrwertsteuer ";
+
+language['A_CONFIG_SYSTEM_SMW_N'] = "Neue Mehrwertsteuer eingeben";
+
+language['A_CONFIG_SYSTEM_SZA_NOB'] = "Bitte nur Zahlen eingeben.";
+language['A_CONFIG_SYSTEM_SZA_CHO'] = "Bitte eine Zahlungsweise eingeben.";
+language['A_CONFIG_SYSTEM_SZA_B'] = "Zahlungsweise bearbeiten: ";
+language['A_CONFIG_SYSTEM_SZA_NA'] = "Zahlungsweise: ";
+language['A_CONFIG_SYSTEM_SZA_N'] = "Neue Zahlungsweise eingeben";
+language['A_CONFIG_SYSTEM_SZA_Z'] = " Zuschlag: "; 
+language['A_CONFIG_SYSTEM_SZA_ZF'] = "Zuschlagsfrei ab: ";
+language['A_CONFIG_SYSTEM_SZA_M'] = "Weitere Merkmale bearbeiten: ";
+language['A_CONFIG_SYSTEM_SZA_MB'] = "Merkmal: ";
+language['A_CONFIG_SYSTEM_SZA_NM'] = "Neues Merkmal eingeben";
+language['A_CONFIG_SYSTEM_SZA_AK'] = "Zahlungsweise aktivieren";
+language['A_CONFIG_SYSTEM_SZA_ERR'] = "Zahlungsweise";
+language['A_CONFIG_SYSTEM_SZA_MSG'] = "Meldung "; 
+language['A_CONFIG_SYSTEM_SZA_CHOICE'] = "Bitte eine Zahlungsweise auswaehlen.";
+language['A_CONFIG_SYSTEM_SZA_CASH'] = "Akzeptierte W&auml;hrung";
+language['A_CONFIG_SYSTEM_SZA_ALL'] = "Alle";
+language['A_CONFIG_SYSTEM_SZA_ACTION'] = "Action Bearbeiten";
+
+language['A_CONFIG_SYSTEM_SFT_NA'] = "Merkmal: ";
+language['A_CONFIG_SYSTEM_SFT_NNA'] = "Merkmale";
+language['A_CONFIG_SYSTEM_SFT_VAL'] = "Preis: ";
+language['A_CONFIG_SYSTEM_SFT_REQ'] = "required: ";
+language['A_CONFIG_SYSTEM_SFT_N'] = "Neues Merkmal eingeben";
+language['A_CONFIG_SYSTEM_SFT_NEW'] = "Bitte geben Sie ein Merkmal ein.";
+language['A_CONFIG_SYSTEM_SFT_NO'] = "Kein Merkmal";
+
+language['A_CONFIG_SYSTEM_VS_OK1'] = "Erster Text";
+language['A_CONFIG_SYSTEM_VS_OK2'] = "Zweiter Text";
+language['A_CONFIG_SYSTEM_VS_NOS'] = "... falls kein JavaScript aktiv";
+language['A_CONFIG_SYSTEM_VS_OLD'] = "... falls zu alter Browser";
+language['A_CONFIG_SYSTEM_VS_IND'] = "Dateiname der Vorschaltseite";
+language['A_CONFIG_SYSTEM_VS_DAT'] = "In welche Datei speichern?";
+language['A_CONFIG_SYSTEM_VS_PWD'] = "Mit Passwort?";
+
+language['A_CONFIG_SYSTEM_TBL_PTBGC'] = "Hintergrundfarbe rechts";
+language['A_CONFIG_SYSTEM_TBL_PTBG'] = "Hintergrundbild rechts";	
+language['A_CONFIG_SYSTEM_TBL_PTL'] = "Link-Farben rechts";	
+language['A_CONFIG_SYSTEM_TBL_PTVL'] = "Link-Farben visited";
+language['A_CONFIG_SYSTEM_TBL_PTAL'] = "Link-Farben aktiv";
+language['A_CONFIG_SYSTEM_TBL_NPBGC'] = "Hintergrundfarbe links";
+language['A_CONFIG_SYSTEM_TBL_NPBG'] = "Hintergrundbild links";
+language['A_CONFIG_SYSTEM_TBL_TBGNT'] = "Navigation links oben";
+language['A_CONFIG_SYSTEM_TBL_TBGNP'] = "Navigation links unten";
+language['A_CONFIG_SYSTEM_TBL_TBGP'] = "Artikeltabellen";		
+language['A_CONFIG_SYSTEM_TBL_TBGPT'] = "&Uuml;berschrift der Seiten";
+language['A_CONFIG_SYSTEM_TBL_TBGPN'] = "Navigation unten rechts";
+language['A_CONFIG_SYSTEM_TBL_TBGB'] = "Hintergrundfarbe Kundendaten";
+language['A_CONFIG_SYSTEM_TBL_TBGBR'] = "... Kundendaten required";
+language['A_CONFIG_SYSTEM_TBL_TBGBN'] = "... Kundendaten &Uuml;berschriften";	
+language['A_CONFIG_SYSTEM_TBL_TBPT'] = "&Uuml;berschrift";
+language['A_CONFIG_SYSTEM_TBL_TBPN'] =	"Navigation";
+language['A_CONFIG_SYSTEM_TBL_TBP'] =	"Produkte";
+language['A_CONFIG_SYSTEM_TBL_TBN'] = "Linke Seite";	
+language['A_CONFIG_SYSTEM_TBL_AW'] = "Bitte erst auswaehlen!";
+language['A_CONFIG_SYSTEM_TBL_T_W'] = "Tabellenbreite rechte Seite";
+language['A_CONFIG_SYSTEM_TBL_BO'] = "Rahmendicke";
+language['A_CONFIG_SYSTEM_TBL_TP'] = "Innenrand";
+language['A_CONFIG_SYSTEM_TBO_GZ'] = "Bitte eine ganze Zahl eingeben.";
+language['A_CONFIG_SYSTEM_TBO_KZ'] = "Bitte eine kleinere Zahl (max.15) eingeben."
+
+language['A_CONFIG_SYSTEM_ERR'] = 'ERROR: Keine Action zu diesem Select!';
+
+
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>

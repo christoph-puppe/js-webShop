@@ -1,0 +1,19 @@
+body {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; font-size: 12pt; color: #000000; text-decoration: none; background-color: #FFFFFF}
+
+p {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; font-size: 12pt; color: #000000}
+
+h1 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #990000; font-weight: normal; font-size: 20pt;}
+h2 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #990000; font-weight: normal; font-size: 16pt; text-align:center}
+h3 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #990000; font-weight: normal; font-size: 14pt;}
+h4 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #990000; font-weight: normal; font-size: 12pt;}
+h5 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #000000; font-weight: normal; font-size: 10pt;}
+h6 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #990000; font-weight: normal; font-size: 8pt;}
+
+.h1 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #000000; font-size: 12pt; font-weight: bold}
+.h2 {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #000000; font-size: 10pt; font-weight: bold}
+
+li {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; font-size: 10pt; color: #000000}
+ul {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; font-size: 10pt; normal; color: #000000}
+ol {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; font-size: 10pt; color: #000000}
+
+td {  font-family: Verdana, Arial, Helvetica, Swiss, sans-serif; color: #000000; font-size: 12pt}

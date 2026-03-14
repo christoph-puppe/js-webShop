@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>js-webShop - the e-commerce revosolution: DEMO-SHOP</TITLE>
+<SCRIPT >
+
+function adm(url){
+if (navigator.appName != "Netscape" || parseFloat(navigator.appVersion) < 4.06){
+
+alert("Der von Ihnen benutzte Browser kann die Administration nicht ausfuehren!\nDas Einrichten von Shops geht nur mit einem Netscape Communicator 4.06 oder neuer.\ Dieser befindet sich im Lieferumfang der Vollversion.\n Zum Testen koennen Sie sich einen neuen Netscape auch von den den Computerzeischriften beigelegten CD's installieren.");
+}
+else {
+
+wid = window.outerWidth - 30;
+hei = window.outerHeight - 80;
+
+prop = "directories=no,width="+ wid +",height="+ hei +",resizable=no,menubar=yes"
+
+open(url,"shop",prop);
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<center>
+  <p><img src="gif/jswbshop.jpg" border=0></p>
+  <p> <font face="Verdana, Arial, Helvetica, Swiss" size="4">DEMO SHOP</font></p>
+  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Sehr geehrte/r
+    Interessent/in, wir freuen uns, da&szlig; Sie js-webShop <A href="shop/index.htm">testen</A> wollen!<p>
+    Mit Netscape 4.5 oder 4.06 oder neuer k&ouml;nnen Sie den Shop <A href="javascript:adm('shop/admin.htm')">administrieren</A>.</font></p>
+  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Alles geht nat&uuml;rlich viel schneller,
+    wenn Sie erst das Verzeichnis auf Ihre Festplatte kopieren. ;-)</font></p>
+  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Mit der DEMO-VERSION
+    von js-webShop (die keinerlei Funktionseinschränkungen hat) d&uuml;rfen Sie einen
+    Online- Shop mit maximal 10 Artikeln im WWW betreiben - ohne jede Verpflichtung
+    und v&ouml;llig kostenlos! </font></p>
+  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ihren (Test-)Shop
+    bringen Sie ins WWW, indem Sie alle Dateien im Ordner SHOP in einen beliebigen
+    Ordner auf Ihrem Webserver &uuml;berspielen. Wenn js-webShop Sie &uuml;berzeugt hat
+    und Sie ein gr&ouml;&szlig;eres Sortiment online anbieten wollen, k&ouml;nnen Sie das Vollprodukt
+    mit dieser DEMO-VERSION bestellen.</font></p>
+  <p><font face="Verdana, Arial, Helvetica, Swiss" size="2">Bitte denken Sie daran,
+    f&uuml;r die ADMINISTRATION Ihres Online-Shops (Einrichtung und Wartung) nur Netscape
+    4.06 oder 4.5 bzw. eine h&ouml;here Version zu benutzen (Mac: 4.08)! Diesen Browser
+    finden Sie auf jeder Internet-CDROM.</font></p>
+  <p><font face="Verdana, Arial, Helvetica, Swiss" size="2"><b>Achtung, Mac-User</b>:
+    JavaScript kann Pfadbezeichnungen mit Leerzeichen
+    nicht interpretieren! Bitte sorgen Sie für einen leerzeichenfreien Pfad bis zur admin.htm!</font></p>
+  <p><font face="Verdana, Arial, Helvetica, Swiss" size="2">Please remember to
+    use Netscape 4.06 or 4.5 or a higher version (Mac: 4.08) to administrate your
+    online shop (setup and maintenance). You find this browser on any internet
+    cdrom.</font></p>
+</center>
+</BODY>
+</HTML>

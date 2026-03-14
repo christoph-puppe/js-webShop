@@ -1,0 +1,1288 @@
+<HTML>
+<HEAD>
+<STYLE>
+<!--
+.yel {color: #FFFF00}
+//-->
+</STYLE>
+	<TITLE>js-webShop - the e-commerce solution</TITLE>
+		    <META name="description" content="js-webShop - the eCommerce Solution - von iConnect, dem Spezialisten f&uuml;r eCommerce und Online-Shopping-Systeme, CGI-Programmierung, HTML-Programmierung, JavaScript-Programmierung. Testen Sie js-webShop und js-bestell">
+        <META name="keywords" content="iConnect, iconnect, ICONNECT, Internet, js-webShop, jswebshop, JSWEBSHOP, js-bestell, jsbestell, webshop, Webshop, CGI, Programmierung, Internet-Programmierung, Programming, Scripting, Script, Skript, Scripts, Skripts, eCommerce, E-Commerce, Verkauf, online verkaufen, Vermietung, vermieten, Versand, Warenversand, Warenverkauf, Bestellung, Bestellungen,  Bestellsystem, Bestellsysteme, Bestellsoftware, Shoppingsoftware, Shoppingsystem, Shopping, Onlineverkauf, Onlinebestellung, Versandhaus, Versandhandel, Datenbank, Datenbanken, Datenbanksoftware, Datenbankanbindung, Webdesign, webdesign, WEBDESIGN, HTML-Programmierung, HTML, HTML-Seiten, DTP, DTP-Programmierung, Desktop Publishing, Javascript, JavaScript-Programmierung, Internet-Pr&auml;senz, Online-Pr&auml;senz, Internet-Auftritt, Domain-Hosting, Domain, eigener Server, eigene Domain, eigene Dom&auml;ne, Promotion, Suchmaschinen, Pressearbeit, Public Relations, Bekanntheit, Top 10, Top Ten, DF1, Freeware, Free, Gratis, Information, Preis, Service">
+        <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<META http-equiv="Language" content="de">
+        <META NAME="author" CONTENT="iConnect Berlin">
+        <META NAME="publisher" CONTENT="iConnect Berlin">
+        <META NAME="copyright" CONTENT="iConnect Berlin">
+        <META NAME="page-topic" CONTENT="Dienstleistung, eCommerce, Verkauf, Shopping">
+        <META NAME="page-type" CONTENT="Produktinfo">
+        <META NAME="audience" CONTENT="Alle">
+				<META NAME="robots" CONTENT="INDEX,FOLLOW">
+				
+  <script language="JavaScript">
+<!--
+function tauschImage() { //v1.0
+  var i,theObj,j=0,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (tauschImage.arguments.length-2); i+=3) {
+    theObj = eval(tauschImage.arguments[(navigator.appName == 'Netscape')?i:i+1])
+    if (theObj != null) {
+      swapArray[j++] = theObj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=theObj)?theObj.src:oldArray[j];
+      theObj.src = tauschImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+</HEAD>
+<BODY background="wand.gif" bgcolor="#FFFFFF" LINK="#333366" VLINK="#333366">
+<A name="top"></A> 
+<TABLE border="0" cellpadding="5">
+  <TR> 
+    <TD valign="top"> <font face="Verdana, Arial, Helvetica, sans-serif" size="4" color=#CC0000"> 
+      FAQ </font> 
+      <HR>
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="5">
+          <TD width="100%" valign="top" colspan="2"> <A href="#faq"><b><font size="3" face="Verdana, Arial, Helvetica, sans-serif">FAQ 
+            - H&auml;ufig auftretende Fragen</font></b></a> <font face="Verdana, Arial, Helvetica, sans-serif"><BR>
+            <A href="#allg">Allgemeines</A> <BR>
+            <A href="#art">Artikelimport</A> <BR>
+            <A href="#absp">Abspeichern</A> <BR>
+            <A href="#layout">Layout</A> <BR>
+            <A href="#vors">Vorschaltseite</A> <BR>
+            <A href="#korb">Warenkorb</A> <BR>
+            <A href="#pay">Zahlung</A><font size="2"> </font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <P>&nbsp; 
+            </font></font></TD>
+      </TABLE>
+      <A name="faq"></a> 
+      <HR>
+      <TABLE width="100%" border="1" cellspacing="0" cellpadding="5">
+          <TD width="100%" border="0"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <P> <A name="allg"></a> 
+          <font size="2"> <b>Hier ver&ouml;ffentlichen wir Fragen, die uns zu 
+          <NOBR><i>js-webShop</i></NOBR> gestellt wurden - und nat&uuml;rlich 
+          die entsprechenden Antworten.</b> <!-- Allgemeines --> 
+          <P> <font size="3"><b>Allgemeines</b></font></P>
+          <P> 
+          <OL>
+              <LI><A href="#A1">Sind Sie bereit (nat&uuml;rlich gegen Aufwandsentsch&auml;digung) 
+                mir bei der erstmaligen Einrichtung, bzw. Implementierung zu helfen?</A> 
+              <LI><A href="#A2">Haben Sie Referenzen von schon eingerichteten 
+                Shops, egal welcher Kategorie?</A> 
+              <LI><A href="#A3">M&uuml;ssen die entpackten Dateien in den beiden 
+                Verzeichnissen gleich auf den Webserver?</A> 
+              <LI><A href="#A4">Es sollte auch ein Fenster f&uuml;r die AGBs da 
+                sein, denn sonst ist das Gesch&auml;ft nicht g&uuml;ltig.(Es gibt 
+                einen R&uuml;ge).</A> 
+              <LI><A href="#A5">Auf der Betreiberseite taucht unten das js-webShop-Logo 
+                auf. Warum dort?</A> 
+              <LI><A href="#A6">Wann ist das Update 2.0 beim Kauf von 1.0 zu erhalten?</A> 
+              <LI><A href="#A7">Ist Ihre Software Y2K und Euro-tauglich?</A> 
+              <LI><A href="#A8">Die Pflege/Erstellung der Webseiten erfolgt bei 
+                uns bisher mittels Frontpage. Kann ich damit Ihren Shop editieren?</A> 
+              <LI><A href="#A9">Einige Bilder sind manchmal nicht zu sehen, aber 
+                nur online. Auf dem PC ist alles o.k.. Was k&ouml;nnte die Ursache 
+                sein?</A> 
+              <LI><A href="#A10">Welche Voraussetzungen mu&szlig; der Server meines 
+                Url-Anbieters haben (CGI-f&auml;higkeit etc.), um Ihre Software 
+                hierauf laufen zu lassen?</A> 
+              <LI><A href="#A11">Kann man Ihre Software &uuml;berhaupt auf dem 
+                eigenen Server/Url-Anbieter laufen lassen, oder l&auml;uft die 
+                Software nur bei Ihnen auf Ihrem Server, d.h. verkaufen Sie nur 
+                die Lizenz?</A> 
+              <LI><A href="#A12">(...) Wir arbeiten aber mit MAC und dem System 
+                8.5. Er bringt st&auml;ndig eine Meldung, dass es mit diesem System 
+                nicht geht. Ist in n&auml;chster Zeit ein Update angek&uuml;ndigt 
+                oder m&uuml;ssen wir nach anderen L&ouml;sungen suchen?</A> 
+              <LI><A href="#A13">Bei den &uuml;bermittelten Bestelldaten erscheinen 
+                z.T. merkw&uuml;rdige Zeichen, beispielsweise f&uuml;r Umlaute. 
+                Woran liegt das? Kann man das &auml;ndern?</A> 
+              <LI><A href="#A14">Wir haben eine eigene Webpr&auml;senz/URL mit 
+                Online-Shoppingm&ouml;glichkeit, die DM & Euro ausweist. Geht 
+                das mit ihrem System auch?</A> 
+              <LI><A href="#A15">Wie w&uuml;rde Ihr Shoppingsystem verschickt? 
+                Diskette? E-Mail? Mit Bedienungsanweisung?</A> 
+              <LI><A href="#A16">Kann ich js-webShop auch mit den Browsern 3.x 
+                von Netscape und Internet Explorer betreiben, oder ist dies generell 
+                nur mit Netscape 4.07 und h&ouml;her m&ouml;glich?</A> 
+              <LI><A href="#A17">In welchem Verzeichnis befindet sich die Seite 
+                Start. Ich kann diese Datei nicht finden sehen und wei&szlig; 
+                jetzt nicht wo ich suchen kann?</A> 
+              <LI><A href="#A18">Frage zu NetObjects Fusion und js-webShop. L&auml;sst 
+                sich dabei die von Ihnen angebotene Shop- L&ouml;sung innerhalb 
+                von Fusion nutzen oder hei&szlig;t es: entweder - oder ?</A> 
+              <LI><A href="#A19">Wie funktioniert die Installation und der Unterhalt?</A> 
+              <LI><A href="#A20">Muss ich ein Programm auf den Web-Server laden 
+                um den Online-Shop betreiben zu k&ouml;nnen?</A> 
+              <LI><A href="#A21">Welche Bedingungen muss ich erf&uuml;llen, um 
+                einen Online-Shop mit der Software von Ihrer Firma, betreiben 
+                zu k&ouml;nnen?</A> 
+              <LI><A href="#A22">Ab wieviel Artikel wird denn f&uuml;r den Kunden 
+                die Ladezeit zu lang?</A> 
+              <LI><A href="#A23">Der Shop startet nicht, wenn er in einem Frameset 
+                aufgerufen wird, welches den Shop von einem anderen Server laedt. 
+                Warum?</A> 
+              <LI><A href="#A24">Wozu dient welche Datei im Verzeichnis *shop*?</A> 
+            </OL>
+            <p></P>
+          <P> <A name="A1"><b>1. <i>Sind Sie bereit (nat&uuml;rlich gegen Aufwandsentsch&auml;digung) 
+            mir bei der erstmaligen Einrichtung, bzw. Implementierung zu helfen?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Aber ja. Wir helfen gern. Insbesondere sorgen wir auch daf&uuml;r, 
+              da&szlig; Ihr Online-Shop (optisch) einen guten Eindruck macht. 
+            </LI>
+          </UL>
+          <P> <A name="A2"><b>2. <i>Haben Sie Referenzen von schon eingerichteten 
+            Shops, egal welcher Kategorie?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Haben wir. Die farbliche und inhaltliche Gestaltung liegt jedoch 
+              immer beim Shopbetreiber selbst! 
+                <P><A href="http://www.js-webshop.com/deutsch/referenzen.html"><img src="gif/an_pf_re.gif" width=28 height=6 border=0 alt="Zur js-webShop-Shopliste">Zur 
+                  <i>js-webShop</i>-Shopliste (online)<img src="gif/an_pf_li.gif" width=28 height=6 border=0 alt="Zur js-webShop-Shopliste"></A> 
+            </LI>
+          </UL>
+          <p></P>
+          <P> <A name="A3"><b>3. <i>M&uuml;ssen die entpackten Dateien in den 
+            beiden Verzeichnissen gleich auf den Webserver?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Nein, es l&auml;uft wie folgt: 
+              <P> 1. Demo Shop auf der lokalen Festplatte auspacken. &Uuml;ber 
+                index.html rein in die Shop-Administration. &Auml;nderungen bzw. 
+                Erg&auml;nzungen vornehmen, abspeichern. 
+              <P> 2. Das Shop-Verzeichnis mit allen Dateien (incl. Ordner GIF) 
+                ins Web &uuml;bertragen (FTP) - fertig! 
+            </LI>
+          </UL>
+          <P> <A name="A4"><b>4. <i>Es sollte auch ein Fenster f&uuml;r die AGBs 
+            da sein, denn sonst ist das Gesch&auml;ft nicht g&uuml;ltig. (Es gibt 
+            einen R&uuml;ge).</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Kein Problem. Sie k&ouml;nnen jede beliebige HTML-Seite an js-webShop 
+              anlinken. Oder Sie schreiben die AGB auf die Startseite, oder legen 
+              von dort einen Link auf diese. </LI>
+          </UL>
+          <P> <A name="A5"><b>5. <i>Auf der Betreiberseite taucht unten das <i>js-webShop</i>-Logo 
+            auf. Warum dort?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Da wir auf der Betreiberseite nicht einen Link auf eben diese 
+              Seite legen wollten, haben wir unser Logo und Markenzeichen an dieser 
+              Stelle untergebracht. Dies wird nur dann angezeigt, wenn der Shop 
+              im Internet betrachtet wird, um den Shopownern das st&auml;ndige 
+              Online gehen beim Einrichten dieser Seite zu ersparen. <BR>
+              Wir denken, es ist eine sehr dezente Ecke, in der dar&uuml;ber informiert 
+              wird, mit welcher Software der Shop betrieben wird. </LI>
+          </UL>
+          <P> <A name="A6"><b>6. <i>Wann ist das Update 2.0 beim Kauf von 1.0 
+            zu erhalten?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> <i>js-webShop</i> wird st&auml;ndig weiterentwickelt - im engen 
+              Kontakt mit unseren Kunden. Deren Verbesserungsvorschl&auml;ge und 
+              W&uuml;nsche werden sukzessive in das Produkt eingebaut. Die Zwischenergebnisse 
+              werden als Updates zur Verf&uuml;gung gestellt. Von diesen Updates 
+              wird es ca. 3 geben, wovon das letzte auf die Version 2.0 updatet. 
+              Dieses letzte Update (= Version 2.0) wird voraussichtlich Ende Mai 
+              freigegeben. </LI>
+          </UL>
+          <P> <A name="A7"><b>7. <i>Ist Ihre Software Y2K und Euro-tauglich?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Ja. Unser System rechnet direkt in beliebige W&auml;hrungen um 
+              - mit und ohne MwSt.; alle Zahlungsmittel werden akzeptiert. </LI>
+          </UL>
+          <P> <A name="A8"><b>8. <i>Die Pflege/Erstellung der Webseiten erfolgt 
+            bei uns bisher mittels Frontpage. Kann ich damit Ihren Shop editieren?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Unser System verf&uuml;gt &uuml;ber einen eigenen men&uuml;gef&uuml;hrten 
+              Editor, mit dem Sie auf verschiedene Weise Ihre Artikel erfassen 
+              k&ouml;nnen. Bestehende Web-Seiten k&ouml;nnen X-beliebig eingebunden 
+              werden. Leider geh&ouml;rt FrontPage zu den Editoren, die bereits 
+              beim Einladen den Quelltext von HTML-Seiten (und JavaScript-Dateien, 
+              Endung <i>.js</i>) ver&auml;ndern. Dadurch ist die Wahrscheinlichkeit, 
+              da&szlig; gerade letztgenannte nicht mehr funktionieren, sehr hoch. 
+              <P>Abhilfe: Starten Sie - nur im Browser! - die unver&auml;nderte 
+                Datei INDEX.HTML aus dem Download-ZIP. Diese l&auml;dt den Administration 
+                Manager und Sie k&ouml;nnen sofort loslegen, den Shop einzurichten. 
+              <P>Linken Sie - anschliessend - den fertigen Shop an Ihr FrontPage-Web 
+                an, gern auch innerhalb eines bestehenden Framesets, vermeiden 
+                Sie aber, dass FrontPage auf die Dateien im SHOP-Verzeichnis von 
+                <i>js-webShop</i> zugreift und sie ver&auml;ndert. 
+              <P>Bei diesem Vorgehen sollte alles problemlos klappen. Viel Erfolg! 
+            </LI>
+          </UL>
+          <P> <A name="A9"><b>9. <i>Einige Bilder sind manchmal nicht zu sehen, 
+            aber nur online. Auf dem PC ist alles o.k.. Was k&ouml;nnte die Ursache 
+            sein?</i></b></A> 
+          <P> 
+          <UL>
+            <LI>Im Internet sind UNIX-basierte Betiebssysteme eingesetzt. Es empfiehlt 
+              sich dringend, alle Dateinamen grunds&auml;tzlich klein zu schreiben. 
+              Unix macht zwische Gro&szlig;- und Kleinschreibung einen Unterschied.</LI>
+            <LI>Vermeiden Sie Leerzeichen (bei Windows ist das egal). Benutzen 
+              Sie Unterstriche zur Trennung von Worten in Dateinamen.</LI>
+            <LI>Bsp.: "gif/Kaufen.jpg" ist nicht zusehen. Das k&ouml;nnte daran 
+              liegen, da&szlig; im Admin Manager "kaufen.gif" angegeben ist, aber 
+              das Bild unter "Kaufen.gif" abgepeichert ist (Gro&szlig;-/Kleinschreibung). 
+              <P> Oder: Ein Dateiname ist: "Badeaccessoires fuers Bad.html". Online 
+                geht nichts. Es kann liegen <BR>
+              <OL>
+                <LI>den Leerstellen</LI>
+                <LI>der Gro&szlig;-/Kleinschreibung</LI>
+                <LI>Beiden Dingen</LI>
+              </OL>
+              <BR>
+              Besser f&uuml;r's Internet: "badeaccsessoires_fuers_bad.html" 
+          </UL>
+          <P> <A name="A10"><b>10. <i>Welche Voraussetzungen mu&szlig; der Server 
+            meines Url-Anbieters haben (CGI-f&auml;higkeit etc.), um Ihre Software 
+            hierauf laufen zu lassen?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> K E I N E - Sie erfassen Ihre Artikel offline. Der entstehende 
+              Shop ist vollkommen unabh&auml;ngig und kann in beliebige Verzeichnisse 
+              kopiert werden. CGI-f&auml;higkeit ist nicht erforderlich. Unser 
+              System l&auml;uft vollst&auml;ndig mit Java-Script, kann also auf 
+              jegliches CGI, Java, Pearl usw. verzichten. </LI>
+          </UL>
+          <P> <A name="A11"><b>11. <i>Kann man Ihre Software &uuml;berhaupt auf 
+            dem eigenen Server/Url-Anbieter laufen lassen, oder l&auml;uft die 
+            Software nur bei Ihnen auf Ihrem Server, d.h. verkaufen Sie nur die 
+            Lizenz?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Ihr Shop l&auml;uft auf Ihrem Server, bzw. auf Ihrem Webspace. 
+            </LI>
+          </UL>
+          <P> <A name="A12"><b>12. <i>(...) Wir arbeiten aber mit MAC und dem 
+            System 8.5. Er bringt st&auml;ndig eine Meldung, dass es mit diesem 
+            System nicht geht. Ist in n&auml;chster Zeit ein Update angek&uuml;ndigt 
+            oder m&uuml;ssen wir nach anderen L&ouml;sungen suchen?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Es ist nicht voraussehbar auf welchem Mac es klappt und auf welchem 
+              nicht, deshalb diese Meldung, bitte auszuprobieren, ob Sie abspeichern 
+              koennen. Welchen Browser benutzen Sie? Die auf der CD enthaltene 
+              4.08 l&auml;uft recht stabil zu. </LI>
+          </UL>
+          <P> <A name="A13"><b>13. <i>Bei den &uuml;bermittelten Bestelldaten 
+            erscheinen z.T. merkw&uuml;rdige Zeichen, beispielsweise f&uuml;r 
+            Umlaute. Woran liegt das? Kann man das &auml;ndern?</i></b></A> 
+          <P> 
+          <UL>
+              <LI> <i><a href="http://www.js-webshop.com/deutsch/support.html">updated!</a></i> 
+              </LI>
+          </UL>
+          <P> <A name="A14"><b>1 <i>Wir haben eine eigene Webpr&auml;senz/URL 
+            mit Online-Shoppingm&ouml;glichkeit, die DM & Euro ausweist. Geht 
+            das mit ihrem System auch?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> <i>js-webShop</i> unterst&uuml;tzt beliebig viele W&auml;hrungen. 
+              Eine Euro-Automatik ist integriert. </LI>
+          </UL>
+          <P> <A name="A15"><b>15. <i>Wie w&uuml;rde Ihr Shoppingsystem verschickt? 
+            Diskette? E-Mail? Mit Bedienungsanweisung?</i></b></A> 
+          <P> 
+          <UL>
+            <LI> Per Nachnahme einer Box mit CD, die den Shop mit einer kontextbezogenen 
+              Direkthilfeenth&auml;lt, diverse Software zus&auml;tzlich sowie 
+              ein &uuml;bersichtliches gedrucktes Handbuch. </LI>
+          </UL>
+          <P> <A name="A16"><b>16. <i>Kann ich <i>js-webShop</i> auch mit den 
+            Browsern 3.x von Netscape und Internet Explorer betreiben, oder ist 
+            dies generell nur mit Netscape 4.07 und h&ouml;her m&ouml;glich?</i></b></A> 
+          <P> 
+          <UL>
+            <LI>Der Betrieb eines Online- oder CDROM-Shops, der mit <NOBR><i>js-webShop</i></NOBR> 
+              erstellt wurde, ist mit Browsern der 4'er-Generation m&ouml;glich 
+              (Netscape Navigator / Communicator 4.x sowie Microsoft Internet 
+              Explorer 4.x) sowie prinzipiell mit allen Browsern, die JavaScript 
+              1.1 vollst&auml;ndig implementiert haben. 
+              <P>Das Shop-Setup (Einrichtung, Wartung) ist nur mit Netscape Navigator/Communicator 
+                4.06, 4.5 oder h&ouml;her m&ouml;glich (Macinstosh: 4.08 oder 
+                h&ouml;her). Daher liegt dieser Browser f&uuml;r alle g&auml;ngigen 
+                Betriebssysteme der <i>js-webShop</i> CDROM bei. 
+              <P>Derzeit sind in Deutschland folgende Browser im Einsatz (Quelle: 
+                http://meta.rrzn.uni-hannover.de/browser.html): 
+              <P> 
+              <TABLE border="1" align="center">
+                <tr> 
+                  <td colspan="2" bgcolor="#666699"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFFFF"><b>Erhebung 
+                    Sonntag, 28.02.1999:</b></font></TD>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Netscape 
+                    (Navig./Comm.)</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">55.32 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Microsoft 
+                    Internet-Expl.</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">41.84 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Andere</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">2.84 
+                    %</font></td>
+                <tr> 
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Netscape4.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">50.41 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Netscape 
+                    3.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">4.48 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Netscape 
+                    2.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">0.42 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Netscape 
+                    0.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">0.01 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Netscape 
+                    6.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">0.00 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Netscape 
+                    4.5</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">19.08 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MSIE 
+                    4.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">35.62 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MSIE 
+                    3.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">4.33 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MSIE 
+                    5.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">1.75 
+                    %</font></td>
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">MSIE 
+                    2.x</font></td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">0.15 
+                    %</font></td>
+              </table>
+          </ul>
+            </font></font></td>
+        <td align="right">&nbsp;</td>
+        <tr> 
+      </TABLE>
+      <BR>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Damit sind derzeit 
+      &uuml;ber 85% der eingesetzten Browser <i>js-webShop</i>-kompatibel, Tendenz 
+      steigend. <BR>
+      </font> 
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A17"><b>17. 
+        <i>In welchem Verzeichnis befindet sich die Seite <i>Start</i>. Ich kann 
+        diese Datei nicht finden sehen und wei&szlig; jetzt nicht wo ich suchen 
+        kann?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Diese 
+          Seite gibt es nicht als statische HTML-Seite. Sie wird von <i>js-webShop</i> 
+          automatisch erzeugt. Den Text k&ouml;nnen Sie nat&uuml;rlich &auml;ndern: 
+          Starseite anw&auml;hlen, dann KATALOG / SEITE BEARBEITEN. <BR>
+          Wenn Sie dort eine eigene (statische HTML-)Seite anzeigen wollen, erstellen 
+          Sie diese, tragen die URL (i.d.R. den Dateinamen) unter SEITE BEARBEITEN 
+          ein und &uuml;berspielen alles auf Ihren Server. </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A18"><b>18. 
+        <i>Frage zu NetObjects Fusion und <i>js-webShop</i>. L&auml;&szlig;t sich 
+        dabei die von Ihnen angebotene Shop-L&ouml;sung innerhalb von Fusion nutzen 
+        oder hei&szlig;t es: entweder - oder ?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Mit <i>js-webShop</i> 
+          kann man auch die gesamte Webpr&auml;senz erstellen, weil nicht nur 
+          regul&auml;re Katalogseiten, sondern auch beliebige HTML-Seiten eingebunden 
+          werden k&ouml;nnen. Im &uuml;brigen l&auml;sst sich js-webShop an beliebiger 
+          Stelle anbinden, muss nur in seinen 2 Frames laufen (die allerdings 
+          auch in &uuml;bergeordnete Frames eingebunden sein k&ouml;nnen oder 
+          im separaten Browser-Fenster) </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A19"><b>19. 
+        <i>Wie funktioniert die Installation und der Unterhalt?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>js-webShop</i> 
+          ist komplett in JavaScript geschrieben (daher "js-") und braucht deshalb 
+          nicht installiert zu werden. Auf der CDROM liefern wir f&uuml;r Windows-Systeme 
+          eine SETUP.BAT mit, die alle ben&ouml;tigten Dateien auf die Festplatte 
+          kopiert und die Schreibschutz-Attribute der CD zur&uuml;cksetzt. </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Einrichtung 
+            und Wartung des Shops erfolgen im Administration Manager, und zwar 
+            komplett offline. Anschliessend wird nur noch das Shop-Verzeichnis 
+            auf den Webserver gespielt - fertig ist der Shop! Die Sortimentseingabe 
+            erfolgt manuell, eine Schnittstelle zu allen g&auml;ngigen Datenbanken 
+            und Tabellenkalkulationen wird es in der Professional Edition geben 
+            (Erscheinungstermin: Mai 1999, Preis: ca. 800 DM). </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A20"><b>20. 
+        <i>Muss ich ein Programm auf den Web-Server laden um den Online-Shop betreiben 
+        zu k&ouml;nnen?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Das genau 
+          ist einer der entscheidenden Vorteile von <i>js-webShop</i> gegen&uuml;ber 
+          anderen L&ouml;sungen. <i>js-webShop</i> braucht kein CGI-BIN mit CGI-Scripts 
+          und keine Datenbanksoftware. Es kann sogar auf einfachsten Accounts 
+          wie AOL und T-Online betrieben werden. Kurz gesagt, die Anforderungen 
+          an den Webserver sind nicht h&ouml;her als bei ganz normalen HTML-Seiten. 
+          </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A21"><b>21. 
+        <i>Welche Bedingungen muss ich erf&uuml;llen, um einen Online-Shop mit 
+        der Software von Ihrer Firma, betreiben zu k&ouml;nnen?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Den DEMO 
+          SHOP mit max. 10 Artikeln d&uuml;rfen Sie ohne jede Bedingung zeitlich 
+          unbegrenzt betreiben. M&ouml;chten Sie mehr, kaufen Sie doch einfach 
+          <i>js-webShop</i> f&uuml;r 199,- EUR + MwSt: <BR>
+          Die Lizenz gestattet Ihnen die Einrichtung von bis zu 3 Online-Shops, 
+          allerdings muss der Shop-Inhaber der 3 Shops identisch sein. Das gestattet, 
+          z.B. einen Shop f&uuml;r Endverbraucher, einen f&uuml;r H&auml;ndler 
+          und einen f&uuml;r Sonderangebote einzurichten. Bei anderen Produkten 
+          m&uuml;ssen Sie f&uuml;r solche Zwecke &uuml;blicherweise 3 Lizenzen 
+          erwerben </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A22"><b>22. 
+        <i>Ab wieviel Artikel wird denn f&uuml;r den Kunden die Ladezeit zu lang?</i></b></A> 
+        </font> 
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Die Bilder 
+          werden noch nicht vorgeladen, das wird erst in Version 2.0 integriert. 
+          Bis um die 200-400 Artikel geht es auch recht z&uuml;gig. Es laufen 
+          aber bereits Shops mit mehr als 500 Artilkeln (siehe <A href="referenzen.html"><i>js-webShop</i>-Shopliste</A>). 
+          </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A23"><b>23. 
+        <i>Der Shop startet nicht, wenn er in einem Frameset aufgerufen wird, 
+        welches den Shop von einem anderen Server l&auml;dt. Warum?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Das liegt 
+          am Wesen von Netzwerken und den darin vergebenen Zugriffsrechten. <BR>
+          Beispiel: ( URL:http://here.de/index.html ): </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Erkl&auml;rung: 
+            </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Die Frames 
+            *geh&ouml;ren* dem Server <i>here.de</i>, deswegen darf das JavaScript 
+            nicht darauf zugreifen und den Shop anzeigen. </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">L&ouml;sung: 
+            Das Frameset auf <i>there.de</i> aufrufen. <BR>
+            Beispiel ( URL:http://there.de/frame.html ): </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Erkl&auml;rung: 
+            Jetzt *geh&ouml;ren* die Frames dem Server <i>there.de</i> und das 
+            JavaScript darf darauf zugreifen, sprich: das HTML anzeigen. </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="A24"><b>24. 
+        <i>Wozu dient welche Datei im Verzeichnis *shop*?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> (ohne 
+          Antwort)</font></LI>
+      </UL>
+      <A name="art"></a> 
+      <HR>
+      <!-- Artikelimport --> 
+      <P> <font size="3"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Artikelimport</font></b></font> 
+      </P>
+      <P> 
+      <OL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#Art1"><i>Warum 
+          empfehlen Sie, nicht mehr als 500 Artikel pro Shop anzubieten?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#Art2"><i>Kann 
+          man auch wesentlich mehr (als die von Ihnen empfohlene Anzahl) Artikel 
+          eingeben? Und wie sieht es mit einer Datenbankanbindung aus?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#Art3"><i>Eine 
+          Frage bezgl. der Eintragungen von Artikeln in den Shop. Ich habe einen 
+          Artikel, der in normalen Gr&ouml;&szlig;en 105,00 DM und in Sondergr&ouml;&szlig;en 
+          120,00 DM kostet. Jede Variante existiert in mehreren Gr&ouml;&szlig;en. 
+          Wie kann ich das eintragen.?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#Art4"><i>Besteht 
+          die M&ouml;glichkeit Artikeldaten in irgend einer Form zu importieren? 
+          Das w&auml;re sehr wichtig f&uuml;r uns, denn keiner will 2000 Artikel 
+          eintippen, wenn Sie bereits in einer Excel-Datei vorliegen.?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#Art5"><i>Sind 
+          weitere Angaben wie Menge, Gr&ouml;&szlig;e und Farbe m&ouml;glich?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#Art6"><i>Ist 
+          es m&ouml;glich aus einer HTML-Seite mittels Hyperlinks o.&auml;. auf 
+          eine bestimmte JavaScript-Seite meines Shop´s zu gelangen?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#Art7"><i>Wie 
+          gelangen die Artikel-Beschreibungen in die Suchmaschinen des Internet?</i></A> 
+          </font>
+      </OL>
+      <p></P>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="Art1"><b>1. 
+        <i>Warum empfehlen Sie, nicht mehr als 500 Artikel pro Shop anzubieten?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Weil 
+          sich die Ladezeit der Site erh&ouml;ht. Einige Internet-Benutzer sind 
+          etwas ungeduldig, wenn sie l&auml;nger auf den Aufbau einer Seite warten 
+          m&uuml;ssen. </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Es wird 
+            derzeit an der <i>js-webShop</i> Professional Edition gearbeitet, 
+            die wesentlich mehr Artikel verwalten kann (Datenbankanbindung). Die 
+            zun&auml;chst angebotene Version reicht im allgemeinen aus. Die Begrenzung 
+            wurde im Sinne der Geschwindigkeit so festgelegt. </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="Art2"><b>2. 
+        <i>Kann man auch wesentlich mehr (als die von Ihnen empfohlene Anzahl) 
+        Artikel eingeben? Und wie sieht es mit einer Datenbankanbindung aus?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>js-webShop</i> 
+          ist f&uuml;r kleine, ambitionierte eCommerce-Auftritte konzipiert. Das 
+          bedeutet zumeist auch Sortimente mit weniger als 500 Artikeln, f&uuml;r 
+          die eine Datenbankl&ouml;sung weder zweckm&auml;ssig noch bezahlbar 
+          w&auml;re. Dennoch wird ein Datenimport von einer nicht geringen Anzahl 
+          von Kunden gew&uuml;nscht. </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Wir 
+            werden daher im Mai die <i>js-webShop</i> Professional Edition herausbringen, 
+            die Schnittstellen zu allen g&auml;ngigen DB's (also auch CSV) bieten 
+            wird. Ob wir dar&uuml;ber hinaus auch eine einfache CSV-Schnittstelle 
+            f&uuml;r die Standard-Version anbieten, ist noch nicht entschieden. 
+            </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="Art3"><b>3. 
+        <i>Eine Frage bezgl. der Eintragungen von Artikeln in den Shop. Ich habe 
+        einen Artikel, der in normalen Gr&ouml;&szlig;en 105,00 DM und in Sondergr&ouml;&szlig;en 
+        120,00 DM kostet. Jede Variante existiert in mehreren Gr&ouml;&szlig;en. 
+        Wie kann ich das eintragen.?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Das w&auml;ren 
+          2 Artikel mit jeweils einem Produktmerkmal (Gr&ouml;sse): <BR>
+          1. Artikel 105 DM in Gr. XS, S, M <BR>
+          2. Artikel 120 DM in Gr. L, XL, XXL </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Die 
+            Produktmerkmale (in beliebiger Anzahl!) werden in einem der n&auml;chsten 
+            Updates einzugeben sein. Bis dahin: Je Gr&ouml;ssenauspr&auml;gung 
+            1 Artikel. </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="Art4"><b>4. 
+        <i>Besteht die M&ouml;glichkeit Artikeldaten in irgend einer Form zu importieren? 
+        Das w&auml;re sehr wichtig f&uuml;r uns, denn keiner will 2000 Artikel 
+        eintippen, wenn Sie bereits in einer Excel-Datei vorliegen.?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Diese 
+          M&ouml;glichkeit wird es in der<i>js-webShop</i>Professional Edition 
+          geben. Diese Version wird Ende Mai erscheinen und ca. 800 DM kosten. 
+          F&uuml;r die jetzige Version von <i>js-webShop</i> (1.0) empfehlen wir 
+          etwa bis zu 500 Artikel, weil konzeptbedingt das gesamte Online-Sortiment 
+          vorgeladen wird. (Einer unserer Online-Shops hat schon &uuml;ber 500 
+          Artikel, und l&auml;dt sich trotzdem noch passabel.) </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> In der 
+            Professional Edition wird diese Beschr&auml;nkung aufgehoben, indem 
+            das Sortiment kategorienweise vorgeladen wird. Weil sich <i>js-webShop</i> 
+            dann auch f&uuml;r grosse Sortimente eignet, wird es auch entsprechende 
+            Import-/Export-Schnittstellen zu allen g&auml;ngigen Datenbanken und 
+            Tabellenkalkulationen geben. </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Der 
+            Einsatz der Professional Edition setzt die Nutzbarkeit eines CGI-Verzeichnisses 
+            voraus. </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="Art5"><b>5. 
+        <i>Sind weitere Angaben wie Menge, Gr&ouml;&szlig;e und Farbe m&ouml;glich?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Frei 
+          definierbare Produktmerkmale werden in der Version 1.1 einstellbar sein. 
+          Diese Version wird allen K&auml;ufern der 1.0 kostenlos als Update zum 
+          Download freigegeben. </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="Art6"><b>6. 
+        <i>Ist es m&ouml;glich aus einer HTML-Seite mittels Hyperlinks o.&auml;. 
+        auf eine bestimmte JavaScript-Seite meines Shop´s zu gelangen?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Ja. Allerdings 
+          ist das nicht ganz trivial. (Es gibt eine JavaScript-Funktion "cv()", 
+          die man aufrufen kann.) Im linken Frame sind Bespiel Links, schauen 
+          sie sich das html dieses Frames an und kopieren Sie die Links (z.B. 
+          "javascript:parent.cv('2')" ) in Ihre html Seiten. Die geschilderte 
+          M&ouml;glichkeit funktioniert von allen HTML-Seiten aus, die sich *innerhalb 
+          von <i>js-webShop</i>* (also dem Frameset) befinden. </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="Art7"><b>7. 
+        <i>Wie gelangen die Artikel-Beschreibungen in die Suchmaschinen des Internet?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>js-webShop</i> 
+          trägt beim Anlegen von Katalogseiten und Artikeln die Bezeichnungen 
+          (z.B. Produkt xyz) an den beiden für Suchmaschinen relevanten Stellen 
+          in der index.html ein: </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 1. Keywords 
+            (Stichworte) <BR>
+            2. Body (Textkörper) </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Suchmaschinen, 
+            die sog. Spider ausschicken, erfassen entweder Keywords oder Body 
+            und listen entsprechende Einträge in Trefferlisten. Da nicht alle 
+            Suchmaschinen Spider verwenden und da es mitunter Monate dauert, bis 
+            ein Spider eine neue Präsenz gefunden und notiert hat, ist eine (manuelle) 
+            Anmeldung bei den wichtigsten Suchmaschinen dennoch unerlässlich. 
+            </font>
+        </LI>
+      </UL>
+      <A name="absp"></a> 
+      <HR>
+      <!-- Abspeichern --> 
+      <P> <font size="3"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Abspeichern</font></b></font> 
+      </P>
+      <P> 
+      <OL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#absp1"><i>Beim 
+          Abspeichern erscheint im rechten oberen Rahmen immer das Dateiverzeichnis. 
+          Der Shop speichert aber nicht. Woran kann das liegen?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#absp2"><i>Ich 
+          habe Probleme mit dem Abspeichern. Nach dem Klick auf "Abspeichern" 
+          kommt sofort, ohne irgendwelche Zwischenfenster o.&auml;. "Parent directory" 
+          und es l&auml;&szlig;t sich gar nichts speichern.</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#absp3"><i>Im 
+          Internet sieht man die Bilder nicht. Lokal schon. Warum?</i></A> </font>
+      </OL>
+      <p></P>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="absp1"><b>1. 
+        <i>Beim Abspeichern erscheint im rechten oberen Rahmen immer das Dateiverzeichnis. 
+        Der Shop speichert aber nicht. Woran kann das liegen?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Zun&auml;chst 
+          sollte Sie drei m&ouml;gliche Ursachen pr&uuml;fen: </font> 
+          <P> 
+          <OL>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Haben 
+              Sie <NOBR><i>js-webShop</i></NOBR> wirklich &uuml;ber das Dateisystem 
+              in den Browser geladen? In der Adresszeile Ihres Browsers k&ouml;nnen 
+              Sie dies erkennen: <I>http://</I> darf nicht dort stehen. Dies w&uuml;rde 
+              bedeuten, das Sie den Shop &uuml;ber das HTTP-Protokoll geladen 
+              haben. Hier&uuml;ber ist das Speichern nicht m&ouml;glich. Es mu&szlig; 
+              mit <I>file:///</I> anfangen (&uuml;ber die Men&uuml;leiste: <i>File 
+              - Open Page / Datei - Datei &ouml;ffnen</i>). </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Benutzen 
+              Sie wirklich einen Netscape-Browser ab Version 4.06 (oder h&ouml;her) 
+              zum Administrieren von <NOBR><i>js-webShop</i></NOBR>? </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ist 
+              Java in Ihren Netscape-Browser aktiviert? Unter <I>Edit - Preferences</I> 
+              und dann <I>Advanced</I> k&ouml;nnen Sie JavaScript und Java aktivieren. 
+              Es gibt &uuml;brigens heutzutage kaum mehr einen Grund, darauf zu 
+              verzichten. </font>
+          </OL>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="absp2"><b>2. 
+        <i>Ich habe Probleme mit dem Abspeichern. Nach dem Klick auf "Abspeichern" 
+        kommt sofort, ohne irgendwelche Zwischenfenster o.&auml;. "Parent directory" 
+        und es l&auml;&szlig;t sich gar nichts speichern.</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Wenn <i>js-webShop</i> 
+          in einem sehr langen Unterverzeichnis-Pfad installiert wird (z.B. C:\Programme\Meine 
+          Lieblingsprogramme\Internet\Electronic Commerce\Online-Bestellsysteme\js-webShop\shop), 
+          gibt es Probleme beim Abspeichern des Shops. Abhilfe: <i>js-webShop</i> 
+          weiter oben in der Verzeichnisstruktur installieren.</font></LI>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Das Problem 
+          kann auch folgendes sein: Java ist deaktiviert! Dieses zeigt, wo unter 
+          BEARBEITEN / EINSTELLUNGEN (Edit/Preferences) Java aktiviert sein muss. 
+          <i>js-webShop</i> ben&ouml;tigt Java genau einmal: n&auml;mlich beim 
+          Speichern! </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="absp3"><b>3. 
+        <i>Im Internet sieht man die Bilder nicht. Lokal schon. Warum?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Bei der 
+          Eingabe von Produktbildern muss unbedingt darauf geachtet werden, dass 
+          alle Dateinamen in Kleinschreibung ohne Leerzeichen und Umlaute ein- 
+          gegeben werden! Das gilt generell f&uuml;r alle Dateien, die ins Internet 
+          ge- spielt werden, also auch f&uuml;r GIF und JPG. Beispiele: FALSCH: 
+          Mein Produktbild.GIF RICHTIG: mein_produktbild.gif</font></LI>
+      </UL>
+      <BR>
+      <A name="layout"></a> 
+      <HR>
+      <!-- Layout --> 
+      <P> <font size="3"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Layout</font></b></font></P>
+      <P> 
+      <OL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#layout1"><i>Wie 
+          gro&szlig; sollte die Bilder in den Artikeltabellen sein?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#layout2"><i>Wenn 
+          der Warenkorb mit Produkten gef&uuml;llt ist, erscheint das Bild des 
+          bestellten Produktes. Direkt daneben auf der linken Seite erscheint 
+          das Wort "Bild". Ist es m&ouml;glich etwas anderes zu schreiben?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#layout3"><i>Wie 
+          breit sollen die Logos und Buttons f&uuml;r den linken Frame sein?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#layout4"><i>Ist 
+          es m&ouml;glich KEIN LOGO im linken Frame zu benutzen ohne dieses Fehler-Bildchen 
+          zu sehen?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#layout5"><i>Wir 
+          sind unter anderem auch im Pr&auml;sentversand t&auml;tig, da&szlig; 
+          hei&szlig;t unsere Kunden lassen durch uns auch an andere Adressen versenden. 
+          Wie k&ouml;nnen wir es im webShop einbauen?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#layout6"><i>Die 
+          Oberfl&auml;che sieht auf meinem Monitor 17 Zoll sch&ouml;n aus, nicht 
+          aber auf dem 15 Zoll Monitor im B&uuml;ro. Gibt es eine M&ouml;glichkeit 
+          daf&uuml;r zu sorgen, dass man - egal welchen Monitor man hat - horizontal 
+          nicht scrollen mu&szlig;?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#layout7"><i>Sind 
+          weitere Frames m&ouml;glich, als die im Demoshop dargestellten?</i></A> 
+          </font>
+      </OL>
+      <p></P>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="layout1"><b>1. 
+        <i>Wie gro&szlig; sollte die Bilder in den Artikeltabellen sein?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Passen 
+          Sie Ihre Produktbilder dem jeweils verwendeten Artikel-Layout an! <i>js-webShop</i> 
+          skaliert Ihre Artikelbilder - abh&auml;ngig vom verwendeten Layout - 
+          jeweils auf bestimmte Breiten. Das Seitenverh&auml;ltnis der Bilder 
+          wird beibehalten, die Bilder werden also nicht verzerrt dargestellt. 
+          Dennoch erzielen Sie eine optimale Anzeige nur, wenn Sie die empfohlenen 
+          Bild-Breiten einhalten: </font> 
+          <P> 
+          <OL>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">- 
+              Layout Tabelle: optimale Breite = 60 Pixel </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">- 
+              Layout K&auml;stchen: optimale Breite = 150 Pixel </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">- 
+              Layout Grosse Bilder: optimale Breite = 70% der Tabellenbreite <BR>
+              (maximal 378 Pixel / Verh&auml;ltnis Breite zu H&ouml;he = 70 zu 
+              100) </font>
+          </OL>
+      </UL>
+      <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Hinweis 
+        zum letztgenannten Layout: <i>js-webShop</i> setzt die Breite der Produkt-Tabellen 
+        vorgabem&auml;ssig auf 540 Pixel. Verwenden Sie "breite" Bilder (statt 
+        Seitenverh&auml;ltnis 70:100 z.B. 80:100), passt <i>js-webShop</i> die 
+        Produkt-Tabelle entsprechend an. Dadurch wird die gesamte Tabelle breiter. 
+        </font></P>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="layout2"><b>2. 
+        <i>Wenn der Warenkorb mit Produkten gef&uuml;llt ist, erscheint das Bild 
+        des bestellten Produktes. Direkt daneben auf der linken Seite erscheint 
+        das Wort "Bild". Ist es m&ouml;glich etwas anderes zu schreiben?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">In der 
+          jetzigen Version nicht, aber das werden wir in der Version 2.0 &auml;ndern.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="layout3"><b>3. 
+        <i>Wie breit sollen die Logos und Buttons f&uuml;r den linken Frame sein?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Die Breite 
+          der Navigations-Gifs muss 170 Pixel betragen. Dies wird durch die Breite 
+          des linken Frames vorgegeben. Schmalere Gifs sind kein Problem. Erweitern 
+          Sie einfach die Bildbreite durch Hinzuf&uuml;gung eines transparenten 
+          Bereichs.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="layout4"><b>4. 
+        <i>Ist es m&ouml;glich KEIN LOGO im linken Frame zu benutzen ohne dieses 
+        Fehler-Bildchen zu sehen?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ein kleines 
+          Transparentes Gif. Wird im n&auml;chsten Update behoben sein.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="layout5"><b>5. 
+        <i>Wir sind unter anderem auch im Pr&auml;sentversand t&auml;tig, da&szlig; 
+        hei&szlig;t unsere Kunden lassen durch uns auch an andere Adressen versenden. 
+        Wie k&ouml;nnen wir es im webShop einbauen?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Unter 
+          "Kundendaten" noch eine Lieferadresse eingeben.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="layout6"><b>6. 
+        <i>Die Oberfl&auml;che sieht auf meinem Monitor 17 Zoll sch&ouml;n aus, 
+        nicht aber auf dem 15 Zoll Monitor im B&uuml;ro. Gibt es eine M&ouml;glichkeit 
+        daf&uuml;r zu sorgen, dass man - egal welchen Monitor man hat - horizontal 
+        nicht scrollen mu&szlig;?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Unter 
+          "Shop-Setup => Rahmen" die Tabellenbreite auf 540 stellen, dann scrollt's 
+          auch unter 800x600 nicht mehr.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="layout7"><b>7. 
+        <i>Sind weitere Frames m&ouml;glich, als die im Demoshop dargestellten?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>js-webShop</i> 
+          l&auml;uft in einem Frameset mit 2 Frames. Diese wiederum k&ouml;nnen 
+          innerhalb eines bestehenden Framesets geladen werden, oder in einem 
+          neuen Browser-Fenster, oder wie Sie es w&uuml;nschen. F&uuml;r Kunden 
+          mit 800x600-Bildschirmaufl&ouml;sung empfehlen wir allerdings, <i>js-webShop</i> 
+          "_top" zu laden. Per VERLASSEN-Button kommt der Kunde genau an die Stelle 
+          zur&uuml;ck, von wo er den Laden "betreten" hatte. </font></LI>
+      </UL>
+      <A name="vors"></a> 
+      <HR>
+      <!-- Vorschaltseite --> 
+      <P> <font size="3"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Vorschaltseite</font></b></font> 
+      </P>
+      <P> 
+      <OL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#vors1"><i>Die 
+          Hilfedatei bietet keine Information &uuml;ber die Einstellung der Vorschaltseite. 
+          Worum geht es hier ?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#vors2"><i>Auf 
+          der ersten Seite (Vorschaltseite) sind unter dem Kasten die Titel der 
+          verschieden Seiten des Shops zu sehen sowie Nummern, Kurzbeschreibung 
+          usw. von Produkten, die ich im Administration Manager eingegeben habe. 
+          Wie k&ouml;nnte ich dies &auml;ndern oder verschwinden lassen?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#vors3"><i>Kann 
+          statt des Hinweises das JavaScript deaktiert wurde, auch an dieser Stelle 
+          von mir erstellte Alternativ- Seiten (ohne Shop-System) eingestellt 
+          werden?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#vors4"><i>Besteht 
+          die M&ouml;glichkeit einer Alternativ-L&ouml;sung, wenn vom User JavaScript 
+          deaktiviert wurde?</i></A> </font>
+        <LI>
+      </OL>
+      <p></P>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="vors1"><b>1. 
+        <i>Die Hilfedatei bietet keine Information &uuml;ber die Einstellung der 
+        Vorschaltseite. Worum geht es hier ?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Die Vorschaltseite 
+          (index.html) l&auml;dt das Shop-Sortiment vor, damit der Shop anschliessend 
+          schnell angezeigt wird. Gerade hinsichtlich der Vorschaltseite gab es 
+          einige Verbesserungsvorschl&auml;ge, die wir in die Folgeversion einbauen 
+          werden (FINAL 1.1, ca. Anfang April). Hierf&uuml;r werden wir dann eine 
+          ausf&uuml;hrliche (aktuelle) Hilfe anbieten. <BR>
+          F&uuml;r die jetzige Version (FINAL 1.0) einige Hinweise: </font> 
+          <P> 
+          <OL>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>In 
+              welche Datei speichern?</i> Der Vorgabewert ist 'js-webShop.html' 
+              - Das ist der Dateiname des Framesets, in das der eigentliche Shop 
+              geladen wird. (index.html ist ja nur die Vorschaltseite.) </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>Mit 
+              Passwort?</i> Wenn Sie dies ankreuzen, macht <NOBR><i>js-webShop</i></NOBR> 
+              eine Passwortabfrage, um den Shop z.B. vor dem Zugriff von Jugendlichen 
+              zu sch&uuml;tzen, falls er z.B. nicht jugendfreie Inhalte enth&auml;lt. 
+              </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>Zweiter 
+              Text</i>: Hier k&ouml;nnen Sie einstellen, was unten auf der Vorschaltseite 
+              angezeigt wird. </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>... 
+              falls kein JavaScript aktiv</i>: Einige WWW-Surfer schalten "aus 
+              Sicherheitsgr&uuml;nden" JavaScript ab. Das ist wirklich nicht n&ouml;tig, 
+              weil es mit JavaScript praktisch unm&ouml;glich ist, Angriffe auf 
+              den Rechner des Surfers vorzunehmen. Dennoch wird in Zeitschriften 
+              immer wieder vor solchen Angriffen gewarnt. Ohne JavaScript funktioniert 
+              der Shop aber nicht, und damit sich Ihre Kunden nicht wundern, gibt's 
+              dann die voreingestellte Meldung, die Sie aber frei &auml;ndern/erg&auml;nzen 
+              k&ouml;nnen. </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>... 
+              falls zu alter Browser</i>: <i>js-webShop</i> funktioniert mit &uuml;ber 
+              82% der momentan benutzten Browser. Die 3'er-Versionen von Internet 
+              Explorer und Netscape beherrschen jedoch nicht das aktuelle JavaScript 
+              (kein Wunder, sie sind ja auch schon &uuml;ber 3 Jahre alt, nach 
+              Internet-Ma&szlig;st&auml;ben also aus der Steinzeit). Damit die 
+              restlichen 18% nicht im Regen stehen gelassen werden, gibt's die 
+              Meldung, gleich mit einem Link, wo man sich einen aktuellen 4'er-Browser 
+              downloaden kann. </font>
+          </OL>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="vors2"><b>2. 
+        <i>Auf der ersten Seite (Vorschaltseite) sind unter dem Kasten die Titel 
+        der verschieden Seiten des Shops zu sehen sowie Nummern, Kurzbeschreibung 
+        usw. von Produkten, die ich im Administration Manager eingegeben habe. 
+        Wie k&ouml;nnte ich dies &auml;ndern oder verschwinden lassen?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Es handelt 
+          sich um folgendes: </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>js-webShop</i> 
+            tr&auml;gt beim Anlegen von Kategorien (linker Frame) und Artikeln 
+            (rechter Frame) immer automatisch die KEYWORDS in die richtige Datei 
+            ein (index.html). Sehr viele Internet-Suchmaschinen durchforsten das 
+            WWW nach eben diesen Keywords, die im HEAD der index.html stehen (META 
+            NAME="keywords" CONTENT="... -Keyword-Liste- ..."). Wenn sie f&uuml;ndig 
+            werden, sind Ihre Artikel usw. bei Eingabe in die Suchmaschine auch 
+            tats&auml;chlich zu finden - ein Vorteil gegen&uuml;ber Shops, die 
+            das nicht haben! </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Leider 
+            gibt es auch viele Suchmaschinen, die nicht den HEAD, sondern den 
+            Anfang des BODY-Tags durchsuchen. Also schreibt <i>js-webShop</i> 
+            die Keywords auch in den BODY, wo sie dann aber leider sichtbar sind. 
+            Nun k&ouml;nnte man einfach alle Keywords im BODY in einen HTML-Kommentar 
+            setzen (auskommentieren), wodurch sie dann unsichtbar werden, aber 
+            dann ignorieren die meisten der letztgenannten Suchmaschinen wiederum, 
+            was drinsteht. Also eine Zwickm&uuml;hle, aus der man praktisch nicht 
+            herauskommt. <BR>
+            Sie haben also nur folgende Wahl: </font>
+          <P> 
+          <OL>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Keywords 
+              im BODY in Kommentar setzen. Folge: keine Auflistung in vielen Suchmaschinen 
+              </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Keywords 
+              ganz herausl&ouml;schen. Folge: keine Auflistung in vielen Suchmaschinen 
+              </font>
+            <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Keywords 
+              in die Farbe des Hintergrunds setzen. </font>
+          </OL>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Letzteres 
+            funktioniert nur, wenn die Vorschaltseite (index.html) kein Hintergrundbild 
+            enth&auml;lt. Beispiel: <BR>
+            <NOBR><i>BODY BGCOLOR="blue"</i></NOBR> setzt die Hintergrundfarbe 
+            in sattes Blau. <NOBR><i>FONT COLOR="blue"</i></NOBR> <FONT color="blue">setzt 
+            die Schrift ebenfalls in sattes Blau, wodurch sie unsichtbar wird</FONT>. 
+            <BR>
+            Diese Farb&auml;nderungen m&uuml;ssen Sie momentan noch manuell durchf&uuml;hren, 
+            auch nach jeder &Auml;nderung am Shop (<i>js-webShop</i> schreibt 
+            die index.html nat&uuml;rlich nach jeder &Auml;nderung/Erg&auml;nzung 
+            des Sortiments neu). </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="vors3"><b>3. 
+        <i>Kann statt des Hinweises das JavaScript deaktiert wurde, auch an dieser 
+        Stelle von mir erstellte Alternativ-Seiten (ohne Shop-System) eingestellt 
+        werden?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Jein. 
+          Sie k&ouml;nnen im entsprechenden Hinweistext der Vorschaltseite ("Alter 
+          Browser") auch HTML einbauen, z.B. einen Button, der die Verwender alter 
+          Browser auf eine andere Seite bringt. Problematisch wird's, wenn alte 
+          Browser die Vor- schaltseite nicht vollst&auml;ndig anzeigen. Das ist 
+          bei einigen IE3-Versionen der Fall. </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="vors4"><b>4. 
+        <i>Besteht die M&ouml;glichkeit einer Alternativ-L&ouml;sung, wenn vom 
+        User JavaScript deaktiviert wurde?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Nicht 
+          wirklich. Im Administration Manager l&auml;&szlig;t sich einstellen, 
+          welche Meldung in diesem Falle ausgegeben wird. Aber ein JavaScript-Bestellsystem 
+          l&auml;uft eben nur mit JavaScript ... </font></LI>
+      </UL>
+      <A name="korb"></a> 
+      <HR>
+      <!-- Warenkorb --> 
+      <P> <font size="3"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Warenkorb</font></b></font> 
+      </P>
+      <P> 
+      <OL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb1"><i>Wenn 
+          der Warenkorb mit Produkten gef&uuml;llt ist, erscheint das Bild des 
+          bestellten Produktes. Direkt daneben auf der linken Seite erscheint 
+          das Wort "Bild". Ist es m&ouml;glich etwas anderes zu schreiben?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb2"><i>Mit 
+          dem von mir ausgew&auml;hlten Hintergrund sind die Worte "Zum Produkt" 
+          und "L&ouml;schen" im Warenkorb kaum zu lesen. Kann man die Farbe dieser 
+          beiden Links &auml;ndern?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb3"><i>Ist 
+          die Gr&ouml;&szlig;e der Bilder im Warenkorb verstellbar?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb4"><i>Wie 
+          w&uuml;rde ich Mitteilung bekommen, ob jemand bestellt hat? Automatisch 
+          per Mail? Oder schreibt das Programm die Bestellungen in eine Datei 
+          auf den Server, die ich jedesmal auf Inhalt &uuml;berpr&uuml;fen m&uuml;&szlig;te?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb5"><i>Wie 
+          kann man Zusatzinformationen zu den bestellten Artikeln angeben (z.B. 
+          Gr&ouml;&szlig;e, oder die Angaben f&uuml;r einen Stempel, der online 
+          angeboten wird?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb6"><i>Wie 
+          kann man die Gr&ouml;&szlig;e der Bilder im Warenkorb beeinflussen?</i></A> 
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb7"><i>Mit 
+          dem von mir ausgew&auml;hlten Hintergrund sind die Worte "Zum Produkt" 
+          und "L&ouml;schen" im Warenkorb kaum zu lesen. Kann man die Farbe dieser 
+          beiden Links &auml;ndern?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#korb8"><i>K&ouml;nnen 
+          auch Rabatte in Form von Bestellmengen realisiert werden?</i></A> </font>
+      </OL>
+      <p></P>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb1"><b>1. 
+        <i>Wenn der Warenkorb mit Produkten gef&uuml;llt ist, erscheint das Bild 
+        des bestellten Produktes. Direkt daneben auf der linken Seite erscheint 
+        das Wort "Bild". Ist es m&ouml;glich etwas anderes zu schreiben?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">In der 
+          jetzigen Version nicht, aber das werden wir in der Version 2.0 &auml;ndern.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb2"><b>2. 
+        <i>Mit dem von mir ausgew&auml;hlten Hintergrund sind die Worte "Zum Produkt" 
+        und "L&ouml;schen" im Warenkorb kaum zu lesen. Kann man die Farbe dieser 
+        beiden Links &auml;ndern?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Nein, 
+          aber das werden wir voraussichtlich ebenfalls &auml;ndern.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb3"><b>3. 
+        <i>Ist die Gr&ouml;&szlig;e der Bilder im Warenkorb verstellbar?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Derzeit 
+          noch nicht. Entweder in der Version 2.0 oder in einem Update wird dies 
+          behoben sein. </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">TIP: 
+            Da die Bilder immer in ihrer Orginalgr&ouml;sse angezeigt werden, 
+            kleinere Bilder angeben, dann l&auml;dt sich die Seite auch schneller. 
+            </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Wenn 
+            Sie die Produktbilder im Warenkorb st&ouml;ren oder wenn Sie sie aus 
+            anderen Gr&uuml;nden nicht anzeigen wollen, entfernen Sie das H&auml;kchen 
+            "im Warenkorb Bilder anzeigen". </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb4"><b>4. 
+        <i>Wie w&uuml;rde ich Mitteilung bekommen, ob jemand bestellt hat? Automatisch 
+        per Mail? Oder schreibt das Programm die Bestellungen in eine Datei auf 
+        den Server, die ich jedesmal auf Inhalt &uuml;berpr&uuml;fen m&uuml;&szlig;te?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Sie k&ouml;nnen 
+          selbst festlegen, wohin die Bestellung geschickt wird. Wahrscheinlich 
+          wird dies Ihre E-Mail-Adresse sein. </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb5"><b>5. 
+        <i>Wie kann man Zusatzinformationen zu den bestellten Artikeln angeben 
+        (z.B. Gr&ouml;&szlig;e, oder die Angaben f&uuml;r einen Stempel, der online 
+        angeboten wird?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Der Shop-Owner 
+          mu&szlig; im Administration Manager unter <i>Shop-Setup-Absenden</i> 
+          Bei 'Kundenkommentar' ein H&auml;kchen in die Checkbox klicken. Dann 
+          steht zu jedem Artikel im Warenkorb ein Textfeld zu Verf&uuml;gung. 
+          <BR>
+          In der Folgeversion (<i>js-webShop 2.0</i>) wird es zu jedem Artikel 
+          die M&ouml;glichkeit geben, beliebige Anganen zu machen.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb6"><b>6. 
+        <i>Wie kann man die Gr&ouml;&szlig;e der Bilder im Warenkorb beeinflussen?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Derzeit 
+          ist die Breite des f&uuml;r das Bild vogesehenen Platzes 150 Pixel. 
+          Eine Einstellm&ouml;glickeit ist derzeit nicht vorhanden, aber das werden 
+          wir voraussichtlich auch &auml;ndern.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb7"><b>7. 
+        <i>Mit dem von mir ausgew&auml;hlten Hintergrund sind die Worte "Zum Produkt" 
+        und "L&ouml;schen" im Warenkorb kaum zu lesen. Kann man die Farbe dieser 
+        beiden Links &auml;ndern?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Nein, 
+          aber das werden wir voraussichtlich ebenfalls &auml;ndern.</font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="korb8"><b>8. 
+        <i>K&ouml;nnen auch Rabatte in Form von Bestellmengen realisiert werden?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Bislang 
+          nicht direkt. Es gibt die M&ouml;glichkeit, Zuschl&auml;ge (z.B. Lieferungskosten) 
+          ab Erreichen eines bestimmten Bestellwerts nicht zu erheben, oder auch 
+          bei Verwendung bestimmter Zahlungsmethoden (z.B. Vorkasse). Direkte 
+          st&uuml;ck- oder umsatzbezogene Rabattierung ist derzeit nicht vorgesehen. 
+          Eins der kommenden Updates wird aber Artikelrabattierung (Positionsrabatte) 
+          erm&ouml;glichen. </font></LI>
+      </UL>
+      <A name="pay"></a> 
+      <HR>
+      <!-- Zahlung --> 
+      <P> <font size="3"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Zahlung</font></b></font> 
+      </P>
+      <P> 
+      <OL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#pay1"><i>Wie 
+          sieht es mit der Abrechnung aus? Bieten Sie als Shop-Hoster auch Inkasso(o.&auml;.)-Systeme 
+          zur bequemen Abrechnung &uuml;ber Kreditkarten an? (wir arbeiten an 
+          einem Projekt f&uuml;r einen US-shop, und der Kunde m&ouml;chte keinen 
+          "Karten-Stress" ...</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#pay2"><i>Werden 
+          die Daten bei Kreditkartenzahlung verschl&uuml;sselt und k&ouml;nnen 
+          alle Kreditkarten abgerechnet werden? Die Pr&uuml;fung der Karte findet 
+          doch bei dem jeweiligen Bankinstitut statt, z.B. VISA?</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#pay3"><i>Sie 
+          machen einen Fehler beim Umrechnen von DEM in Euro. Die Vorschrift lautet 
+          meines Wissens: Entweder müssen weit mehr als zwei Stellen nach dem 
+          Komma angezeigt werden, oder es muss zugunsten des Käufers abgerundet 
+          werden.</i></A> </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A href="#pay4"><i>Wie 
+          steht es mit der Einbindung und Abrechnung von eCash bzw. Kreditkarten?</i></A> 
+          </font>
+      </OL>
+      <p></P>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="pay1"><b>1. 
+        <i>Wie sieht es mit der Abrechnung aus? Bieten Sie als Shop-Hoster auch 
+        Inkasso(o.&auml;.)-Systeme zur bequemen Abrechnung &uuml;ber Kreditkarten 
+        an? (wir arbeiten an einem Projekt f&uuml;r einen US-shop, und der Kunde 
+        m&ouml;chte keinen "Karten-Stress" ...</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Wir stehen 
+          in Verhandlungen mit einem Cardservice, der &auml;usserst interessante 
+          Rechnungsmodalit&auml;ten gerade f&uuml;r kleine und mittlere Unternehmen 
+          anbietet. Bei einer einmaligen Einrichtungsgeb&uuml;hr von knapp 200,- 
+          DM werden pro Transaktion 2,50 DM Provision f&auml;llig. Z.Zt. untersuchen 
+          wir die technische Leistungsf&auml;higkeit dieses Anbieters. Bei positivem 
+          Ergebnis wird das Online-Clearing in <i>js-webShop</i> eingebaut, d.h. 
+          der Shop-Inhaber kann per Mausklick konfigurieren, ob er diese Abrechnungsm&ouml;glichkeit 
+          wahrnehmen m&ouml;chte. </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="pay2"><b>2. 
+        <i>Werden die Daten bei Kreditkartenzahlung verschl&uuml;sselt und k&ouml;nnen 
+        alle Kreditkarten abgerechnet werden? Die Pr&uuml;fung der Karte findet 
+        doch bei dem jeweiligen Bankinstitut statt, z.B. VISA?</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Bei Kreditkarten-Zahlung 
+          (und -Pr&uuml;fung!) m&uuml;ssen Sie unterscheiden: </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 1. Offline-Clearing: 
+            preisg&uuml;nstig, z.B. nur 2,5% Provision, aber langsam (Geld z.T. 
+            erst nach 90 Tagen (!) verf&uuml;gbar) 2. Online-Clearing: teuer, 
+            aber schnell, Geld sofort verf&uuml;gbar (Grundgeb&uuml;hr monatlich 
+            + fixe Geb&uuml;hr je Bestellung + Provision der Kartengesellschaft) 
+            </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Welches 
+            der beiden Verfahren Sie w&auml;hlen, h&auml;ngt u.a. von Online-Umsatzerwartung 
+            und Kundengruppe (bzw. deren Zahlverhalten) ab. </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Zur 
+            verschl&uuml;sselten Daten&uuml;bermittlung: Nach dem urspr&uuml;nglichen 
+            Konzept schickt <i>js-webShop</i> die Bestell-Daten direkt aus dem 
+            Browser ab - unverschl&uuml;sselt an den Shop-Betreiber. Das ist insofern 
+            schick, als man kein CGI-BIN oder dergleichen ben&ouml;tigt. Aus diversen 
+            Gr&uuml;nden haben wir uns jedoch entschlossen, vom "reinen" Konzept 
+            abzuweichen und die Bestellungen an ein Script (Programm) weiterzuleiten, 
+            was sie verarbeitet. Diese Verarbeitung erfolgt bei uns (http://secure.js-webShop.com/cgi-bin/forward.pl) 
+            verschl&uuml;sselt. Auf Wunsch werden auch die Bestell-Mails durch 
+            unseren Weiterleitungs-Server verschl&uuml;sselt weitergeschickt. 
+            Hierf&uuml;r sind die entsprechenden PGP-Keys erforderlich. </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Falls 
+            Sie &uuml;ber die M&ouml;glichkeit verf&uuml;gen, auf Ihrem Webserver 
+            CGI-Scripts zu installieren, k&ouml;nnen Sie (als K&auml;ufer) das 
+            Script (FORWARD.PL) downloaden und "daheim" einsetzen. Falls von Ihrem 
+            Provider angeboten, k&ouml;nnen Sie dann &uuml;ber SSL auf Ihren Webserver 
+            zugreifen und die Bestelldaten verschl&uuml;sselt abholen. </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Sie 
+            sehen, Kreditkarten-Zahlung ist im WWW bislang alles andere als trivial. 
+            Eine sichere "Click-and-Go-L&ouml;sung" gibt es trotz gegenteiliger 
+            Versprechungen nicht oder sie ist sehr teuer. Wir werden trotzdem 
+            in den n&auml;chsten Wochen ein Verfahren in <i>js-webShop</i> einbauen, 
+            das verh&auml;ltnism&auml;ssig einfach zu konfigurieren ist. </font>
+        </LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="pay3"><b>3. 
+        <i>Sie machen einen Fehler beim Umrechnen von DEM in Euro. Die Vorschrift 
+        lautet meines Wissens: Entweder müssen weit mehr als zwei Stellen nach 
+        dem Komma angezeigt werden, oder es muss zugunsten des Käufers abgerundet 
+        werden.</i></b></A> </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Die Umrechnungsvorschrift 
+          lautet: Wenn von einer Korbw&auml;hrung in eine andere Korbw&auml;hrung 
+          umgerechnet wird, ist erst der Betrag in Euro auszurechnen, dieser darf 
+          auf nicht weniger als 3 Stellen gerundet sein, danach wird in die Zielw&auml;hrung 
+          umgerechnet und auf die kleinste Einheit gerundet. Jeweils nach kaufm&auml;nnischen 
+          Rundungsvorschriften. Als Umrechnungsfaktor sind die ersten 6 Stellen, 
+          die keine Null sind, zu benutzen. </font></LI>
+      </UL>
+      <P> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><A name="pay4"><b>4. 
+        <i>Wie steht es mit der Einbindung und Abrechnung von eCash bzw. Kreditkarten?</i></b></A> 
+        </font>
+      <P> 
+      <UL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Wie so 
+          vieles andere können auch Zahlungsarten frei definiert werden. D.h., 
+          der Shop-Betreiber kann festlegen, welche Felder für welche Zahlungsart 
+          vom Kunden ausgefüllt werden müssen bzw. können. Im nächsten (für Kunden 
+          kostenlosen) Update wird eine Zuordnung von Zahlungsarten zu Actions 
+          möglich sein. Das bedeutet, Zahlungsweise A (z.B. Kreditkarte) wird 
+          über Action A (z.B. verschlüsselte Übermittlung an Clearing-Service) 
+          abgewickelt, Zahlungsweise B (z.B. eCash) über Action B (z.B. Übertragung 
+          der Zahlungsinfo an Deutsche-Bank-Server) etc. </font> 
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Zur 
+            Abwicklung: eCash z.B. erfolgt mit separater Vereinbarung zwischen 
+            Online-Händler und Deutscher Bank. Für Kreditkarten-Clearing arbeiten 
+            wir mit einem darauf spezialisierten Unternehmen zusammen. </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Direkt 
+            auswählbar werden sein: </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 1. Online-Clearing 
+            für Kreditkarten: relativ hohe monatliche Grundgebühr und nicht zu 
+            vernachlässigende Transaktionskosten, einfache Abwicklung für Kunde 
+            und Händler, Sicherheit für den Händler, dass die Zahlung erfolgt 
+            ist </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 2. eCash 
+            für Micro- und Macro-Payment. Dieses Zahlungsverfahren wird in Deutschland 
+            von der Deutschen Bank und in Österreich von der Bank Austria angeboten. 
+            Teilnahme ist für Händler und Kunden (fast) kostenlos. Nachteil: (noch) 
+            geringer Verbreitungsgrad. </font>
+          <P><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Daneben 
+            wird bereits jetzt sichere Datenübermittlung unterstützt, so dass 
+            alle Zahlungsarten mit Eingabe sensibler Daten (z.B. Bankeinzug) verwendet 
+            werden können. </font> 
+        </LI>
+      </UL>
+    </TD>
+</TABLE>
+</BODY>
+</HTML>

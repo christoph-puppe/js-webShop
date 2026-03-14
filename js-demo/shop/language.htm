@@ -1,0 +1,130 @@
+<HTML>
+<BODY >
+<H3>Bitte einen Augenblick Geduld!</H3>
+
+<SCRIPT>
+<!--
+var language = new Array();
+
+language['B_DEL'] = "L&ouml;schen";
+
+language['BA_STORE_ORDER_ASK'] = 'Bitte geben Sie einen Namen fuer diese Bestellung an:';
+language['BA_STORE_ORDER_LONG'] = 'Die Bestellung ist zu lang! Nicht abgespeichert:';
+
+language['BA_NETTO'] = 'Sie sind dabei die Preisanzeige auf Netto umzuschalten!\nDie Netto-Preise enthalten nicht die gesetzlich vorgeschriebene MwST und sind nur fuer Vorsteuer-\nabzugsberechtigte erlaubt!\n\nSind Sie Vorsteuerabzugsberechtigt und wollen die Netto-Preise sehen, dann klicken Sie bitte auf "OK".\n Wenn nicht dann klicken Sie bitte auf "Abbrechen".';
+
+language['BA_GET_COOKIE_NO'] = 'Ein Artikel ist nicht mehr im Shop vorhanden.';
+language['BA_GET_COOKIE_ASK'] = 'Der Artikel ist bereits bestellt, ueberschreiben?';
+
+language['BA_CHECK_FEATURES'] = 'Folgenden Angaben werden noch benoetigt:';
+language['B_VALIDIERUNG_ZAHL'] = "Bitte Zahlen eingeben!";
+language['B_VALIDIERUNG_2_ZEICHEN'] = "Bitte mindestens 2 Zeichen (nicht nur Leerzeichen) eingeben!";
+language['B_VALIDIERUNG_VORWAHL'] = "Bitte mit Vorwahl! (z.B. 0123/45678)";
+language['B_VALIDIERUNG_PLZ'] = "Bitte eine gueltige Postleitzahl (5-stellig) eingeben!";
+language['B_VALIDIERUNG_8_ZEICHEN'] = "Bitte mindestens 8 Zeichen eingeben!";
+language['B_VALIDIERUNG_AT'] = "Eine gueltige Email-Adresse enthaelt das @-Zeichen!";
+language['B_VALIDIERUNG_POINT'] = "Eine gueltige Adresse enthaelt mindestens einen Punkt!";
+language['B_VALIDIERUNG_URL'] = "Bitte eine gueltige URL eingeben!";
+language['B_SPEICHERE_KUNDEN_MESS1'] = "Leider ist Ihre Addresse zu lang, sie ueberschreitet die max. Zeichenanzahl!";
+language['B_SPEICHERE_KUNDEN_MESS2'] = "Ihr Browser merkt sich Ihre persoenlichen Daten.\n";
+language['B_SPEICHERE_KUNDEN_MESS3'] = "Beim naechsten Besuch werden sie diese Daten nicht mehr eingeben muessen.";
+language['B_SPEICHERE_KUNDEN_MESS4'] = "Dies gilt fuer einen Zeitraum von 12 Monaten.";
+language['B_VALIDIERUNG_NO_ZEICHEN'] = "Bitte etwas eingeben";
+language['B_VALIDIERUNG_P_URL'] = "Eine gueltige URL enthaelt mindestens einen Punkt! Beispiel: xxx.com oder xxx.de";
+language['B_MARKIEREN_ALERT1'] = "Unbekannter Dartellungstyp!";
+language['B_MARKIEREN_ALERT2'] = "menge_eingabe_typ != text noch nicht implementiert!";
+language['B_SET_AMOUNT_ALERT'] = 'Bitte nur Zahlen groesser Null eingeben!\nZum Abbestellen bitte auf die Checkbox / das Gif klicken.';
+language['B_SET_CURRENCY_A'] = "Mit der gewaehlten Zahlungsweise ist nur diese Waehrung moeglich!\nUmstellen unter: ";
+
+language['E_TAX'] = "MwSt  ";
+language['E_TAX_N'] = "zzgl. MwSt  ";
+language['E_TAX_B'] = "incl. MwSt  ";
+
+
+language['EA_W_VERSION'] = "Die Version der Daten stimmt nicht mit der Version des Programms ueberein!\nEs kann zu Fehlern kommen!";
+
+language['EA_LIEFER_NETTO'] = "Sie haben ein Liefergebiet ohne MwSt-Pflicht gewaehlt. Die Preise werden ohne MwSt (Netto) angezeigt!";
+language['EA_LIEFER_BRUTTO'] = "Sie haben ein Liefergebiet mit MwSt-Pflicht gewaehlt. Die Preise werden incl. MwSt (Brutto) angezeigt!";
+
+language['E_THANKS_ALERT'] = "Ihre Bestellung wurde per Mail abgeschickt.\nWenn Mail in Ihrem Browser nicht funktioniert, schicken Sie bitte\n diese Seite Per FAX an die angegebene Adresse.";
+language['E_THANKS_MISSING'] = "Die folgenden Felder werden zum Bearbeiten\nder Bestellung benoetigt!\n";
+language['E_THANKS_ORDER'] = "Sie haben noch nichts bestellt!";
+
+language['E_NAME_OWNER'] = "Betreiber";
+language['E_NAME_STARTSEITE'] = "Start";
+language['E_NAME_BASKET'] = "Warenkorb";
+language['E_NAME_DATA'] = "Ihre Daten";
+language['E_NAME_SEND'] = "Abschicken";
+
+language['E_PRINT_LEFT_PAGE_BOT_SUM1'] = "Summe dieser Seite:&nbsp";
+language['E_PRINT_LEFT_PAGE_BOT_SUM2'] = "Summe aller Seiten:&nbsp";
+
+language['E_PRINT_NAVIGATION_NETTO'] = "Preise netto";
+language['E_PRINT_NAVIGATION_BRUTTO'] = "Preise brutto";
+
+language['E_PRINT_SEND_HEAD'] = "Abschicken";
+
+language['E_PRINT_FEATURES_ADD'] = " zzgl. ";
+
+language['E_PRINT_DATA_HEAD2'] = "Ihre Daten:";
+language['E_PRINT_DATA_PAY'] = "Zahlungsweise (Zuschlag)";
+language['E_PRINT_DATA_PRINT'] = "Drucken";
+language['E_PRINT_DATA_ONLY'] = "Zahlbar in ";
+
+language['E_PRINT_HTML_ORD'] = "Bestellen";
+language['E_PRINT_HTML_MENGE'] = "Anzahl";
+language['E_PRINT_HTML_PREISA'] = "Preis";
+language['E_PRINT_HTML_GPREIS'] = "Grundpreis&nbsp;";
+language['E_PRINT_HTML_PREIS'] = "St&uuml;ckpreis&nbsp;";
+
+language['E_PRINT_DATA_HEAD'] = "Bestellung";
+language['E_PRINT_DATA_AREAS'] = "Liefergebiet (Zuschlag)";
+language['E_PRINT_DATA_FREIGHT'] = "Versandart (Zuschlag)";
+language['E_PRINT_DATA_SAVE'] = "Speicherung Ihrer Daten";
+language['E_PRINT_DATA_SAVE_TEXT'] = "Wenn Sie auf das Kr&uuml;melmonster klicken, werden die eingegebenen Daten als Cookie in Ihrem Browser gespeichert. Das hei&szlig;t, da&szlig; Sie diese beim n&auml;chsten Besuch nicht nochmals eingeben m&uuml;ssen.";
+language['E_PRINT_DATA_OK'] ="Alles OK, abschicken!";
+language['E_PRINT_BASKET_HEAD'] = "Warenkorb";
+language['E_SEARCH_PROMPT'] = "Geben Sie einen Suchbegriff ein:",'';
+language['E_SEARCH_NAME'] = "Suchergebnis";
+language['E_SEARCH_ERG1'] = "Ihre Suche nach <I>";
+language['E_SEARCH_ERG2'] = "</I> brachte folgende Ergebnisse:";
+
+language['E_PRINT_BASKET_ORDER'] = "Mit dieser Funktion k&ouml;nnen Sie Ihre Bestellung abspeichern.";
+language['E_PRINT_BASKET_ORDER_ADD'] = "Abspeichern des aktuellen Warenkorbs";
+language['E_PRINT_BASKET_ORDER_GET'] = "Laden dieses Warenkorbes";
+language['E_PRINT_BASKET_ORDER_DEL'] = "L&ouml;schen dieses Warenkorbes";
+
+language['E_CHECK_BROWSER_IE_ERR'] = "Leider haben sie einen nicht Javascript 1.1 kompatiblen Browser.\nIhre Version ist wahrscheinlich veraltet.\n\n Klicken Sie fuer ein Update auf OK.";
+language['E_CHECK_BROWSER_IE_ALERT'] = "Einige Funktionen von js-webShop werden Fehlermeldungen liefern.";
+language['E_PRINT_DATA_MESS1'] = "\nAngaben zum Unternehmen bzw. zur Person ";
+language['E_PRINT_DATA_MESS2'] = "Ihre Daten werden nur f&uuml;r die Bearbeitung der Bestellung gespeichert und nicht an Dritte weitergegeben.";
+language['E_LEAVE_CONFIRM'] = "Wenn Sie den Shop verlassen, wird Ihr Warenkorb geloescht!";
+
+language['E_PRINT_SUMMEN_HEAD'] = "Summen und Zuschl&auml;ge";
+language['E_PRINT_SUMMEN'] = "zzgl. der zu verhandelnden Preise";
+
+language['E_PRINT_PROD_GPREIS'] = "Grundpreis";
+language['E_PRINT_PROD_SPREIS'] = "St&uuml;ckpreis";
+language['E_PRINT_PROD_FPREIS'] = "Neuer St&uuml;ckpreis: ";
+language['E_PRINT_PROD_PREIS'] = "Preis";
+language['E_PRINT_PROD_GSPREIS'] = "Gesamtpreis";
+language['E_PRINT_PROD_PNV'] = "Preis n.V.";
+language['E_PRINT_PROD_IMAGE'] = "Bild";
+language['E_PRINT_PROD_AMOUNT'] = "Menge";
+language['E_PRINT_PROD_ORDER'] = "Ihre Bestellung:";
+language['E_PRINT_PROD_GOART'] = "zum Produkt";
+language['E_PRINT_PROD_COM'] = "Anmerkung";
+language['E_PRINT_PROD_ADD'] = "+ ";
+
+language['E_MOB_BEST'] = "Haben wollen!";
+language['E_MOB_N_BEST'] = "Doch nicht?";
+
+language['E_SHOWDESC_MORE'] = "Wollen Sie mehr wissen?";
+language['E_SHOWDESC_BACK'] = "Zur&uuml;ck";
+
+
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>
