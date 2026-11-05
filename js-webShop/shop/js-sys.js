@@ -45,7 +45,7 @@ system["ewu"]["PTE"]["name"] = "Escudo";
 system["ewu"]["PTE"]["euro"] = "200.482";
 system["ewu"]["PTE"]["use"] = "limit";
 system["ewu"]["FRF"] = new Array();
-system["ewu"]["FRF"]["name"] = "Franc franï¿½ais";
+system["ewu"]["FRF"]["name"] = "Franc français";
 system["ewu"]["FRF"]["euro"] = "6.55957";
 system["ewu"]["FRF"]["use"] = "limit";
 system["ewu"]["IEP"] = new Array();
@@ -151,7 +151,7 @@ system["payment"][2]["value"] = "200";
 system["payment"][2]["limit"] = "20000";
 system["payment"][2]["activ"] = "limit";
 system["payment"][2]["0"] = "Kreditkartennummer";
-system["payment"][2]["1"] = "Gï¿½ltig bis (MMJJ)";
+system["payment"][2]["1"] = "Gültig bis (MMJJ)";
 system["payment"][2]["2"] = "Inhaber (wie auf Karte)";
 system["payment"][3] = new Array();
 system["payment"][3]["name"] = "per%20ccard.net";
@@ -163,7 +163,7 @@ system["payment"][3]["msg"] =
 system["payment"][3]["activ"] = "limit";
 system["payment"][3]["action"] =
   "https%3A//secure.ccard.net/js_demo/basket.cgi";
-system["payment"][3]["enctype"] = "application/payment-www-form-urlencoded";
+system["payment"][3]["enctype"] = "application/x-www-form-urlencoded";
 system["payment"][3]["zit"] = "hidden";
 system["payment"][3]["zin"] = "job_nr";
 system["payment"][3]["ziv"] = "js_001";
@@ -187,7 +187,7 @@ system["str"] = "Kollwitztr.%2057%20%A0%A0%A0%20%20%A0%20";
 system["city"] = "10405%20Berlin";
 system["country"] = "Germany";
 system["sonstiges"] =
-  "%3CA%20href%3Dhttp%3A//www.js-webShop.com/cgi-bin/empfehlung.pl%3EBitte%20empfehlen%20Sie%20uns%20weiter%21%3C/artikel%3E";
+  "%3CA%20href%3Dhttp%3A//www.js-webShop.com/cgi-bin/empfehlung.pl%3EBitte%20empfehlen%20Sie%20uns%20weiter%21%3C/A%3E";
 system["leave"] = "verlassn.gif";
 system["search"] = "suchen.gif";
 system["goleft"] = "goback.gif";
@@ -206,7 +206,7 @@ system["av"] =
   "<FONT%20face%3D%22Verdana,Arial,Helvetica,Swiss%22%20size=%22+2%22%20color=#0099FF>";
 system["font_right_head"] =
   "<FONT%20face%3D%22Verdana,Arial,Helvetica,Swiss%22%20size=%22+2%22%20color=#FF0000>";
-system["font_e"] =
+system["font_top_text"] =
   "<FONT%20face%3D%22Verdana,Arial,Helvetica,Swiss%22%20size=%22%22%20color=#330000>";
 system["font_send"] =
   "<FONT%20face%3D%22Verdana,Arial,Helvetica,Swiss%22%20size=%22-1%22%20color=#330000>";
@@ -230,15 +230,15 @@ system["np_bg"] = "wand.gif";
 system["pt_l"] = "";
 system["pt_vl"] = "";
 system["pt_al"] = "";
-system["C_top"] = "";
-system["C_f"] = "";
+system["page_top"] = "";
+system["page_summen"] = "";
 system["ba"] = "";
-system["nav_C_top"] =
+system["nav_page_top"] =
   "%3Cstyle%20type%3Dtext/css%3EA%20%7Btext-decoration%3Anone%7D%3C/STYLE%3E ";
 system["nav_ba"] = "</BODY></HTML>";
 system["startmsg"] =
-  "%3CSCRIPT%3E%0D%0Afunction%20adm%28url%29%7B%0D%0Aif%20%28navigator.appName%20%21%3D%20%22Netscape%22%20%7C%7C%20parseFloat%28navigator.appVersion%29%20%3C%204.06%29%7B%0D%0Aalert%28%22Der%20von%20Ihnen%20benutzte%20Browser%20kann%20die%20Administration%20nicht%20ausfuehren%21%5CnDas%20Einrichten%20von%20Shops%20geht%20nur%20mit%20einem%20Netscape%20Communicator%204.06%20oder%20neuer.%5C%20Dieser%20befindet%20sich%20im%20Lieferumfang%20der%20Vollversion.%5Cn%20Zum%20Testen%20koennen%20Sie%20sich%20einen%20neuen%20Netscape%20auch%20von%20den%20den%20Computerzeischriften%20beigelegten%20CD%27s%20installieren.%22%29%3B%0D%0A%7D%0D%0Aelse%20%7B%0D%0Awid%20%3D%20window.outerWidth%20-%2030%3B%0D%0Ahei%20%3D%20window.outerHeight%20-%2080%3B%0D%0Aprop%20%3D%20%22directories%3Dno%2Cwidth%3D%22+%20wid%20+%22%2Cheight%3D%22+%20hei%20+%22%2Cresizable%3Dno%2Cmenubar%3Dyes%22%0D%0Aopen%28url%2C%22shop%22%2Cprop%29%3B%0D%0A%7D%0D%0A%7D%0D%0A%3C/script%3E%0D%0A%3Cfont%20color%3Dred%3EHerzlichen%20Gl%26uuml%3Bckwunsch%20und%20ein%20Willkommen%20im%20js-webShop%21%3C/font%3E%3Cbr%3E%0D%0AEine%20kurze%20Einleitung%20soll%20Ihnen%20den%20Einstieg%20in%20das%20neue%20Online-Shopping-System%2C%20%20js-webShop%2C%20erleichtern.%3Cbr%3E%3Cbr%3E%0D%0AAuf%20der%20linken%20Seite%20w%26auml%3Bhlen%20Sie%20Katalogseiten%2C%20rechts%20werden%20dann%20die%20Artikel%20der%20Katalogseite%20angezeigt%2C%20die%20Sie%20gestaltet%20haben.%3Cbr%3E%0D%0A%0D%0AFast%20alle%20Artikel%20dieses%20Shops%20%28au%26szlig%3Ber%20Mode%29%20sind%20tats%26auml%3Bchlich%20lieferbar%21%20%3Cbr%3E%3Cbr%3E%20%0D%0AHier%20k%26ouml%3Bnnen%20Sie%20diesen%20Shop%20%3Ca%20href%3D%22javascript%3Aadm%28%27admin.htm%27%29%22%3Eadministrieren%3C/a%3E%20wenn%20Sie%20Netscape%204.06%20oder%20neuer%20benutzen.%0D%0A%3Cbr%3E%3CBR%3E%0D%0AIn%20den%20Hilfedateien%20stehen%20alle%20Informationen%2C%20die%20Sie%20f%26uuml%3Br%20diesen%20Shop%20ben%26ouml%3Btigen.%20S%26auml%3Bmtliche%20Buttons%20k%26ouml%3Bnnen%20jederzeit%20angew%26auml%3Bhlt%20werden%2C%20bereits%20gemachte%20Angaben%20bleiben%20erhalten%2C%20speichern%20Sie%20Ihre%20Arbeit%20regelm%26auml%3B%26szlig%3Big%20ab%21%3Cbr%3E%0D%0ASollten%20Sie%20dennoch%20Fragen%20oder%20Anregungen%20haben%2C%20stehen%20wir%20Ihnen%20gerne%20%3CA%20href%3D%27mailto%3Apd%40pdcom.com%27%3Ezur%20Verf%26uuml%3Bgung%3C/a%3E.%20Wie%20Sie%20uns%20erreichen%3F%0D%0ALinks%20%20oben%20und%20rechts%20unten.%20Zu%20den%20Betreiberdaten%20verlinken%3Cbr%3E%0D%0AFirmenlogo%20%3Ca%20href%3D%27javascript%3Aparent.a_do_export%28%29%3B%27%3E%3Cimg%20src%3D%22pdl.gif%22%20border%3D%220%22%20align%3D%22absmiddle%22%3E%3C/a%3E%20und%20%3Cbr%3EProduktlogo%20%3CA%20href%3D%27javascript%3Aparent.a_do_export%28%29%3B%27%3E%3Cimg%20src%3D%22logo1.gif%22%20border%3D%220%22%20align%3D%22absmiddle%22%3E%3C/a%3E%20.%20%3Cbr%3E%0D%0A%3Cp%3EViel%20Spass%20und%20vor%20allem%20Erfolg%20mit%20js-webShop%21%3C/p%3E";
-system["navgif_aq"] = "";
+  "%3CSCRIPT%3E%0D%0Afunction%20adm%28url%29%7B%0D%0Aif%20%28navigator.appName%20%21%3D%20%22Netscape%22%20%7C%7C%20parseFloat%28navigator.appVersion%29%20%3C%204.06%29%7B%0D%0Aalert%28%22Der%20von%20Ihnen%20benutzte%20Browser%20kann%20die%20Administration%20nicht%20ausfuehren%21%5CnDas%20Einrichten%20von%20Shops%20geht%20nur%20mit%20einem%20Netscape%20Communicator%204.06%20oder%20neuer.%5C%20Dieser%20befindet%20sich%20im%20Lieferumfang%20der%20Vollversion.%5Cn%20Zum%20Testen%20koennen%20Sie%20sich%20einen%20neuen%20Netscape%20auch%20von%20den%20den%20Computerzeischriften%20beigelegten%20CD%27s%20installieren.%22%29%3B%0D%0A%7D%0D%0Aelse%20%7B%0D%0Awid%20%3D%20window.outerWidth%20-%2030%3B%0D%0Ahei%20%3D%20window.outerHeight%20-%2080%3B%0D%0Aprop%20%3D%20%22directories%3Dno%2Cwidth%3D%22+%20wid%20+%22%2Cheight%3D%22+%20hei%20+%22%2Cresizable%3Dno%2Cmenubar%3Dyes%22%0D%0Aopen%28url%2C%22shop%22%2Cprop%29%3B%0D%0A%7D%0D%0A%7D%0D%0A%3C/script%3E%0D%0A%3Cfont%20color%3Dred%3EHerzlichen%20Gl%26uuml%3Bckwunsch%20und%20ein%20Willkommen%20im%20js-webShop%21%3C/font%3E%3Cbr%3E%0D%0AEine%20kurze%20Einleitung%20soll%20Ihnen%20den%20Einstieg%20in%20das%20neue%20Online-Shopping-System%2C%20%20js-webShop%2C%20erleichtern.%3Cbr%3E%3Cbr%3E%0D%0AAuf%20der%20linken%20Seite%20w%26auml%3Bhlen%20Sie%20Katalogseiten%2C%20rechts%20werden%20dann%20die%20Artikel%20der%20Katalogseite%20angezeigt%2C%20die%20Sie%20gestaltet%20haben.%3Cbr%3E%0D%0A%0D%0AFast%20alle%20Artikel%20dieses%20Shops%20%28au%26szlig%3Ber%20Mode%29%20sind%20tats%26auml%3Bchlich%20lieferbar%21%20%3Cbr%3E%3Cbr%3E%20%0D%0AHier%20k%26ouml%3Bnnen%20Sie%20diesen%20Shop%20%3Ca%20href%3D%22javascript%3Aadm%28%27admin.htm%27%29%22%3Eadministrieren%3C/a%3E%20wenn%20Sie%20Netscape%204.06%20oder%20neuer%20benutzen.%0D%0A%3Cbr%3E%3CBR%3E%0D%0AIn%20den%20Hilfedateien%20stehen%20alle%20Informationen%2C%20die%20Sie%20f%26uuml%3Br%20diesen%20Shop%20ben%26ouml%3Btigen.%20S%26auml%3Bmtliche%20Buttons%20k%26ouml%3Bnnen%20jederzeit%20angew%26auml%3Bhlt%20werden%2C%20bereits%20gemachte%20Angaben%20bleiben%20erhalten%2C%20speichern%20Sie%20Ihre%20Arbeit%20regelm%26auml%3B%26szlig%3Big%20ab%21%3Cbr%3E%0D%0ASollten%20Sie%20dennoch%20Fragen%20oder%20Anregungen%20haben%2C%20stehen%20wir%20Ihnen%20gerne%20%3CA%20href%3D%27mailto%3Apd%40pdcom.com%27%3Ezur%20Verf%26uuml%3Bgung%3C/a%3E.%20Wie%20Sie%20uns%20erreichen%3F%0D%0ALinks%20%20oben%20und%20rechts%20unten.%20Zu%20den%20Betreiberdaten%20verlinken%3Cbr%3E%0D%0AFirmenlogo%20%3Ca%20href%3D%27javascript%3Aparent.e_print_owner%28%29%3B%27%3E%3Cimg%20src%3D%22pdl.gif%22%20border%3D%220%22%20align%3D%22absmiddle%22%3E%3C/a%3E%20und%20%3Cbr%3EProduktlogo%20%3CA%20href%3D%27javascript%3Aparent.e_print_owner%28%29%3B%27%3E%3Cimg%20src%3D%22logo1.gif%22%20border%3D%220%22%20align%3D%22absmiddle%22%3E%3C/a%3E%20.%20%3Cbr%3E%0D%0A%3Cp%3EViel%20Spass%20und%20vor%20allem%20Erfolg%20mit%20js-webShop%21%3C/p%3E";
+system["navgif_start"] = "";
 system["navgifs_aq"] = "";
 system["navgif_data"] = "";
 system["navgifs_data"] = "";
@@ -253,11 +253,11 @@ system["b_a_img"] = "bestella.gif";
 system["b_b_img"] = "bestellt.gif";
 system["am"] = "../../beispiele.html";
 system["logo"] = "pdl.gif";
-system["al_url"] = "http%3A//pdcom.com";
-system["nav_C_bottom"] = "";
-system["au_h"] =
+system["leave_url"] = "http%3A//pdcom.com";
+system["nav_page_bottom"] = "";
+system["font_navigation_h"] =
   "<FONT%20face%3D%22Verdana,Arial,Helvetica,Swiss%22%20size%3D%22+1%22%20color=%233333FF>";
-system["C_bottom"] = "";
+system["page_bottom"] = "";
 system["ln"] = "000-128-971";
 system["com"] = "on";
 system["action"] = "mailto%3Apd%40pdcom.com";
@@ -293,8 +293,8 @@ system["features"][3]["name"] = "CD-ROM";
 system["features"][3]["required"] = "mwst";
 system["features"][3]["ftype"] = "select";
 system["features"][3]["0"] = "DVD%20SDR-430";
-system["features"][3]["1"] = "CD-currency-LW%20R55S";
-system["features"][3]["2"] = "CD-currency-address%20HP8100i";
+system["features"][3]["1"] = "CD-R-LW%20R55S";
+system["features"][3]["2"] = "CD-R-W%20HP8100i";
 system["features"][4] = new Array();
 system["features"][4]["name"] = "Farbe";
 system["features"][4]["required"] = "mwst";

@@ -7,7 +7,7 @@ var page = new Array();
 page[0] = new Array();
 page[0]["name"] = "js-webShop";
 page[0]["top_text"] =
-  "Sie%20d%26uuml%3Brfen%20diesen%20Shop%20frei%20und%20ohne%20Lizenzgeb%26uuml%3Bhr%20benutzen%21%3Cbr%3EDie%20einzige%20Einschr%26auml%3Bnkung%20%3Cu%3Edieser%3C/freight%3E%20Version%20besteht%20in%20der%20Limitierung%20auf%2010%20Artikel.%3Cbr%3E%0D%0ASie%20d%26uuml%3Brfen%20mit%20diesem%20Shop%20auch%20Geld%20verdienen%21%20%20%3B-%29%20%3Cbr%3EWerden%20Sie%20einfach%20Wiederverk%26auml%3Bufer%20des%20%3Cimg%20src%3D%22logo1.gif%22%20align%3D%22absmiddle%22%3E%21%3Cbr%3E%0D%0AMehr%20dazu%20erfahren%20Sie%20beim%20Klick%20auf%20%3Ca%20href%3D%22jsff.htm%22%3E%3Cb%3E%3Cu%3Ejs-webShop%3C/b%3E%3C/freight%3E%3C/a%3E.%20";
+  "Sie%20d%26uuml%3Brfen%20diesen%20Shop%20frei%20und%20ohne%20Lizenzgeb%26uuml%3Bhr%20benutzen%21%3Cbr%3EDie%20einzige%20Einschr%26auml%3Bnkung%20%3Cu%3Edieser%3C/u%3E%20Version%20besteht%20in%20der%20Limitierung%20auf%2010%20Artikel.%3Cbr%3E%0D%0ASie%20d%26uuml%3Brfen%20mit%20diesem%20Shop%20auch%20Geld%20verdienen%21%20%20%3B-%29%20%3Cbr%3EWerden%20Sie%20einfach%20Wiederverk%26auml%3Bufer%20des%20%3Cimg%20src%3D%22logo1.gif%22%20align%3D%22absmiddle%22%3E%21%3Cbr%3E%0D%0AMehr%20dazu%20erfahren%20Sie%20beim%20Klick%20auf%20%3Ca%20href%3D%22jsff.htm%22%3E%3Cb%3E%3Cu%3Ejs-webShop%3C/b%3E%3C/u%3E%3C/a%3E.%20";
 page[0]["summen"] = "true";
 page[0]["artikel"] = "2,";
 page[1] = new Array();
@@ -131,7 +131,7 @@ artikel[7]["htmltyp"] = "3";
 artikel[7]["typ"] = "img";
 artikel[7]["menge"] = "true";
 artikel[7]["preisa"] = "true";
-artikel[7]["name"] = "address%26uuml%3Brfelbrett";
+artikel[7]["name"] = "W%26uuml%3Brfelbrett";
 artikel[7]["titel"] = "220%20mm%20Durchmesser%2C%2030%20mm%20hoch";
 artikel[7]["image"] = "rund.jpg";
 artikel[7]["desc"] =

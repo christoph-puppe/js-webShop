@@ -1,7 +1,7 @@
 //- -- Copyright 1998 pluto@iconnect.de --
 //-
 //- Coauthor kdoberstein@js-webShop.com
-function B_lade_kunden() {
+function a_init() {
   ADMIN_TOP = "<body background='../gif/chip.jpg' bgcolor=#FFFFFF>";
   ADMIN_BOT = "";
   PAYCURR = "";
@@ -27,11 +27,11 @@ function B_lade_kunden() {
   }
   if (MAC)
     alert(
-      "Ein Mac!\mwst\mwst Leider kommt es auf ** manchen ** Mac's zu Problemen\nbeim abspeichern. Unter 8.5 war es besonders schwierig.\nBitte testen Sie erst das Abspeichern bevor Sie\nEinstellungen vornehmen!\mwst\mwst Danke.",
+      "Ein Mac!\n\n Leider kommt es auf ** manchen ** Mac's zu Problemen\nbeim abspeichern. Unter 8.5 war es besonders schwierig.\nBitte testen Sie erst das Abspeichern bevor Sie\nEinstellungen vornehmen!\n\n Danke.",
     );
-  XebTr();
+  a_initTr();
 }
-function e_print_features() {
+function a_update() {
   if (!system["version"]) system["version"] = "1.0.0";
   if (
     system["version"] == "1.0.0" ||
@@ -57,7 +57,7 @@ function e_print_features() {
   }
   if (system["version"] == "1.1" || system["version"] == "1.2b") {
     alert("Update auf 1.5b");
-    ni = system.payment.length + 1;
+    ni = system.x.length + 1;
     system["payment"][ni] = new Array();
     system["payment"][ni]["name"] = "Per%20ccard.net";
     system["payment"][ni]["value"] = "undefined";
@@ -67,8 +67,7 @@ function e_print_features() {
     system["payment"][ni]["activ"] = "mwst";
     system["payment"][ni]["action"] =
       "https%3A//secure.ccard.net/js_demo/basket.cgi";
-    system["payment"][ni]["enctype"] =
-      "application/payment-www-form-urlencoded";
+    system["payment"][ni]["enctype"] = "application/x-www-form-urlencoded";
     system["payment"][ni]["zit"] = "hidden";
     system["payment"][ni]["zin"] = "job_nr";
     system["payment"][ni]["ziv"] = "js_001";
@@ -99,105 +98,105 @@ function e_print_features() {
     system["version"] = "1.6";
   }
 }
-function XebTr() {
+function a_initTr() {
   tr = new Array();
-  tr["&iexcl;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&cent;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&pound;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&curren;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&yen;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&brvbar;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&sect;"] = new Array("ÔøΩ", "ÔøΩ", "", "ÔøΩ");
-  tr["&uml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&copy;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ordf;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&laquo;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&not;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&shy;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&reg;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&macr;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&deg;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&plusmn;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&sup2;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&sup3;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&acute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&micro;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&para;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&middot;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&cedil;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&sup1;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ordm;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&raquo;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&frac14;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&frac12;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&frac34;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&iquest;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Agrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Aacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Acirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Atilde;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Auml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Aring;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&AElig;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ccedil;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Egrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Eacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ecirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Euml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Igrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Iacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Icirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Iuml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ETH;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ntilde;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ograve;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Oacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ocirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Otilde;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ouml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&times;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Oslash;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ugrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Uacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Ucirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Uuml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&Yacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&THORN;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&szlig;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&agrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&aacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&acirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&atilde;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&auml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&aring;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&aelig;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ccedil;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&egrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&eacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ecirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&euml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&igrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&iacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&icirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&iuml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&eth;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ntilde;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ograve;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&oacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ocirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&otilde;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ouml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&divide;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&oslash;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ugrave;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&uacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&ucirc;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&uuml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&yacute;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&thorn;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
-  tr["&yuml;"] = new Array("ÔøΩ", "ÔøΩ", "ÔøΩ", "ÔøΩ");
+  tr["&iexcl;"] = new Array("°", "≠", "≠", "¡");
+  tr["&cent;"] = new Array("¢", "Ω", "õ", "¢");
+  tr["&pound;"] = new Array("£", "ú", "ú", "£");
+  tr["&curren;"] = new Array("§", "œ", "§", "€");
+  tr["&yen;"] = new Array("•", "æ", "ù", "¥");
+  tr["&brvbar;"] = new Array("¶", "›", "¶", "¶");
+  tr["&sect;"] = new Array("ß", "ı", "", "§");
+  tr["&uml;"] = new Array("®", "˘", "®", "¨");
+  tr["&copy;"] = new Array("©", "∏", "©", "©");
+  tr["&ordf;"] = new Array("™", "¶", "¶", "ª");
+  tr["&laquo;"] = new Array("´", "Æ", "Æ", "«");
+  tr["&not;"] = new Array("¨", "™", "™", "¬");
+  tr["&shy;"] = new Array("≠", "≠", "≠", "–");
+  tr["&reg;"] = new Array("Æ", "©", "Æ", "®");
+  tr["&macr;"] = new Array("Ø", "Ó", "Ø", "¯");
+  tr["&deg;"] = new Array("∞", "¯", "¯", "°");
+  tr["&plusmn;"] = new Array("±", "Ò", "Ò", "±");
+  tr["&sup2;"] = new Array("≤", "˝", "˝", "≤");
+  tr["&sup3;"] = new Array("≥", "¸", "≥", "≥");
+  tr["&acute;"] = new Array("¥", "Ô", "¥", "´");
+  tr["&micro;"] = new Array("µ", "µ", "µ", "µ");
+  tr["&para;"] = new Array("∂", "Ù", "∂", "¶");
+  tr["&middot;"] = new Array("∑", "˙", "˙", "·");
+  tr["&cedil;"] = new Array("∏", "˜", "∏", "¸");
+  tr["&sup1;"] = new Array("π", "˚", "π", "π");
+  tr["&ordm;"] = new Array("∫", "ß", "ß", "º");
+  tr["&raquo;"] = new Array("ª", "Ø", "Ø", "»");
+  tr["&frac14;"] = new Array("º", "¨", "¨", "º");
+  tr["&frac12;"] = new Array("Ω", "´", "´", "Ω");
+  tr["&frac34;"] = new Array("æ", "Û", "æ", "æ");
+  tr["&iquest;"] = new Array("ø", "®", "®", "¿");
+  tr["&Agrave;"] = new Array("¿", "∑", "¿", "À");
+  tr["&Aacute;"] = new Array("¡", "µ", "¡", "Á");
+  tr["&Acirc;"] = new Array("¬", "∂", "¬", "Â");
+  tr["&Atilde;"] = new Array("√", "«", "√", "Ã");
+  tr["&Auml;"] = new Array("ƒ", "é", "é", "Ä");
+  tr["&Aring;"] = new Array("≈", "è", "è", "Å");
+  tr["&AElig;"] = new Array("∆", "í", "í", "Æ");
+  tr["&Ccedil;"] = new Array("«", "Ä", "Ä", "Ç");
+  tr["&Egrave;"] = new Array("»", "‘", "»", "È");
+  tr["&Eacute;"] = new Array("…", "ê", "ê", "É");
+  tr["&Ecirc;"] = new Array(" ", "“", " ", "Ê");
+  tr["&Euml;"] = new Array("À", "”", "À", "Ë");
+  tr["&Igrave;"] = new Array("Ã", "ﬁ", "Ã", "Ì");
+  tr["&Iacute;"] = new Array("Õ", "÷", "Õ", "Í");
+  tr["&Icirc;"] = new Array("Œ", "◊", "Œ", "Î");
+  tr["&Iuml;"] = new Array("œ", "ÿ", "œ", "Ï");
+  tr["&ETH;"] = new Array("–", "—", "–", "–");
+  tr["&Ntilde;"] = new Array("—", "•", "•", "Ñ");
+  tr["&Ograve;"] = new Array("“", "„", "“", "Ò");
+  tr["&Oacute;"] = new Array("”", "‡", "”", "Ó");
+  tr["&Ocirc;"] = new Array("‘", "‚", "‘", "Ô");
+  tr["&Otilde;"] = new Array("’", "Â", "’", "Õ");
+  tr["&Ouml;"] = new Array("÷", "ô", "ô", "Ö");
+  tr["&times;"] = new Array("◊", "û", "◊", "◊");
+  tr["&Oslash;"] = new Array("ÿ", "ù", "ÿ", "Ø");
+  tr["&Ugrave;"] = new Array("Ÿ", "Î", "Ÿ", "Ù");
+  tr["&Uacute;"] = new Array("⁄", "È", "⁄", "Ú");
+  tr["&Ucirc;"] = new Array("€", "Í", "€", "Û");
+  tr["&Uuml;"] = new Array("‹", "ö", "ö", "Ü");
+  tr["&Yacute;"] = new Array("›", "Ì", "›", "›");
+  tr["&THORN;"] = new Array("ﬁ", "Ë", "ﬁ", "ﬁ");
+  tr["&szlig;"] = new Array("ﬂ", "·", "·", "ß");
+  tr["&agrave;"] = new Array("‡", "Ö", "Ö", "à");
+  tr["&aacute;"] = new Array("·", "†", "†", "á");
+  tr["&acirc;"] = new Array("‚", "É", "É", "â");
+  tr["&atilde;"] = new Array("„", "∆", "„", "ã");
+  tr["&auml;"] = new Array("‰", "Ñ", "Ñ", "ä");
+  tr["&aring;"] = new Array("Â", "Ü", "Ü", "å");
+  tr["&aelig;"] = new Array("Ê", "ë", "ë", "æ");
+  tr["&ccedil;"] = new Array("Á", "á", "á", "ç");
+  tr["&egrave;"] = new Array("Ë", "ä", "ä", "è");
+  tr["&eacute;"] = new Array("È", "Ç", "Ç", "é");
+  tr["&ecirc;"] = new Array("Í", "à", "à", "ê");
+  tr["&euml;"] = new Array("Î", "â", "â", "ë");
+  tr["&igrave;"] = new Array("Ï", "ç", "ç", "ì");
+  tr["&iacute;"] = new Array("Ì", "°", "°", "í");
+  tr["&icirc;"] = new Array("Ó", "å", "å", "î");
+  tr["&iuml;"] = new Array("Ô", "ã", "ã", "ï");
+  tr["&eth;"] = new Array("", "–", "", "");
+  tr["&ntilde;"] = new Array("Ò", "§", "§", "ñ");
+  tr["&ograve;"] = new Array("Ú", "ï", "ï", "ò");
+  tr["&oacute;"] = new Array("Û", "¢", "¢", "ó");
+  tr["&ocirc;"] = new Array("Ù", "ì", "ì", "ô");
+  tr["&otilde;"] = new Array("ı", "‰", "ı", "õ");
+  tr["&ouml;"] = new Array("ˆ", "î", "î", "ö");
+  tr["&divide;"] = new Array("˜", "ˆ", "ˆ", "÷");
+  tr["&oslash;"] = new Array("¯", "õ", "¯", "ø");
+  tr["&ugrave;"] = new Array("˘", "ó", "ó", "ù");
+  tr["&uacute;"] = new Array("˙", "£", "£", "ú");
+  tr["&ucirc;"] = new Array("˚", "ñ", "ñ", "û");
+  tr["&uuml;"] = new Array("¸", "Å", "Å", "ü");
+  tr["&yacute;"] = new Array("˝", "Ï", "˝", "˝");
+  tr["&thorn;"] = new Array("˛", "Á", "˛", "˛");
+  tr["&yuml;"] = new Array("ˇ", "ò", "ò", "ÿ");
 }
-function e_print_header(txtin) {
+function a_myEscape(txtin) {
   var ind = 0;
   var reg = "";
   var cu = 0;
@@ -219,50 +218,50 @@ function e_print_header(txtin) {
   }
   return escape(txtout);
 }
-function B_get_cookie() {
+function a_show_help_ins() {
   s.document.open();
   s.document.writeln(ADMIN_TOP);
   s.document.writeln(FONT_A_BIG + A_SHOW_HELP_INS + "</FONT>");
   s.document.writeln(ADMIN_BOT);
   s.document.close();
 }
-function B_speichere_kunden() {
+function a_show_help_set() {
   s.document.open();
   s.document.writeln(ADMIN_TOP);
   s.document.writeln(FONT_A_BIG + A_SHOW_HELP_SET + "</FONT>");
   s.document.writeln(ADMIN_BOT);
   s.document.close();
 }
-function b_set_cookie() {
+function a_show_help_des() {
   s.document.open();
   s.document.writeln(ADMIN_TOP);
   s.document.writeln(FONT_A_BIG + A_SHOW_HELP_DES + "</FONT>");
   s.document.writeln(ADMIN_BOT);
   s.document.close();
 }
-function b_product_price(s_obj) {
+function a_show_help(s_obj) {
   was = s_obj.options[s_obj.selectedIndex].value;
   s_obj.selectedIndex = 0;
   if (was == "help_ed") {
-    B_get_cookie();
+    a_show_help_ins();
     return;
   } else if (was == "help_set") {
-    B_speichere_kunden();
+    a_show_help_set();
     return;
   } else if (was == "help_des") {
-    b_set_cookie();
+    a_show_help_des();
     return;
   }
-  B_auswertung(was);
+  A_doConfigSystem(was);
 }
-function Xeg() {
-  with (preis.document) {
+function a_print_frame() {
+  with (m.document) {
     writeln(ADMIN_TOP);
     writeln("<FORM name=menu>");
     writeln("<CENTER><TABLE >");
     writeln("<TR>");
     writeln("<TD colspan=2 align=middle>" + FONT_A + A_PRINT_FRAME_TOP);
-    writeln("<SELECT onChange='parent.b_product_price(this)' name=sel1>");
+    writeln("<SELECT onChange='parent.a_show_help(this)' name=sel1>");
     writeln("<OPTION selected value='help_ed'>" + A_PRINT_FRAME_INS);
     writeln("<OPTION value='page'>" + A_PRINT_FRAME_ADDP);
     writeln("<OPTION value='ed_C'>" + A_PRINT_FRAME_ED_PAGE);
@@ -270,7 +269,7 @@ function Xeg() {
     writeln("<OPTION value='ins_art'>" + A_PRINT_FRAME_ADD1);
     writeln("<OPTION value='ed_art'>" + A_PRINT_FRAME_ED_ART);
     writeln("</SELECT><BR>");
-    writeln("<SELECT onChange='parent.b_product_price(this)' name=sel2>");
+    writeln("<SELECT onChange='parent.a_show_help(this)' name=sel2>");
     writeln("<OPTION value='help_des'>" + A_NAME_ADMIN_DES);
     writeln("<OPTION value='sf'>" + A_NAME_ADMIN_F);
     writeln("<OPTION value='nav'>" + A_NAME_ADMIN_NAV);
@@ -278,7 +277,7 @@ function Xeg() {
     writeln("<OPTION value='tbo'>" + A_NAME_ADMIN_TBO);
     writeln("<OPTION value='htm'>" + A_NAME_ADMIN_HTM);
     writeln("</SELECT><BR>");
-    writeln("<SELECT onChange='parent.b_product_price(this)' name=sel3>");
+    writeln("<SELECT onChange='parent.a_show_help(this)' name=sel3>");
     writeln("<OPTION value='help_set'>" + A_NAME_ADMIN);
     writeln("<OPTION value='sb'>" + A_NAME_ADMIN_B);
     writeln("<OPTION value='vorlage'>" + A_NAME_ADMIN_VOR);
@@ -299,7 +298,7 @@ function Xeg() {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm');\"",
     );
     writeln("value='" + A_NAME_HELP + "'>");
-    writeln("<INPUT type=button onClick='javascript:parent.B_set_mwstshow();'");
+    writeln("<INPUT type=button onClick='javascript:parent.A_save();'");
     writeln("value='" + A_NAME_SAVE + "'><BR>");
     writeln(
       "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/bugrep.htm');\"",
@@ -318,30 +317,30 @@ function Xeg() {
     close();
   }
 }
-function B_toMWST(ln) {
+function a_ln(ln) {
   if (rounds > 10) {
     location.replace("http://www.js-webShop.com");
     return;
   }
   if (ln) {
-    if (B_getMWST(ln)) system["ln"] = escape(ln);
+    if (a_check_ln(ln)) system["ln"] = escape(ln);
     else alert(A_CHECK_LN);
   } else {
     if (system["ln"]) {
-      if (B_getMWST(unescape(system["ln"]))) {
-        Xeg();
+      if (a_check_ln(unescape(system["ln"]))) {
+        a_print_frame();
         return;
       }
     }
     tln = prompt(A_NAME_LN + ":", "");
-    if (B_getMWST(tln)) {
+    if (a_check_ln(tln)) {
       system["ln"] = escape(tln);
-      Xeg();
-    } else B_toMWST();
+      a_print_frame();
+    } else a_ln();
   }
   return;
 }
-function B_getMWST(ln) {
+function a_check_ln(ln) {
   if (!ln) return false;
   rounds++;
   if (
@@ -357,7 +356,7 @@ function B_getMWST(ln) {
     return false;
   else return true;
 }
-function B_set_currency() {
+function a_print_save() {
   s.document.open();
   s.document.writeln(ADMIN_TOP);
   s.document.writeln("<FORM name=config>");
@@ -366,7 +365,7 @@ function B_set_currency() {
   s.document.writeln(ADMIN_BOT);
   s.document.close();
 }
-function B_set_mwstshow() {
+function A_save() {
   var path = "";
   path = unescape(
     location.href.substring(0, location.href.lastIndexOf("/") + 1),
@@ -383,7 +382,7 @@ function B_set_mwstshow() {
   with (s.document) {
     open();
     writeln(ADMIN_TOP);
-    writeln("<FORM name=save onSubmit='parent.toDM();'>");
+    writeln("<FORM name=save onSubmit='parent.a_do_save();'>");
     writeln(FONT_A_BIG + A_SAVE_TOP + "</FONT><BR>");
     writeln(
       FONT_A +
@@ -400,7 +399,7 @@ function B_set_mwstshow() {
     close();
   }
 }
-function toDM() {
+function a_do_save() {
   netscape.security.PrivilegeManager.enablePrivilege("UniversalFileAccess");
   if (s.document.save.path.value != "") {
     path = s.document.save.path.value;
@@ -408,7 +407,7 @@ function toDM() {
     else path = path.substring(0, path.lastIndexOf("/") + 1);
   } else path = unescape(s.document.save.defaultPath.value);
   file_index = path + unescape(admin["ind"]);
-  file_shop = path + unescape(admin["aq_file"]);
+  file_shop = path + unescape(admin["start_file"]);
   file_aq = path + "js-adm.js";
   file_art = path + "js-db.js";
   file_layout = path + "js-sys.js";
@@ -427,31 +426,31 @@ function toDM() {
   out_index = new java.io.FileOutputStream(file_index);
   ba_stream_index = new java.io.ByteArrayOutputStream();
   FSI = new java.io.DataOutputStream(ba_stream_index);
-  toCurr();
+  a_save_index();
   out_index.write(ba_stream_index.toByteArray());
   out_index.close();
   out_art = new java.io.FileOutputStream(file_art);
   ba_stream_art = new java.io.ByteArrayOutputStream();
   FSA = new java.io.DataOutputStream(ba_stream_art);
-  B_enter_payment();
+  a_save_db();
   out_art.write(ba_stream_art.toByteArray());
   out_art.close();
   out_layout = new java.io.FileOutputStream(file_layout);
   ba_stream_layout = new java.io.ByteArrayOutputStream();
   FSL = new java.io.DataOutputStream(ba_stream_layout);
-  B_retOpt();
+  a_save_system();
   out_layout.write(ba_stream_layout.toByteArray());
   out_layout.close();
   out_shop = new java.io.FileOutputStream(file_shop);
   ba_stream_shop = new java.io.ByteArrayOutputStream();
   FSS = new java.io.DataOutputStream(ba_stream_shop);
-  toDMhidden();
+  a_save_frameset();
   out_shop.write(ba_stream_shop.toByteArray());
   out_shop.close();
   out_aq = new java.io.FileOutputStream(file_aq);
   ba_stream_aq = new java.io.ByteArrayOutputStream();
   FST = new java.io.DataOutputStream(ba_stream_aq);
-  B_isEu();
+  a_save_admin();
   out_aq.write(ba_stream_aq.toByteArray());
   out_aq.close();
   with (s.document) {
@@ -459,7 +458,7 @@ function toDM() {
     writeln(ADMIN_TOP);
     writeln(FONT_A_BIG + A_DO_SAVE_DONE);
     writeln(
-      "<P><CENTER><artikel HREF='file:///" +
+      "<P><CENTER><A HREF='file:///" +
         file_index +
         "' target=_new>" +
         A_DO_SAVE_DONE_TEST +
@@ -470,31 +469,31 @@ function toDM() {
     close();
   }
 }
-function toDMhidden() {
+function a_save_frameset() {
   FSS.writeBytes(
-    '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">\mwst<HTML>\mwst<HEAD>\mwst\mwst',
+    '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">\n<HTML>\n<HEAD>\n\n',
   );
-  FSS.writeBytes("<TITLE>" + unescape(system["titel"]) + "</TITLE>\mwst");
+  FSS.writeBytes("<TITLE>" + unescape(system["titel"]) + "</TITLE>\n");
   FSS.writeBytes(
     '<META name="author" content="' +
       unescape(system["betreiber"] + " " + system["email"]) +
-      '">\mwst',
+      '">\n',
   );
   FSS.writeBytes(
     '<META name="generator" content="js-webShop V' +
       system["version"] +
-      ' www.js-webShop.com">\mwst',
+      ' www.js-webShop.com">\n',
   );
   FSS.writeBytes(
     '<META name="author" content="' +
       unescape(system["betreiber"] + " " + system["email"]) +
-      '">\mwst',
+      '">\n',
   );
-  FSS.writeBytes("</HEAD>\mwst");
+  FSS.writeBytes("</HEAD>\n");
   FSS.writeBytes(
-    "<NOSCRIPT>\mwst<H1>Please allow JavaScript to have a look at this Cs!<P>" +
+    "<NOSCRIPT>\n<H1>Please allow JavaScript to have a look at this Cs!<P>" +
       A_DO_SAVE_INDEX_NOSCRIPT +
-      "</H1>\mwst</NOSCRIPT>\mwst\mwst",
+      "</H1>\n</NOSCRIPT>\n\n",
   );
   FSS.writeBytes(
     '<SCRIPT src="js-db.js" type="text/javascript"> \
@@ -525,7 +524,7 @@ function toDMhidden() {
 //- -- Contact pluto@iconnect.de -- \
 \
 //--> \
-</SCRIPT>\mwst\mwst\mwst',
+</SCRIPT>\n\n\n',
   );
   FSS.writeBytes(
     '<FRAMESET onLoad=\'setTimeout("E_main();",500);\' \
@@ -536,43 +535,41 @@ NORESIZE>\
 <FRAME NAME="r" src="language.htm" \
 MARGINWIDTH="20" MARGINHEIGHT="10" \
 SCROLLING="auto" NORESIZE> \
-</FRAMESET>\mwst\mwst <BODY> \mwst',
+</FRAMESET>\n\n <BODY> \n',
   );
   FSS.writeBytes(
-    "\mwst\mwst<H1>Your browser doesn't support frames, we're sorry.<P>\mwst" +
+    "\n\n<H1>Your browser doesn't support frames, we're sorry.<P>\n" +
       A_DO_SAVE_INDEX_NOFRAMES +
-      "</H1>\mwst\mwst",
+      "</H1>\n\n",
   );
   FSS.writeBytes("</BODY></HTML>");
 }
-function toCurr() {
+function a_save_index() {
   var re = /(<.*?>)/gi;
   var re2 = /"/gi;
   var txt = "";
   var tt = "";
   FSI.writeBytes(
-    '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">\mwst<HTML>\mwst<HEAD>\mwst\mwst',
+    '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">\n<HTML>\n<HEAD>\n\n',
   );
-  FSI.writeBytes("<TITLE>" + unescape(system["titel"]) + "</TITLE>\mwst");
+  FSI.writeBytes("<TITLE>" + unescape(system["titel"]) + "</TITLE>\n");
   FSI.writeBytes(
     '<META name="author" content="' +
       unescape(system["betreiber"] + " " + system["email"]) +
-      '">\mwst',
+      '">\n',
   );
   FSI.writeBytes(
     '<META name="generator" content="js-webShop V' +
       system["version"] +
-      ' www.js-webShop.com">\mwst',
+      ' www.js-webShop.com">\n',
   );
   FSI.writeBytes(
     '<META name="author" content="' +
       unescape(system["betreiber"] + " " + system["email"]) +
-      '">\mwst',
+      '">\n',
   );
   FSI.writeBytes(
-    '<META name="description" content="' +
-      unescape(system["titel"]) +
-      '">\mwst',
+    '<META name="description" content="' + unescape(system["titel"]) + '">\n',
   );
   FSI.writeBytes('<META name="keywords" content="');
   for (i in page) {
@@ -587,20 +584,20 @@ function toCurr() {
       FSI.writeBytes(txt.replace(re, "") + " ");
     }
   }
-  FSI.writeBytes('">' + "\mwst");
-  FSI.writeBytes("<script>\ndone = false;\mwst</script>\mwst");
+  FSI.writeBytes('">' + "\n");
+  FSI.writeBytes("<script>\ndone = false;\n</script>\n");
   endung = file_shop.substring(file_shop.lastIndexOf("."), file_shop.length);
   FSI.writeBytes(
-    "<script language='JavaScript1.2'>\mwst<!-- \
+    "<script language='JavaScript1.2'>\n<!-- \
 function go(){ \
 var gt = document.fo.pass.value; \
 eval(\"location.replace('\"+ gt +\"" +
       endung +
       "')\"); \
 } \
-//-->\mwst</script>",
+//-->\n</script>",
   );
-  FSI.writeBytes("</head>\mwst");
+  FSI.writeBytes("</head>\n");
   FSI.writeBytes(
     "<BODY " +
       PT_BGC +
@@ -612,12 +609,12 @@ eval(\"location.replace('\"+ gt +\"" +
       PT_AL +
       "' background='" +
       PT_BG +
-      "'>\mwst\mwst",
+      "'>\n\n",
   );
   FSI.writeBytes(
-    "\mwst\mwst<noscript> \mwst" +
-      unescape(admin["aq_noscript"]) +
-      " \mwst</noscript>\mwst",
+    "\n\n<noscript> \n" +
+      unescape(admin["start_noscript"]) +
+      " \n</noscript>\n",
   );
   FSI.writeBytes(
     '<script language=\'JavaScript1.2\'> \
@@ -654,7 +651,7 @@ writeln('" +
       FONT_TT +
       "'); \
 writeln(unescape('" +
-      admin["aq_ok1"] +
+      admin["start_ok1"] +
       '\') +"<HR>"); \
 \
 writeln("<P><img name=s01 src=' +
@@ -688,20 +685,20 @@ writeln("<img name=s42 src=' +
       system["s_off"] +
       '>"); \
 writeln("<HR>"+ unescape(\'' +
-      admin["aq_ok2"] +
+      admin["start_ok2"] +
       "')); \
-writeln(\"<FORM name=fo onSubmit='return false;'>\"); \mwst",
+writeln(\"<FORM name=fo onSubmit='return false;'>\"); \n",
   );
   if (admin["password"] == "on") {
     FSI.writeBytes(
-      "writeln(\"<INPUT type=text name=pass onChange='go()'>\");\mwst",
+      "writeln(\"<INPUT type=text name=pass onChange='go()'>\");\n",
     );
-    FSI.writeBytes('writeln("<INPUT type=button value=Weiter >");\mwst');
+    FSI.writeBytes('writeln("<INPUT type=button value=Weiter >");\n');
   } else
     FSI.writeBytes(
       'writeln("<INPUT type=button value=weiter onClick=\'location.replace(\\\"' +
-        unescape(admin["aq_file"]) +
-        '\\\");\'>");\mwst',
+        unescape(admin["start_file"]) +
+        '\\\");\'>");\n',
     );
   FSI.writeBytes(
     'writeln("</FORM></FONT></TD></TR></TABLE>"); \
@@ -737,7 +734,7 @@ writeln('" +
       FONT_TT +
       "'); \
 writeln(unescape('" +
-      admin["aq_old"] +
+      admin["start_old"] +
       "') +\"</TD></TR>\"); \
 writeln(\"</TABLE>\"); \
 close(); \
@@ -828,7 +825,7 @@ document.s41.src = '" +
 </script> \
 <script language='JavaScript1.2'> \
 <!-- \
-var my_img = new Array(); \mwst",
+var my_img = new Array(); \n",
   );
   var co = 0;
   var tmp = "";
@@ -837,7 +834,7 @@ var my_img = new Array(); \mwst",
       tmp = unescape(system[im]);
       tmpsrc = tmp.match(/([a-z|0-9|_|\-|\/|\\]*\.+(jpg|gif))/i);
       if (tmpsrc) {
-        FSI.writeBytes("my_img[" + co + "] = '" + tmpsrc[0] + "';\mwst");
+        FSI.writeBytes("my_img[" + co + "] = '" + tmpsrc[0] + "';\n");
         co++;
       }
     }
@@ -849,7 +846,7 @@ var my_img = new Array(); \mwst",
         tmp = unescape(page[im][ha]);
         tmpsrc = tmp.match(/([a-z|0-9|_|\-|\/|\\]*\.+(jpg|gif))/i);
         if (tmpsrc) {
-          FSI.writeBytes("my_img[" + co + "] = '" + tmpsrc[0] + "';\mwst");
+          FSI.writeBytes("my_img[" + co + "] = '" + tmpsrc[0] + "';\n");
           co++;
         }
       }
@@ -862,15 +859,15 @@ document.writeln("<img name=put_here"+ i +" src=\'"+ my_img[i] +"\' width=1 heig
 \
 document.s42.src = \'' +
       system["s_on"] +
-      "'; \mwst",
+      "'; \n",
   );
   if (admin["password"] == "off")
     FSI.writeBytes(
       "setTimeout('location.replace(\"" +
-        unescape(admin["aq_file"]) +
-        "\")', 2000);\mwst",
+        unescape(admin["start_file"]) +
+        "\")', 2000);\n",
     );
-  FSI.writeBytes("//--> \mwst</script>\mwst\mwst\mwst");
+  FSI.writeBytes("//--> \n</script>\n\n\n");
   FSI.writeBytes(
     "<TABLE " +
       TBG_PT +
@@ -880,16 +877,16 @@ document.s42.src = \'' +
       TB_P +
       "' cellpadding='" +
       TP_P +
-      "'>\mwst",
+      "'>\n",
   );
   FSI.writeBytes(
     "<TR><TD>" +
       FONT +
       "<FONT size=-3 color='" +
       unescape(system["tbg_pt"]) +
-      "'>\mwst",
+      "'>\n",
   );
-  FSI.writeBytes(unescape(system["titel"]) + "\mwst\mwst");
+  FSI.writeBytes(unescape(system["titel"]) + "\n\n");
   for (i in page) {
     tt = unescape(page[i]["name"]);
     txt = tt.replace(re2, "");
@@ -904,28 +901,22 @@ document.s42.src = \'' +
   }
   FSI.writeBytes("</font></font></TD></TR></TABLE></body></html>");
 }
-function B_isEu() {
-  B_enter_address(FST);
-  FST.writeBytes("var admin = new Array();\mwst");
+function a_save_admin() {
+  a_save_header(FST);
+  FST.writeBytes("var admin = new Array();\n");
   for (i in admin) {
-    FST.writeBytes("admin['" + i + "'] = '" + admin[i] + "';\mwst");
+    FST.writeBytes("admin['" + i + "'] = '" + admin[i] + "';\n");
   }
 }
-function B_retOpt() {
-  B_enter_address(FSL);
-  FSL.writeBytes("var system = new Array();\mwst");
+function a_save_system() {
+  a_save_header(FSL);
+  FSL.writeBytes("var Q = new Array();\n");
   for (i in system) {
     if (i == "currency" || i == "mwst") {
-      FSL.writeBytes("system['" + i + "'] = new Array();\mwst");
-      for (summen in system[i]) {
+      FSL.writeBytes("system['" + i + "'] = new Array();\n");
+      for (f in system[i]) {
         FSL.writeBytes(
-          "system['" +
-            i +
-            "']['" +
-            summen +
-            "'] = '" +
-            system[i][summen] +
-            "';\mwst",
+          "system['" + i + "']['" + f + "'] = '" + system[i][f] + "';\n",
         );
       }
     } else if (
@@ -935,66 +926,60 @@ function B_retOpt() {
       i == "payment" ||
       i == "features"
     ) {
-      FSL.writeBytes("system['" + i + "'] = new Array();\mwst");
-      for (preisa in system[i]) {
-        if (!system[i][preisa] && i == "features") continue;
-        FSL.writeBytes(
-          "system['" + i + "'][" + preisa + "] = new Array();\mwst",
-        );
-        for (summen in system[i][preisa]) {
+      FSL.writeBytes("system['" + i + "'] = new Array();\n");
+      for (k in system[i]) {
+        if (!system[i][k] && i == "features") continue;
+        FSL.writeBytes("system['" + i + "'][" + k + "] = new Array();\n");
+        for (f in system[i][k]) {
           FSL.writeBytes(
             "system['" +
               i +
               "'][" +
-              preisa +
+              k +
               "]['" +
-              summen +
+              f +
               "'] = '" +
-              system[i][preisa][summen] +
-              "';\mwst",
+              system[i][k][f] +
+              "';\n",
           );
         }
       }
     } else if (i == "ewu") {
-      FSL.writeBytes("system['" + i + "'] = new Array();\mwst");
-      for (preisa in system[i]) {
-        FSL.writeBytes(
-          "system['" + i + "']['" + preisa + "'] = new Array();\mwst",
-        );
-        for (summen in system[i][preisa]) {
+      FSL.writeBytes("system['" + i + "'] = new Array();\n");
+      for (k in system[i]) {
+        FSL.writeBytes("system['" + i + "']['" + k + "'] = new Array();\n");
+        for (f in system[i][k]) {
           FSL.writeBytes(
             "system['" +
               i +
               "']['" +
-              preisa +
+              k +
               "']['" +
-              summen +
+              f +
               "'] = '" +
-              system[i][preisa][summen] +
-              "';\mwst",
+              system[i][k][f] +
+              "';\n",
           );
         }
       }
     } else {
       if (system[i] != "do_not_save")
-        FSL.writeBytes("system['" + i + "'] = '" + system[i] + "';\mwst");
+        FSL.writeBytes("system['" + i + "'] = '" + system[i] + "';\n");
     }
   }
 }
-function B_enter_payment() {
-  B_enter_address(FSA);
-  FSA.writeBytes("var artikel = new Array();\mwst");
-  FSA.writeBytes("var features = new Array();\mwst");
-  FSA.writeBytes("var page = new Array();\mwst");
+function a_save_db() {
+  a_save_header(FSA);
+  FSA.writeBytes("var A = new Array();\n");
+  FSA.writeBytes("var B = new Array();\n");
+  FSA.writeBytes("var C = new Array();\n");
   for (i in page) {
     if (i == "length") {
       continue;
     }
-    FSA.writeBytes("page[" + i + "] = new Array();\mwst");
-    for (menge in page[i]) {
-      FSA.writeBytes(
-        "page[" + i + "]['" + menge + "'] = '" + page[i][menge] + "';\mwst",
-      );
+    FSA.writeBytes("page[" + i + "] = new Array();\n");
+    for (j in page[i]) {
+      FSA.writeBytes("page[" + i + "]['" + j + "'] = '" + page[i][j] + "';\n");
     }
   }
   for (i in artikel) {
@@ -1004,101 +989,95 @@ function B_enter_payment() {
     if (i == "length") {
       continue;
     }
-    FSA.writeBytes("artikel[" + i + "] = new Array();\mwst");
-    for (menge in artikel[i]) {
-      if (!artikel[i][menge]) continue;
+    FSA.writeBytes("artikel[" + i + "] = new Array();\n");
+    for (j in artikel[i]) {
+      if (!artikel[i][j]) continue;
       FSA.writeBytes(
-        "artikel[" +
-          i +
-          "]['" +
-          menge +
-          "'] = '" +
-          artikel[i][menge] +
-          "';\mwst",
+        "artikel[" + i + "]['" + j + "'] = '" + artikel[i][j] + "';\n",
       );
     }
   }
 }
-function B_enter_address(i_strm) {
-  i_strm.writeBytes("\mwst //- -- Copyright 1998 / 1999 iConnect.de --\mwst");
-  i_strm.writeBytes(" //- -- Contact pluto@iconnect.de --\mwst");
-  i_strm.writeBytes(" //- -- coAuthor kdoberstein@js-webShop.de --\mwst");
+function a_save_header(i_strm) {
+  i_strm.writeBytes("\n //- -- Copyright 1998 / 1999 iConnect.de --\n");
+  i_strm.writeBytes(" //- -- Contact pluto@iconnect.de --\n");
+  i_strm.writeBytes(" //- -- coAuthor kdoberstein@js-webShop.de --\n");
 }
-function B_del(io) {
-  if (io.type == "text") system[io.name] = e_print_header(io.value);
+function a_set_config(io) {
+  if (io.type == "text") system[io.name] = a_myEscape(io.value);
   else if (io.type == "select-one") {
     var wert = "" + io.options[io.selectedIndex].value;
     if (wert == "enter") {
       wert = prompt(A_CONFIG_SYSTEM_SL_ASK, "");
       if (wert.length == 0) return;
     }
-    system[io.name] = e_print_header(wert);
+    system[io.name] = a_myEscape(wert);
   } else if (io.type == "checkbox") {
     if (io.checked) system[io.name] = "on";
     else system[io.name] = "off";
-  } else if (io.type == "textarea") system[io.name] = e_print_header(io.value);
+  } else if (io.type == "textarea") system[io.name] = a_myEscape(io.value);
   else alert("NOT DEFINED! " + io.type);
-  a_doSetEuroland();
+  E_init();
   LEFT = false;
   E_go("refresh");
 }
-function B_auswertung(setup) {
-  //noch:event fÔøΩr onclick auf radio-button raussuchen
+function A_doConfigSystem(setup) {
+  //noch:event f¸r onclick auf radio-button raussuchen
   var auswahl, selectname, configname;
   var txt_name, txt_value, txt_y, err_txt;
   var idx = "-1";
   if (setup == "page") {
-    e_insert_navgif();
+    a_page();
     return;
   } else if (setup == "ins_art") {
-    E_print_left_frame();
+    a_product();
     return;
   } else if (setup == "ed_C") {
-    e_insert_navgif(e_C_state);
+    a_page(e_page_state);
     return;
   } else if (setup == "vorlage") {
-    Xif();
+    a_import_first();
     return;
   } else if (setup == "import") {
-    Xih();
+    a_import_pages();
     return;
   } else if (setup == "ed_art") {
     a_editProd();
     return;
   } else if (setup == "sw") {
-    B_storeOrder(idx);
+    a_curr(idx);
     return;
   } else if (setup == "sa") {
-    B_delOrder("-1");
+    a_address("-1");
     return;
   } else if (setup == "sfr") {
     ART = "freight";
-    Xfp("-1");
+    a_vs("-1");
     return;
   } else if (setup == "slg") {
     ART = "areas";
-    Xfp("-1");
+    a_vs("-1");
     return;
   } else if (setup == "smw") {
-    B_setAmount("-1");
+    a_mwst("-1");
     return;
   } else if (setup == "sza") {
-    B_setCom("-1");
+    a_payment("-1");
     return;
   } else if (setup == "tbl") {
-    Xfu("-1");
+    a_color("-1");
     return;
   } else if (setup == "tbo") {
-    Xfx("-1");
+    a_border("-1");
     return;
   } else if (setup == "sf") {
-    Xfs("-1");
+    a_font("-1");
     return;
   } else if (setup == "vs") {
-    Xfy("-1");
+    a_config("-1");
     return;
   } else if (setup == "sft") {
-    e_set_areas("-1");
+    a_feature("-1");
     return;
   }
   with (s.document) {
@@ -1122,7 +1101,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_N +
           "</FONT></TD><TD><INPUT type=text name='name' value='" +
           unescape(system["name"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1130,7 +1109,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_TITEL +
           "</TD><TD><INPUT type=text name='titel' value='" +
           unescape(system["titel"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1138,7 +1117,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_B +
           "</TD><TD><INPUT type=text name='betreiber' value='" +
           unescape(system["betreiber"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1146,7 +1125,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_E +
           "</TD><TD><INPUT type=text name='email' value='" +
           unescape(system["email"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1154,7 +1133,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_T +
           "</TD><TD><INPUT type=text name='tel' value='" +
           unescape(system["tel"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1162,7 +1141,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_F +
           "</TD><TD><INPUT type=text name='fax' value='" +
           unescape(system["fax"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1170,7 +1149,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_S +
           "</TD><TD><INPUT type=text name='str' value='" +
           unescape(system["str"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1178,7 +1157,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_C +
           "</TD><TD><INPUT type=text name='city' value='" +
           unescape(system["city"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1186,7 +1165,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_CO +
           "</TD><TD><INPUT type=text name='country' value='" +
           unescape(system["country"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1194,22 +1173,22 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SB_PB +
           "</TD><TD><INPUT type=text name='txt_pn' value='" +
           unescape(system["txt_pn"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
           FONT_A +
           A_CONFIG_SYSTEM_SB_LU +
-          "</TD><TD><INPUT type=text name='al_url' value='" +
-          unescape(system["al_url"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "</TD><TD><INPUT type=text name='leave_url' value='" +
+          unescape(system["leave_url"]) +
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln("<TD>&nbsp;</TD><TD>&nbsp;</TD></TR>");
       writeln(
         "<TR><TD>" +
           FONT_A +
           A_CONFIG_SYSTEM_SB_SO +
-          "</TD><TD colspan=3><TEXTAREA rows=10 cols=50 name='sonstiges' onChange='parent.B_del(this);' wrap=virtual>" +
+          "</TD><TD colspan=3><TEXTAREA rows=10 cols=50 name='sonstiges' onChange='parent.a_set_config(this);' wrap=virtual>" +
           unescape(system["sonstiges"]) +
           "</TEXTAREA></TD></TR>",
       );
@@ -1232,7 +1211,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_LOGO +
           "</FONT></TD><TD><INPUT type=text name='logo' value='" +
           unescape(system["logo"]) +
-          "' onChange='parent.B_del(this);'></TD>" +
+          "' onChange='parent.a_set_config(this);'></TD>" +
           FONT_A,
       );
       writeln(
@@ -1247,7 +1226,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_SEL +
           "</TD><TD><INPUT type=text name='gif_sel' value='" +
           unescape(system["gif_sel"]) +
-          "' onChange='parent.B_del(this);'></TD>" +
+          "' onChange='parent.a_set_config(this);'></TD>" +
           FONT_A,
       );
       writeln(
@@ -1256,7 +1235,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_NSEL +
           "</TD><TD><INPUT type=text name='gif_nsel' value='" +
           unescape(system["gif_nsel"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1264,7 +1243,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_NBG +
           "</TD><TD><INPUT type=text name='np_bg' value='" +
           unescape(system["np_bg"]) +
-          "' onChange='parent.B_del(this);'></TD>" +
+          "' onChange='parent.a_set_config(this);'></TD>" +
           FONT_A,
       );
       writeln(
@@ -1273,7 +1252,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_BG +
           "</TD><TD><INPUT type=text name='pt_bg' value='" +
           unescape(system["pt_bg"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1281,7 +1260,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_B +
           "</TD><TD><INPUT type=text name='b_img' value='" +
           unescape(system["b_img"]) +
-          "' onChange='parent.B_del(this);'></TD>" +
+          "' onChange='parent.a_set_config(this);'></TD>" +
           FONT_A,
       );
       writeln(
@@ -1290,7 +1269,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_B_A +
           "</TD><TD><INPUT type=text name='b_a_img' value='" +
           unescape(system["b_a_img"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln("<TR><TD>&nbsp;</TD><TD>&nbsp;</TD>");
       writeln(
@@ -1299,7 +1278,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_B_B +
           "<TD><INPUT type=text name='b_b_img' value='" +
           unescape(system["b_b_img"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1307,7 +1286,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_LEAVE +
           "</TD><TD><INPUT type=text name='leave' value='" +
           unescape(system["leave"]) +
-          "' onChange='parent.B_del(this);'></TD>" +
+          "' onChange='parent.a_set_config(this);'></TD>" +
           FONT_A,
       );
       writeln(
@@ -1316,7 +1295,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_SEARCH +
           "</TD><TD><INPUT type=text name='search' value='" +
           unescape(system["search"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1324,7 +1303,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_GOLEFT +
           "</TD><TD><INPUT type=text name='goleft' value='" +
           unescape(system["goleft"]) +
-          "' onChange='parent.B_del(this);'></TD>" +
+          "' onChange='parent.a_set_config(this);'></TD>" +
           FONT_A,
       );
       writeln(
@@ -1333,15 +1312,15 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_GORIGHT +
           "</TD><TD><INPUT type=text name='goright' value='" +
           unescape(system["goright"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
           FONT_A +
           A_CONFIG_SYSTEM_NAV_START +
-          "</TD><TD><INPUT type=text name='navgif_aq' value='" +
-          unescape(system["navgif_aq"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "</TD><TD><INPUT type=text name='navgif_start' value='" +
+          unescape(system["navgif_start"]) +
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1349,7 +1328,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_STARTS +
           "</TD><TD><INPUT type=text name='navgifs_aq' value='" +
           unescape(system["navgifs_aq"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1357,7 +1336,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_BASKET +
           "</TD><TD><INPUT type=text name='navgif_basket' value='" +
           unescape(system["navgif_basket"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1365,7 +1344,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_BASKETS +
           "</TD><TD><INPUT type=text name='navgifs_basket' value='" +
           unescape(system["navgifs_basket"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1373,7 +1352,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_DATA +
           "</TD><TD><INPUT type=text name='navgif_data' value='" +
           unescape(system["navgif_data"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1381,7 +1360,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_DATAS +
           "</TD><TD><INPUT type=text name='navgifs_data' value='" +
           unescape(system["navgifs_data"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1389,7 +1368,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_SEND +
           "</TD><TD><INPUT type=text name='navgif_send' value='" +
           unescape(system["navgif_send"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1397,7 +1376,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_SENDS +
           "</TD><TD><INPUT type=text name='navgifs_send' value='" +
           unescape(system["navgifs_send"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1405,7 +1384,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_S_ON +
           "</TD><TD><INPUT type=text name='s_on' value='" +
           unescape(system["s_on"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln(
         "<TD>" +
@@ -1413,7 +1392,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_S_OFF +
           "</TD><TD><INPUT type=text name='s_off' value='" +
           unescape(system["s_off"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -1421,7 +1400,7 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_NAV_COOKIE +
           "</TD><TD><INPUT type=text name='cookie' value='" +
           unescape(system["cookie"]) +
-          "' onChange='parent.B_del(this);'></TD>",
+          "' onChange='parent.a_set_config(this);'></TD>",
       );
       writeln("<TD>&nbsp;</TD></TR>");
     } else if (setup == "sl") {
@@ -1439,20 +1418,18 @@ function B_auswertung(setup) {
       writeln(
         "<INPUT type=text name='action' size=40 value='" +
           unescape(system["action"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" + FONT_A + A_CONFIG_SYSTEM_SL_E + "</TD><TD>" + FONT_A,
       );
       write("<SELECT name='enctype' ");
-      writeln(" onChange='parent.B_del(this);'>");
+      writeln(" onChange='parent.a_set_config(this);'>");
       write("<OPTION value='text/plain'");
       if ("text/plain" == unescape(system["enctype"])) write(" selected ");
       writeln(">" + A_CONFIG_SYSTEM_SL_MAIL);
-      write("<OPTION value='application/payment-www-form-urlencoded'");
-      if (
-        "application/payment-www-form-urlencoded" == unescape(system["enctype"])
-      )
+      write("<OPTION value='application/x-www-form-urlencoded'");
+      if ("application/x-www-form-urlencoded" == unescape(system["enctype"]))
         write(" selected ");
       writeln(">" + A_CONFIG_SYSTEM_SL_CGI);
       write("<OPTION value='enter'>");
@@ -1464,61 +1441,63 @@ function B_auswertung(setup) {
           A_CONFIG_SYSTEM_SL_ZIT +
           "&nbsp;&nbsp;<INPUT type=text name='zit' size=15 value='" +
           unescape(system["zit"]) +
-          "' onChange='parent.B_del(this);'><BR>&nbsp;&nbsp;",
+          "' onChange='parent.a_set_config(this);'><BR>&nbsp;&nbsp;",
       );
       writeln(
         A_CONFIG_SYSTEM_SL_ZIN +
           " &nbsp;&nbsp;<INPUT type=text name='zin' size=15 value='" +
           unescape(system["zin"]) +
-          "' onChange='parent.B_del(this);'><BR>",
+          "' onChange='parent.a_set_config(this);'><BR>",
       );
       writeln(
         A_CONFIG_SYSTEM_SL_ZIV +
           "&nbsp;<INPUT type=text name='ziv' size=35 value='" +
           unescape(system["ziv"]) +
-          "' onChange='parent.B_del(this);'></TD></TR>",
+          "' onChange='parent.a_set_config(this);'></TD></TR>",
       );
       writeln("<TR><TD>" + FONT_A + A_CONFIG_SYSTEM_SL_COM + "</TD><TD>");
-      writeln("<INPUT type=checkbox name='com' onClick='parent.B_del(this);'");
+      writeln(
+        "<INPUT type=checkbox name='com' onClick='parent.a_set_config(this);'",
+      );
       if (system["com"] == "on") write(" checked ");
       writeln("></TD></TR>");
     } else if (setup == "htm") {
       writeln("<TR><TD>" + FONT_A + A_NAME_ADMIN_HTM + "</TD></TR>");
-      writeln("<TR>\mwst<TD colspan=2>");
+      writeln("<TR>\n<TD colspan=2>");
       writeln(
-        "<INPUT type=radio name=htm value='C_top' onClick='parent.Xfo(this);'><artikel HREF='javascript:parent.Xfo(\"" +
-          "C_top" +
+        "<INPUT type=radio name=htm value='page_top' onClick='parent.a_htm(this);'><A HREF='javascript:parent.a_htm(\"" +
+          "page_top" +
           "\")' onclick='sysedit.htm[0].checked = true'>" +
           A_CONFIG_SYSTEM_HTM_PT +
-          "</artikel>",
+          "</A>",
       );
       writeln(
-        "<INPUT type=radio name=htm value='C_f' onClick='parent.Xfo(this);'><artikel HREF='javascript:parent.Xfo(\"" +
-          "C_f" +
+        "<INPUT type=radio name=htm value='page_summen' onClick='parent.a_htm(this);'><A HREF='javascript:parent.a_htm(\"" +
+          "page_summen" +
           "\")' onclick='sysedit.htm[1].checked = true'>" +
           A_CONFIG_SYSTEM_HTM_PS +
-          "</artikel>",
+          "</A>",
       );
       writeln(
-        "<INPUT type=radio name=htm value='C_bottom' onClick='parent.Xfo(this);'><artikel HREF='javascript:parent.Xfo(\"" +
-          "C_bottom" +
+        "<INPUT type=radio name=htm value='page_bottom' onClick='parent.a_htm(this);'><A HREF='javascript:parent.a_htm(\"" +
+          "page_bottom" +
           "\")' onclick='sysedit.htm[2].checked = true'>" +
           A_CONFIG_SYSTEM_HTM_PB +
-          "</artikel>",
+          "</A>",
       );
       writeln(
-        "<INPUT type=radio name=htm value='nav_C_top' onClick='parent.Xfo(this);'><artikel HREF='javascript:parent.Xfo(\"" +
-          "nav_C_top" +
+        "<INPUT type=radio name=htm value='nav_page_top' onClick='parent.a_htm(this);'><A HREF='javascript:parent.a_htm(\"" +
+          "nav_page_top" +
           "\")' onclick='sysedit.htm[3].checked = true'>" +
           A_CONFIG_SYSTEM_HTM_NPT +
-          "</artikel>",
+          "</A>",
       );
       writeln(
-        "<INPUT type=radio name=htm value='nav_C_bottom' onClick='parent.Xfo(this);'><artikel HREF='javascript:parent.Xfo(\"" +
-          "nav_C_bottom" +
+        "<INPUT type=radio name=htm value='nav_page_bottom' onClick='parent.a_htm(this);'><A HREF='javascript:parent.a_htm(\"" +
+          "nav_page_bottom" +
           "\")' onclick='sysedit.htm[4].checked = true'>" +
           A_CONFIG_SYSTEM_HTM_NPB +
-          "</artikel>",
+          "</A>",
       );
       writeln("</TD>");
       writeln("<TR><TD align=center colspan=2>" + FONT_A_SMALL);
@@ -1537,7 +1516,7 @@ function B_auswertung(setup) {
       writeln(
         "<TR><TD valign=top colspan=2>" +
           FONT_A +
-          "<TEXTAREA align=textop cols=50 rows=10 name='htmltext' value='' onChange='parent.Xfo(this);' wrap='virtual'>",
+          "<TEXTAREA align=textop cols=50 rows=10 name='htmltext' value='' onChange='parent.a_htm(this);' wrap='virtual'>",
       );
       writeln("</TEXTAREA></TD></TR>");
     } else alert(A_CONFIG_SYSTEM_ERR);
@@ -1554,7 +1533,7 @@ function B_auswertung(setup) {
     close();
   } //of with
 }
-function b_add_record(str) {
+function a_2pf(str) {
   var c,
     len,
     zahl = "",
@@ -1581,7 +1560,7 @@ function b_add_record(str) {
   if (isNaN(pf)) return 0;
   else return Math.round(pf);
 }
-function B_setCom(i_obj) {
+function a_payment(i_obj) {
   var idx = "neu",
     ix = "",
     msg = "";
@@ -1592,9 +1571,9 @@ function B_setCom(i_obj) {
   }
   if (idx != "neu") {
     na = unescape(system["payment"][idx]["name"]);
-    val = a_pment_action(system["payment"][idx]["value"]);
-    lim = a_pment_action(system["payment"][idx]["limit"]);
-    betreiber = system["payment"][idx]["activ"];
+    val = b_nzahl(system["payment"][idx]["value"]);
+    lim = b_nzahl(system["payment"][idx]["limit"]);
+    ac = system["payment"][idx]["activ"];
     if (system["payment"][idx]["msg"])
       msg = unescape(system["payment"][idx]["msg"]);
     if (system["payment"][idx]["curr"])
@@ -1614,9 +1593,9 @@ function B_setCom(i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#zahlungsweise');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top rowspan=12>");
+    writeln("<TR>\n<TD valign=top rowspan=12>");
     writeln(
-      FONT_A + "<SELECT name=\"xs\" onChange='parent.B_setCom(this);' size=8>",
+      FONT_A + "<SELECT name=\"xs\" onChange='parent.a_payment(this);' size=8>",
     );
     for (i in system["payment"]) {
       write("<OPTION value='" + i + "'");
@@ -1679,7 +1658,7 @@ function B_setCom(i_obj) {
           FONT_A +
           "<INPUT type=text name='na' size=15 value='" +
           na +
-          "' onChange='parent.e_print_logo(\"" +
+          "' onChange='parent.a_edit_payment(\"" +
           idx +
           "\");'></FONT></TD></TR>",
       );
@@ -1689,7 +1668,7 @@ function B_setCom(i_obj) {
           A_CONFIG_SYSTEM_SZA_MSG +
           "</FONT></TD><TD>" +
           FONT_A +
-          "<TEXTAREA cols=15 rows=3 name='msg' wrap=virtual onChange='parent.b_checkFeatures(\"" +
+          "<TEXTAREA cols=15 rows=3 name='msg' wrap=virtual onChange='parent.a_edit_payment_value(\"" +
           idx +
           "\");'>",
       );
@@ -1702,7 +1681,7 @@ function B_setCom(i_obj) {
           FONT_A +
           "<INPUT type=text name='val' size=8 value='" +
           val +
-          "' onChange='parent.b_checkFeatures(\"" +
+          "' onChange='parent.a_edit_payment_value(\"" +
           idx +
           "\");'>&nbsp;" +
           CURR +
@@ -1716,7 +1695,7 @@ function B_setCom(i_obj) {
           FONT_A +
           "<INPUT type=text name='lim' size=8 value='" +
           lim +
-          "' onChange='parent.b_checkFeatures(\"" +
+          "' onChange='parent.a_edit_payment_value(\"" +
           idx +
           "\");'>&nbsp;" +
           CURR +
@@ -1728,32 +1707,32 @@ function B_setCom(i_obj) {
           A_CONFIG_SYSTEM_SZA_AK +
           "</FONT></TD><TD>" +
           FONT_A +
-          "<INPUT type=checkbox name='act' onClick='parent.b_checkFeatures(\"" +
+          "<INPUT type=checkbox name='act' onClick='parent.a_edit_payment_value(\"" +
           idx +
           "\");'",
       );
-      if (betreiber == "limit") write("checked");
+      if (ac == "limit") write("checked");
       writeln("></TD></TR>");
     }
     writeln("<TR><TD>" + FONT_A + A_CONFIG_SYSTEM_SZA_CASH + "</TD><TD>");
     writeln(
       FONT_A +
-        '<SELECT name="eca" onChange=\'parent.e_leave(this,"' +
+        '<SELECT name="eca" onChange=\'parent.a_set_payment_curr(this,"' +
         idx +
         "\");'>",
     );
     writeln("<OPTION value='null'>" + A_CONFIG_SYSTEM_SZA_ALL);
-    for (preisa in system["ewu"])
-      if (system["ewu"][preisa]["use"] == "limit") {
-        write("<OPTION value='" + preisa + "'");
-        if (preisa == ix) write("selected");
-        writeln(">" + system["ewu"][preisa]["name"]);
+    for (k in system["ewu"])
+      if (system["ewu"][k]["use"] == "limit") {
+        write("<OPTION value='" + k + "'");
+        if (k == ix) write("selected");
+        writeln(">" + system["ewu"][k]["name"]);
       }
-    for (menge in system["currency"]) {
-      if (menge == "base") continue;
-      write("<OPTION value='" + menge + "'");
-      if (menge == ix) write("selected");
-      writeln(">" + menge);
+    for (j in system["currency"]) {
+      if (j == "base") continue;
+      write("<OPTION value='" + j + "'");
+      if (j == ix) write("selected");
+      writeln(">" + j);
     }
     writeln("</SELECT></TD></TR>");
     if (idx == "neu")
@@ -1762,7 +1741,7 @@ function B_setCom(i_obj) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_INSERT +
-          "' onClick='parent.e_showDesc();'></FONT></TD></TR>",
+          "' onClick='parent.a_new_payment();'></FONT></TD></TR>",
       );
     else {
       writeln(
@@ -1770,14 +1749,14 @@ function B_setCom(i_obj) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_DO +
-          "' onClick='parent.XewMerkmale(this,\"" +
+          "' onClick='parent.a_paymentMerkmale(this,\"" +
           idx +
           "\");'>",
       );
       writeln(
         "<INPUT type=button value='" +
           A_CONFIG_SYSTEM_SZA_ACTION +
-          "' onClick='parent.XewAction(\"" +
+          "' onClick='parent.a_paymentAction(\"" +
           idx +
           "\");'>",
       );
@@ -1798,15 +1777,15 @@ function B_setCom(i_obj) {
     close();
   } //with
 }
-function e_leave(i_obj, idx) {
+function a_set_payment_curr(i_obj, idx) {
   PAYCURR = i_obj.options[i_obj.selectedIndex].value;
   if (idx != "neu") {
     system["payment"][idx]["curr"] = PAYCURR;
-    a_myEscape();
+    E_init_shipping();
     E_go("data");
   }
 }
-function e_showDesc() {
+function a_new_payment() {
   with (s.document.sys_x) {
     if (!na.value) {
       alert("A_CONFIG_SYSTEM_SZA_CHO");
@@ -1814,53 +1793,53 @@ function e_showDesc() {
     }
     idx = system["payment"].length;
     system["payment"][idx] = new Array();
-    system["payment"][idx]["name"] = e_print_header(na.value);
+    system["payment"][idx]["name"] = a_myEscape(na.value);
     if (PAYCURR) system["payment"][idx]["curr"] = PAYCURR;
-    b_checkFeatures(idx);
-    B_setCom("-1");
+    a_edit_payment_value(idx);
+    a_payment("-1");
   }
 }
-function e_print_logo(idx) {
+function a_edit_payment(idx) {
   with (s.document.sys_x) {
-    if (na.value) system["payment"][idx]["name"] = e_print_header(na.value);
-    a_myEscape();
+    if (na.value) system["payment"][idx]["name"] = a_myEscape(na.value);
+    E_init_shipping();
     E_go("data");
-    B_setCom(idx);
+    a_payment(idx);
   }
 }
-function b_checkFeatures(idx) {
+function a_edit_payment_value(idx) {
   with (s.document.sys_x) {
-    system["payment"][idx]["value"] = b_add_record(val.value);
-    system["payment"][idx]["limit"] = b_add_record(lim.value);
-    if (msg.value) system["payment"][idx]["msg"] = e_print_header(msg.value);
+    system["payment"][idx]["value"] = a_2pf(val.value);
+    system["payment"][idx]["limit"] = a_2pf(lim.value);
+    if (msg.value) system["payment"][idx]["msg"] = a_myEscape(msg.value);
     if (system["payment"][idx]["msg"])
-      system["payment"][idx]["msg"] = e_print_header(msg.value);
+      system["payment"][idx]["msg"] = a_myEscape(msg.value);
     if (act.checked) system["payment"][idx]["activ"] = "limit";
     else system["payment"][idx]["activ"] = "mwst";
-    a_myEscape();
+    E_init_shipping();
     E_go("data");
   }
 }
 function a_doDelPay(idx) {
-  Xey("payment", idx);
-  a_myEscape();
+  a_delete_sys("payment", idx);
+  E_init_shipping();
   E_go("data");
-  B_setCom("-1");
+  a_payment("-1");
 }
-function Xey(art, idx) {
+function a_delete_sys(art, idx) {
   var sys_array = new Array();
-  menge = 0;
+  j = 0;
   len = system[art].length;
   for (i in system[art]) {
-    if (i < idx) menge = i;
+    if (i < idx) j = i;
     if (i == idx) i++;
-    if (i > idx) menge = i - 1;
-    if (menge == len - 1) break;
-    sys_array[menge] = system[art][i];
+    if (i > idx) j = i - 1;
+    if (j == len - 1) break;
+    sys_array[j] = system[art][i];
   }
   system[art] = sys_array;
 }
-function XewMerkmale(i_obj, idx) {
+function a_paymentMerkmale(i_obj, idx) {
   var na = "",
     titl = "";
   var ind = "neu";
@@ -1895,10 +1874,10 @@ function XewMerkmale(i_obj, idx) {
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
     write("<TR><TD colspan=3>" + FONT_A_BIG + titl + "</FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top width=35% rowspan=12>");
+    writeln("<TR>\n<TD valign=top width=35% rowspan=12>");
     writeln(
       FONT_A +
-        '<SELECT name="xs" onChange=\'parent.XewMerkmale(this,"' +
+        '<SELECT name="xs" onChange=\'parent.a_paymentMerkmale(this,"' +
         idx +
         "\");' size=8>",
     );
@@ -1932,7 +1911,7 @@ function XewMerkmale(i_obj, idx) {
         FONT_A +
         "<INPUT type=text name='na' size=15 value='" +
         na +
-        "' onChange='parent.XexMerkmale(this,\"" +
+        "' onChange='parent.a_edit_paymentMerkmale(this,\"" +
         idx +
         '","' +
         ind +
@@ -1947,7 +1926,7 @@ function XewMerkmale(i_obj, idx) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_DELETE +
-          "' name='del' onClick='parent.XexMerkmale(this,\"" +
+          "' name='del' onClick='parent.a_edit_paymentMerkmale(this,\"" +
           idx +
           '","' +
           ind +
@@ -1958,7 +1937,7 @@ function XewMerkmale(i_obj, idx) {
         FONT_A_SMALL +
         "<INPUT type=button value='" +
         A_LEAVE +
-        "' onClick='parent.B_setCom(\"" +
+        "' onClick='parent.a_payment(\"" +
         idx +
         "\");'></TD></TR>",
     );
@@ -1968,7 +1947,7 @@ function XewMerkmale(i_obj, idx) {
     close();
   } //with
 }
-function XexMerkmale(i_obj, idx, ind) {
+function a_edit_paymentMerkmale(i_obj, idx, ind) {
   if (i_obj.type == "text") {
     if (i_obj.name == "na") {
       if (ind == "neu") {
@@ -1980,16 +1959,16 @@ function XexMerkmale(i_obj, idx, ind) {
   }
   if (i_obj.type == "button" && i_obj.name == "del") {
     var sys_array = new Array();
-    for (menge in system["payment"][idx]) {
-      if (menge != ind) sys_array[menge] = system["payment"][idx][menge];
+    for (j in system["payment"][idx]) {
+      if (j != ind) sys_array[j] = system["payment"][idx][j];
     }
     system["payment"][idx] = sys_array;
     ind = "-1";
   }
   E_go("refresh");
-  XewMerkmale(ind, idx);
+  a_paymentMerkmale(ind, idx);
 }
-function e_set_freight() {
+function a_feature_types() {
   var g = new Array();
   g[0] = "select";
   g[1] = "multiple-select";
@@ -1998,12 +1977,12 @@ function e_set_freight() {
   g[4] = "text";
   return g;
 }
-function e_set_areas(i_obj) {
-  var summen = new Array();
+function a_feature(i_obj) {
+  var f = new Array();
   var na = (req = "");
   idx = "neu";
   ftype = "";
-  summen = e_set_freight();
+  f = a_feature_types();
   if (i_obj != "-1") {
     if (i_obj.type == "select-multiple")
       idx = i_obj.options[i_obj.selectedIndex].value;
@@ -2027,10 +2006,10 @@ function e_set_areas(i_obj) {
       "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#A_merkmale');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top rowspan=12>");
+    writeln("<TR>\n<TD valign=top rowspan=12>");
     writeln(
       FONT_A +
-        "<SELECT name=\"fts\" onChange='parent.e_set_areas(this);' size=8>",
+        "<SELECT name=\"fts\" onChange='parent.a_feature(this);' size=8>",
     );
     for (i in system["features"])
       if (system["features"][i]) {
@@ -2051,7 +2030,7 @@ function e_set_areas(i_obj) {
         "'",
     );
     if (idx != "neu")
-      write("onChange='parent.e_go_right(this,\"" + idx + "\");'");
+      write("onChange='parent.a_edit_feature(this,\"" + idx + "\");'");
     writeln("></FONT></TD></TR>");
     write(
       "<TR><TD>" +
@@ -2062,18 +2041,18 @@ function e_set_areas(i_obj) {
         "<INPUT type=checkbox name='req'",
     );
     if (idx != "neu") {
-      write("onClick='parent.e_go_right(this,\"" + idx + "\");'");
+      write("onClick='parent.a_edit_feature(this,\"" + idx + "\");'");
       if (req == "limit") write("checked");
     }
     writeln("></TD></TR>");
     write("<TR><TD>" + FONT_A + '<SELECT name="ftstype"');
     if (idx != "neu")
-      write("onChange='parent.e_go_right(this,\"" + idx + "\");'");
+      write("onChange='parent.a_edit_feature(this,\"" + idx + "\");'");
     writeln(">");
-    for (i in summen) {
+    for (i in f) {
       write("<OPTION value='" + i + "'");
-      if (summen[i] == ftype) write("selected");
-      writeln(">" + summen[i]);
+      if (f[i] == ftype) write("selected");
+      writeln(">" + f[i]);
     }
     writeln("</SELECT></TD></TR>");
     if (idx == "neu")
@@ -2082,7 +2061,7 @@ function e_set_areas(i_obj) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_INSERT +
-          "' onClick='parent.e_go_right(this,\"" +
+          "' onClick='parent.a_edit_feature(this,\"" +
           idx +
           "\");'></FONT>",
       );
@@ -2098,14 +2077,14 @@ function e_set_areas(i_obj) {
         FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.e_go_left();'></FONT></TD>",
+          "' onClick='parent.a_delete_feature();'></FONT></TD>",
       );
       writeln(
         "<TD>" +
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_DO_MORE +
-          "' onClick='parent.e_myEscape(\"" +
+          "' onClick='parent.a_more_features(\"" +
           idx +
           "\", this);'></FONT></TD></TR>",
       );
@@ -2115,7 +2094,7 @@ function e_set_areas(i_obj) {
     close();
   } //with
 }
-function e_set_payment() {
+function a_next_feature_idx() {
   var idx = system.features.length;
   for (i = 0; i < system.features.length; i++)
     if (!system.features[i]) {
@@ -2124,9 +2103,9 @@ function e_set_payment() {
     }
   return idx;
 }
-function e_go_right(i_obj, i) {
-  var summen = new Array();
-  summen = e_set_freight();
+function a_edit_feature(i_obj, i) {
+  var f = new Array();
+  f = a_feature_types();
   if (i_obj.type == "text") {
     if (i_obj.value) system.features[i].name = escape(i_obj.value);
     else return;
@@ -2135,27 +2114,25 @@ function e_go_right(i_obj, i) {
     else system.features[i].required = "mwst";
   } else if (i_obj.type == "select-one") {
     idx = i_obj.options[i_obj.selectedIndex].value;
-    for (menge in summen)
-      if (menge == idx) system.features[i].ftype = summen[menge];
+    for (j in f) if (j == idx) system.features[i].ftype = f[j];
   } else if (i_obj.type == "button") {
     with (s.document.sys_fts) {
       if (!na.value) return;
-      i = e_set_payment();
+      i = a_next_feature_idx();
       system.features[i] = new Array();
       system.features[i].name = escape(na.value);
       if (req.checked) system.features[i].required = "limit";
       else system.features[i].required = "mwst";
       idx = ftstype.options[ftstype.selectedIndex].value;
-      for (menge in summen)
-        if (menge == idx) system.features[i].ftype = summen[menge];
+      for (j in f) if (j == idx) system.features[i].ftype = f[j];
     }
   }
   E_go("refresh");
-  e_set_areas(i);
+  a_feature(i);
 }
-function e_go_left() {
+function a_delete_feature() {
   var pos,
-    summen = new Array();
+    f = new Array();
   with (s.document.sys_fts) {
     qu = "";
     pos = fts.options[fts.selectedIndex].value;
@@ -2176,10 +2153,10 @@ function e_go_left() {
       else artikel[i].features = "";
     }
     E_go("refresh");
-    e_set_areas("-1");
+    a_feature("-1");
   }
 }
-function e_myEscape(ix, i_obj) {
+function a_more_features(ix, i_obj) {
   var idx = "neu",
     na = "";
   var A_FTS = unescape(system["features"][ix]["name"]);
@@ -2205,10 +2182,10 @@ function e_myEscape(ix, i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#zahlungsweise');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top rowspan=12>");
+    writeln("<TR>\n<TD valign=top rowspan=12>");
     writeln(
       FONT_A +
-        '<SELECT name="fts" onChange=\'parent.e_myEscape("' +
+        '<SELECT name="fts" onChange=\'parent.a_more_features("' +
         ix +
         "\",this);' size=8>",
     );
@@ -2233,7 +2210,11 @@ function e_myEscape(ix, i_obj) {
     );
     if (idx != "neu")
       writeln(
-        "onChange='parent.e_doSearch(this,\"" + ix + '","' + idx + "\");'",
+        "onChange='parent.a_edit_more_features(this,\"" +
+          ix +
+          '","' +
+          idx +
+          "\");'",
       );
     writeln("></FONT></TD></TR>");
     if (idx == "neu")
@@ -2242,7 +2223,7 @@ function e_myEscape(ix, i_obj) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_INSERT +
-          "' onClick='parent.e_doSearch(this,\"" +
+          "' onClick='parent.a_edit_more_features(this,\"" +
           ix +
           '","' +
           idx +
@@ -2260,7 +2241,7 @@ function e_myEscape(ix, i_obj) {
         FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.e_search(\"" +
+          "' onClick='parent.a_delete_more_features(\"" +
           ix +
           '","' +
           idx +
@@ -2272,7 +2253,7 @@ function e_myEscape(ix, i_obj) {
         FONT_A_SMALL +
         "<INPUT type=button value='" +
         A_LEAVE +
-        "' onClick='parent.e_set_areas(\"" +
+        "' onClick='parent.a_feature(\"" +
         ix +
         "\");'></FONT></TD></TR>",
     );
@@ -2281,7 +2262,7 @@ function e_myEscape(ix, i_obj) {
     close();
   } //with
 }
-function e_doSearch(i_obj, ix, idx) {
+function a_edit_more_features(i_obj, ix, idx) {
   with (s.document.sys_morefts) {
     if (!na.value) return;
     if (i_obj.type == "button") {
@@ -2290,34 +2271,34 @@ function e_doSearch(i_obj, ix, idx) {
     }
     system["features"][ix][idx] = escape(na.value);
     E_go("refresh");
-    e_myEscape(ix, idx);
+    a_more_features(ix, idx);
   }
 }
-function e_search(ix, idx) {
-  var summen = new Array();
+function a_delete_more_features(ix, idx) {
+  var f = new Array();
   na = system["features"][ix]["name"];
   req = system["features"][ix]["required"];
   ftype = system["features"][ix]["ftype"];
   for (i in system["features"][ix]) {
-    if (i < idx) summen[i] = system["features"][ix][i];
-    else summen[i] = system["features"][ix][i + 1];
+    if (i < idx) f[i] = system["features"][ix][i];
+    else f[i] = system["features"][ix][i + 1];
     if (i + 1 == system["features"][ix].length - 1) break;
   }
-  system["features"][ix] = summen;
+  system["features"][ix] = f;
   system["features"][ix]["required"] = req;
   system["features"][ix]["name"] = na;
   system["features"][ix]["ftype"] = ftype;
   E_go("refresh");
-  e_myEscape(ix, "-1");
+  a_more_features(ix, "-1");
 }
-function B_setFeature(txt) {
+function a_base_mwst(txt) {
   system["nbase"] = txt;
   nshow = txt;
   LEFT = false;
-  B_setAmount("-1");
+  a_mwst("-1");
   E_go("refresh");
 }
-function B_setAmount(i_obj) {
+function a_mwst(i_obj) {
   var na = "",
     idx = "neu";
   var btn = A_INSERT;
@@ -2335,26 +2316,26 @@ function B_setAmount(i_obj) {
     writeln(ADMIN_TOP);
     writeln("<FORM name=sys_ns onSubmit='return false;'>");
     writeln("<TABLE width=560 border=0>");
-    writeln("<TR>\mwst<TD valign=top>" + FONT_A);
+    writeln("<TR>\n<TD valign=top>" + FONT_A);
     writeln(
-      "<INPUT type=radio name=mw value = 'brutto' onClick='parent.B_setFeature(this.value);'",
+      "<INPUT type=radio name=mw value = 'brutto' onClick='parent.a_base_mwst(this.value);'",
     );
     if (system["nbase"] == "brutto") write("checked");
     writeln(
-      "><artikel HREF='javascript:parent.B_setFeature(\"brutto\");' onclick='sys_ns.mw[0].checked = true'>" +
+      "><A HREF='javascript:parent.a_base_mwst(\"brutto\");' onclick='sys_ns.mw[0].checked = true'>" +
         "Preise sind brutto" +
-        "</artikel>",
+        "</A>",
     );
     writeln(
       "</TD><TD colspan=2>" +
         FONT_A +
-        "<INPUT type=radio name=mw value = 'netto' onClick='parent.B_setFeature(this.value);'",
+        "<INPUT type=radio name=mw value = 'netto' onClick='parent.a_base_mwst(this.value);'",
     );
     if (system["nbase"] == "netto") write("checked");
     writeln(
-      "><artikel HREF='javascript:parent.B_setFeature(\"netto\");' onclick='sys_ns.mw[1].checked = true'>" +
+      "><A HREF='javascript:parent.a_base_mwst(\"netto\");' onclick='sys_ns.mw[1].checked = true'>" +
         "Preise sind netto" +
-        "</artikel></TD>",
+        "</A></TD>",
     );
     write("<TR><TD>" + FONT_A_BIG + A_NAME_ADMIN_SMW + "</FONT></TD>");
     if (idx == "neu") write("<TD>" + FONT_A_BIG + A_INSERT + "</FONT></TD>");
@@ -2362,13 +2343,13 @@ function B_setAmount(i_obj) {
     writeln(
       "<TD align=right>" +
         FONT_A_SMALL +
-        "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#mwst');\"",
+        "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#n');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
     writeln(
       "<TR><TD rowspan=7>" +
         FONT_A +
-        "<SELECT name=\"mwst\" onChange='parent.B_setAmount(this);' size=6>",
+        "<SELECT name=\"n\" onChange='parent.a_mwst(this);' size=6>",
     );
     for (i in system["mwst"]) {
       write("<OPTION value='" + i + "'");
@@ -2385,7 +2366,7 @@ function B_setAmount(i_obj) {
         FONT_A +
         "<INPUT type=text name='na' size=7 maxlength=5 value='" +
         na +
-        "' onChange='parent.B_sumPage(this,\"" +
+        "' onChange='parent.a_edit_mwst(this,\"" +
         idx +
         "\");'>&nbsp;" +
         "%" +
@@ -2403,7 +2384,7 @@ function B_setAmount(i_obj) {
       write(
         "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.B_sumPage(this,\"" +
+          "' onClick='parent.a_edit_mwst(this,\"" +
           idx +
           "\");'>",
       );
@@ -2413,7 +2394,7 @@ function B_setAmount(i_obj) {
     close();
   } //with
 }
-function B_sumPage(i_obj, idx) {
+function a_edit_mwst(i_obj, idx) {
   with (s.document.sys_ns) {
     if (!i_obj.value) return;
     if (i_obj.type == "text") {
@@ -2424,14 +2405,14 @@ function B_sumPage(i_obj, idx) {
       system["mwst"][idx] = i_obj.value;
     }
     if (i_obj.type == "button") {
-      Xey("mwst", idx);
+      a_delete_sys("mwst", idx);
       idx = "-1";
     }
     E_go("refresh");
-    B_setAmount(idx);
+    a_mwst(idx);
   } //of with
 }
-function B_delOrder(i_obj) {
+function a_address(i_obj) {
   var re = (vali = "");
   VAL = "no";
   ((idx = "neu"), (btn = A_INSERT));
@@ -2463,10 +2444,10 @@ function B_delOrder(i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#kundenD');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top width=35% rowspan=12>");
+    writeln("<TR>\n<TD valign=top width=35% rowspan=12>");
     writeln(
       FONT_A +
-        "<SELECT name=\"Wes\" onChange='parent.B_delOrder(this);' size=8>",
+        "<SELECT name=\"Wes\" onChange='parent.a_address(this);' size=8>",
     );
     for (i in system["address"]) {
       write("<OPTION value='" + i + "'");
@@ -2509,7 +2490,7 @@ function B_delOrder(i_obj) {
           FONT_A +
           "<INPUT type=text name='na' size=15 value='" +
           unescape(system["address"][idx]["name"]) +
-          "' onChange='parent.B_getOrder(\"" +
+          "' onChange='parent.a_edit_address(\"" +
           idx +
           "\");'></TD></TR>",
       );
@@ -2521,14 +2502,14 @@ function B_delOrder(i_obj) {
           FONT_A +
           "<INPUT type=text name='de' size=10 value='" +
           de +
-          "' onChange='parent.B_getOrder(\"" +
+          "' onChange='parent.a_edit_address(\"" +
           idx +
           "\");'></TD></TR>",
       );
       write(
         "<TR><TD colspan=2>" +
           FONT_A +
-          "<INPUT type=checkbox name='req' onClick='parent.Xgt(\"" +
+          "<INPUT type=checkbox name='req' onClick='parent.a_address_required(\"" +
           idx +
           "\");'",
       );
@@ -2539,7 +2520,7 @@ function B_delOrder(i_obj) {
     writeln(
       "<TD>" +
         FONT_A +
-        '<SELECT name="valid" onChange=\'parent.a_save_header(this,"' +
+        '<SELECT name="valid" onChange=\'parent.a_address_validation(this,"' +
         idx +
         "\");'>",
     );
@@ -2563,7 +2544,7 @@ function B_delOrder(i_obj) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_INSERT +
-          "'onClick='parent.Xgs();'>",
+          "'onClick='parent.a_new_address();'>",
       );
     else {
       writeln(
@@ -2576,7 +2557,7 @@ function B_delOrder(i_obj) {
       write(
         "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.Xgq(\"" +
+          "' onClick='parent.a_delete_address(\"" +
           idx +
           "\");'>",
       );
@@ -2586,46 +2567,46 @@ function B_delOrder(i_obj) {
     close();
   }
 }
-function B_getOrder(idx) {
+function a_edit_address(idx) {
   with (s.document.sys_Wes) {
     if (na.value) {
-      system["address"][idx]["name"] = e_print_header(na.value);
-      system["address"][idx]["default"] = e_print_header(de.value);
+      system["address"][idx]["name"] = a_myEscape(na.value);
+      system["address"][idx]["default"] = a_myEscape(de.value);
       E_go("data");
     } else alert(A_CONFIG_SYSTEM_SA_ADD);
   }
 }
-function Xgt(idx) {
+function a_address_required(idx) {
   if (idx == "neu") return;
   if (system["address"][idx]["required"] == "no")
     system["address"][idx]["required"] = "yes";
   else system["address"][idx]["required"] = "no";
   E_go("data");
 }
-function Xgs() {
+function a_new_address() {
   var idx = system["address"].length;
   with (s.document.sys_Wes) {
     system["address"][idx] = new Array();
     system["address"][idx]["validation"] = VAL;
     if (req.checked) system["address"][idx]["required"] = "yes";
     else system["address"][idx]["required"] = "no";
-    B_getOrder(idx);
-    B_delOrder("-1");
+    a_edit_address(idx);
+    a_address("-1");
   }
 }
-function a_save_header(i_obj, idx) {
+function a_address_validation(i_obj, idx) {
   VAL = i_obj.options[i_obj.selectedIndex].value;
   if (idx != "neu") {
-    system["address"][idx]["validation"] = e_print_header(VAL);
+    system["address"][idx]["validation"] = a_myEscape(VAL);
     E_go("data");
   }
 }
-function Xgq(idx) {
-  Xey("address", idx);
+function a_delete_address(idx) {
+  a_delete_sys("address", idx);
   E_go("data");
-  B_delOrder("-1");
+  a_address("-1");
 }
-function B_storeOrder(i_obj) {
+function a_curr(i_obj) {
   var hash = "",
     factor = "",
     jfactor = "";
@@ -2639,11 +2620,13 @@ function B_storeOrder(i_obj) {
   if (idx != "neu") {
     if (idx != "base") {
       hash = idx;
-      if (a_kunde(idx) == "false") factor = Xfj(system["currency"][idx]);
+      if (B_isEu(idx) == "false")
+        factor = a_parse_factor(system["currency"][idx]);
       else {
-        if (idx != "EUR") jfactor = Xfj(system["ewu"][idx]["euro"]);
-        else if (EUROLAND == "true") jfactor = Xfj(system["ewu"][CURR]["euro"]);
-        else factor = Xfj(system["currency"][idx]);
+        if (idx != "EUR") jfactor = a_parse_factor(system["ewu"][idx]["euro"]);
+        else if (EUROLAND == "true")
+          jfactor = a_parse_factor(system["ewu"][CURR]["euro"]);
+        else factor = a_parse_factor(system["currency"][idx]);
       }
     }
     btn = A_USE;
@@ -2662,43 +2645,43 @@ function B_storeOrder(i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#waehrungen');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top width=35% rowspan=12>" + FONT_A);
+    writeln("<TR>\n<TD valign=top width=35% rowspan=12>" + FONT_A);
     writeln(
-      "<INPUT type=radio name=ewu value ='ewu' onClick='parent.B_init(this.value);'",
+      "<INPUT type=radio name=T value ='ewu' onClick='parent.a_doSetEuroland(this.value);'",
     );
     if (EUROLAND == "true") write("checked");
     writeln(
-      "><artikel HREF='javascript:parent.B_init(\"ewu\");' onclick='ewu[0].checked = true'>" +
+      "><A HREF='javascript:parent.a_doSetEuroland(\"T\");' onclick='ewu[0].checked = true'>" +
         A_CONFIG_SYSTEM_SW_EUY +
-        "</artikel>",
+        "</A>",
     );
     writeln(
-      "<BR><INPUT type=radio name=ewu value = 'no_T' onClick='parent.B_init(this.value);'",
+      "<BR><INPUT type=radio name=T value = 'no_T' onClick='parent.a_doSetEuroland(this.value);'",
     );
     if (EUROLAND == "false") write("checked");
     writeln(
-      "><artikel HREF='javascript:parent.B_init(\"no_T\");' onclick='ewu[1].checked = true'>" +
+      "><A HREF='javascript:parent.a_doSetEuroland(\"no_T\");' onclick='ewu[1].checked = true'>" +
         A_CONFIG_SYSTEM_SW_EUN +
-        "</artikel><BR>",
+        "</A><BR>",
     );
     writeln(
-      "<SELECT name=\"currencies\" onChange='parent.B_storeOrder(this);' size=8>",
+      "<SELECT name=\"currencies\" onChange='parent.a_curr(this);' size=8>",
     );
-    a_doDeleteCurrency();
+    E_init_curr();
     if (EUROLAND == "true") {
       writeln("<OPTION value='base'>" + A_CONFIG_SYSTEM_SW_H + CURR + "<BR>");
-      for (menge in system["ewu"])
-        if (system["ewu"][menge]["use"] == "limit") {
-          write("<OPTION value='" + menge + "'");
-          if (menge == idx) write("selected");
-          writeln(a_address("ewu", menge));
+      for (j in system["ewu"])
+        if (system["ewu"][j]["use"] == "limit") {
+          write("<OPTION value='" + j + "'");
+          if (j == idx) write("selected");
+          writeln(B_retOpt("ewu", j));
         }
     } else writeln("<OPTION value='base'>" + A_CONFIG_SYSTEM_SW_H + CURR);
-    for (preisa in system["currency"]) {
-      if (preisa == CURR || preisa == "base") continue;
-      write("<OPTION value='" + preisa + "'");
-      if (preisa == idx) write("selected");
-      writeln(a_address("currency", preisa));
+    for (k in system["currency"]) {
+      if (k == CURR || k == "base") continue;
+      write("<OPTION value='" + k + "'");
+      if (k == idx) write("selected");
+      writeln(B_retOpt("currency", k));
     }
     write("<OPTION value = 'neu'>" + A_CONFIG_SYSTEM_SW_N);
     writeln("</SELECT></TD></TR>");
@@ -2708,7 +2691,7 @@ function B_storeOrder(i_obj) {
           "<TR><TD>" + FONT_A + A_CONFIG_SYSTEM_SW_H + "</TD><TD>" + FONT_A,
         );
         writeln(
-          "<SELECT name=\"eurocurr\" onChange='parent.b_getPageToShow(this);'>",
+          "<SELECT name=\"eurocurr\" onChange='parent.a_doEditBase(this);'>",
         );
         for (i in system["ewu"]) {
           write("<OPTION value='" + i + "'");
@@ -2725,7 +2708,7 @@ function B_storeOrder(i_obj) {
         );
         writeln("</TD></TR>");
       } else {
-        if (idx != "neu" && a_kunde(idx) == "true") {
+        if (idx != "neu" && B_isEu(idx) == "true") {
           if (idx == "EUR") {
             writeln(
               "<TR><TD>" +
@@ -2777,7 +2760,7 @@ function B_storeOrder(i_obj) {
               FONT_A_SMALL +
               "<INPUT type=button value='" +
               A_CONFIG_SYSTEM_SW_EUB +
-              "' onClick='parent.Xfk(-1);'>",
+              "' onClick='parent.a_editEuroCurrency(-1);'>",
           );
         } else {
           writeln(
@@ -2788,7 +2771,7 @@ function B_storeOrder(i_obj) {
               FONT_A +
               "<INPUT type=text name='hash' size=7 value='" +
               hash +
-              "' onchange='parent.Xfn(this,\"" +
+              "' onchange='parent.a_doEditCurrency(this,\"" +
               idx +
               "\");'></TD></TR>",
           );
@@ -2801,7 +2784,7 @@ function B_storeOrder(i_obj) {
               FONT_A +
               "<INPUT type=text name='factor' size=7 value='" +
               factor +
-              "' onchange='parent.Xfn(this,\"" +
+              "' onchange='parent.a_doEditCurrency(this,\"" +
               idx +
               "\");'></TD></TR>",
           );
@@ -2818,7 +2801,7 @@ function B_storeOrder(i_obj) {
                 FONT_A_SMALL +
                 "<INPUT type=button value='" +
                 A_CONFIG_SYSTEM_SW_EUB +
-                "' onClick='parent.Xfk(-1);'>",
+                "' onClick='parent.a_editEuroCurrency(-1);'>",
             );
         }
       }
@@ -2833,7 +2816,7 @@ function B_storeOrder(i_obj) {
             FONT_A +
             "<INPUT type=text name='base' size=7 value='" +
             CURR +
-            "' onChange='parent.b_getPageToShow(this);'></TD></TR>",
+            "' onChange='parent.a_doEditBase(this);'></TD></TR>",
         );
         writeln(
           "<TR><TD colspan=2 align=middle>" +
@@ -2852,7 +2835,7 @@ function B_storeOrder(i_obj) {
             FONT_A +
             "<INPUT type=text name='hash' size=7 value='" +
             hash +
-            "' onchange='parent.Xfn(this,\"" +
+            "' onchange='parent.a_doEditCurrency(this,\"" +
             idx +
             "\");'></TD></TR>",
         );
@@ -2867,7 +2850,7 @@ function B_storeOrder(i_obj) {
             FONT_A +
             "<INPUT type=text name='factor' size=7 value='" +
             factor +
-            "' onchange='parent.Xfn(this,\"" +
+            "' onchange='parent.a_doEditCurrency(this,\"" +
             idx +
             "\");'></TD></TR>",
         );
@@ -2886,7 +2869,7 @@ function B_storeOrder(i_obj) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.Xfl(\"" +
+          "' onClick='parent.a_doDeleteCurrency(\"" +
           idx +
           "\");'>",
       );
@@ -2896,7 +2879,7 @@ function B_storeOrder(i_obj) {
     close();
   } //with
 }
-function B_init(i_obj) {
+function a_doSetEuroland(i_obj) {
   if (i_obj == "ewu") {
     if (EUROLAND == "false") {
       EUROLAND = "true";
@@ -2907,23 +2890,23 @@ function B_init(i_obj) {
     else return;
   }
   system["EUROLAND"] = EUROLAND;
-  a_doDeleteCurrency();
+  E_init_curr();
   LEFT = false;
   E_go("refresh");
-  B_storeOrder("-1");
+  a_curr("-1");
 }
-function b_getPageToShow(i_obj) {
+function a_doEditBase(i_obj) {
   if (i_obj.name == "base") system["currency"]["base"] = i_obj.value;
   if (i_obj.type == "select-one") {
     idx = i_obj.options[i_obj.selectedIndex].value;
     system["currency"]["base"] = idx;
   }
-  a_doDeleteCurrency();
+  E_init_curr();
   LEFT = false;
   E_go("refresh");
-  B_storeOrder("base");
+  a_curr("base");
 }
-function Xfj(i_obj) {
+function a_parse_factor(i_obj) {
   var wert = 0;
   zw = i_obj;
   punkt = zw.indexOf(".");
@@ -2936,7 +2919,7 @@ function Xfj(i_obj) {
   }
   return wert;
 }
-function Xfk(i_obj) {
+function a_editEuroCurrency(i_obj) {
   var idx = "",
     hash = "",
     factor = "";
@@ -2945,10 +2928,10 @@ function Xfk(i_obj) {
       idx = i_obj.options[i_obj.selectedIndex].value;
       if (idx != "EUR") {
         hash = system["ewu"][idx]["name"];
-        factor = Xfj(system["ewu"][idx]["euro"]);
+        factor = a_parse_factor(system["ewu"][idx]["euro"]);
       } else {
         hash = system["ewu"][CURR]["name"];
-        factor = Xfj(system["ewu"][CURR]["euro"]);
+        factor = a_parse_factor(system["ewu"][CURR]["euro"]);
       }
     }
   }
@@ -2966,7 +2949,9 @@ function Xfk(i_obj) {
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
     writeln("<TR><TD rowspan=5>" + FONT_A);
-    writeln("<SELECT name=\"eurocurr\" size=11 onChange='parent.Xfk(this);'>");
+    writeln(
+      "<SELECT name=\"eurocurr\" size=11 onChange='parent.a_editEuroCurrency(this);'>",
+    );
     for (i in system["ewu"]) {
       if (system["ewu"][i]["use"] == "mwst") {
         write("<OPTION value='" + i + "'");
@@ -3036,7 +3021,7 @@ function Xfk(i_obj) {
         FONT_A_SMALL +
         "<INPUT type=button value='" +
         A_INSERT +
-        "' onClick='parent.Xfm(\"" +
+        "' onClick='parent.a_doUseEuroCurrency(\"" +
         idx +
         "\");'></TD>",
     );
@@ -3045,34 +3030,34 @@ function Xfk(i_obj) {
         FONT_A_SMALL +
         "<INPUT type=button value='" +
         A_LEAVE +
-        "' onClick='parent.B_storeOrder(-1);'></TD></TR>",
+        "' onClick='parent.a_curr(-1);'></TD></TR>",
     );
     writeln("</TABLE></FORM>");
     writeln(ADMIN_BOT);
     close();
   } //with
 }
-function Xfl(idx) {
+function a_doDeleteCurrency(idx) {
   if (idx == SELECTED_CURRENCY) SELECTED_CURRENCY = CURR;
-  if (a_kunde(idx) == "true") system["ewu"][idx]["use"] = "mwst";
+  if (B_isEu(idx) == "true") system["ewu"][idx]["use"] = "mwst";
   else {
     var sys_array = new Array();
     for (i in system["currency"])
       if (i != idx) sys_array[i] = system["currency"][i];
     system["currency"] = sys_array;
   }
-  a_doDeleteCurrency();
+  E_init_curr();
   LEFT = false;
   E_go("refresh");
-  B_storeOrder("-1");
+  a_curr("-1");
 }
-function Xfm(idx) {
+function a_doUseEuroCurrency(idx) {
   system["ewu"][idx]["use"] = "limit";
   LEFT = false;
   E_go("refresh");
-  Xfk("-1");
+  a_editEuroCurrency("-1");
 }
-function Xfn(i_obj, idx) {
+function a_doEditCurrency(i_obj, idx) {
   with (s.document.sys_currencies) {
     if (!i_obj) return;
     if (i_obj.type == "text") {
@@ -3107,24 +3092,24 @@ function Xfn(i_obj, idx) {
     }
     LEFT = false;
     E_go("refresh");
-    B_storeOrder(idx);
+    a_curr(idx);
   }
 }
-function Xfo(i_obj) {
+function a_htm(i_obj) {
   with (s.document.sysedit) {
     if (i_obj.type == "textarea") {
       for (i in htm) {
-        if (htm[i].checked) system[htm[i].value] = e_print_header(i_obj.value);
+        if (htm[i].checked) system[htm[i].value] = a_myEscape(i_obj.value);
       }
     } else if (i_obj.type == "radio")
       htmltext.value = unescape(system[i_obj.value]);
     else htmltext.value = unescape(system[i_obj]);
-    E_init_C();
+    E_init_page();
     LEFT = false;
     E_go("refresh");
   } // of with
 }
-function Xfp(i_obj) {
+function a_vs(i_obj) {
   if (ART == "areas") {
     A_CHOICE = A_NAME_ADMIN_LG;
     auswahlhinzu = A_CONFIG_SYSTEM_SLG_N;
@@ -3164,10 +3149,10 @@ function Xfp(i_obj) {
         "');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top width=35% rowspan=12>");
+    writeln("<TR>\n<TD valign=top width=35% rowspan=12>");
     writeln(
       FONT_A +
-        "<SELECT name=\"selectart\" onChange='parent.Xfp(this);' size=8>",
+        "<SELECT name=\"selectart\" onChange='parent.a_vs(this);' size=8>",
     );
     for (i in system[ART]) {
       write("<OPTION value='" + i + "'");
@@ -3219,7 +3204,7 @@ function Xfp(i_obj) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_INSERT +
-          "' onClick='parent.Xfq(this,\"" +
+          "' onClick='parent.a_edit_vs(this,\"" +
           idx +
           "\");'>",
       );
@@ -3232,7 +3217,7 @@ function Xfp(i_obj) {
           FONT_A +
           "<INPUT type=text name='na' size=15 value='" +
           unescape(system[ART][idx]["name"]) +
-          "' onChange='parent.Xfq(this,\"" +
+          "' onChange='parent.a_edit_vs(this,\"" +
           idx +
           "\");'></TD></TR>",
       );
@@ -3243,8 +3228,8 @@ function Xfp(i_obj) {
           "</TD><TD>" +
           FONT_A +
           "<INPUT type=text name='val' size=10 value='" +
-          a_pment_action(system[ART][idx]["value"]) +
-          "' onChange='parent.Xfq(this,\"" +
+          b_nzahl(system[ART][idx]["value"]) +
+          "' onChange='parent.a_edit_vs(this,\"" +
           idx +
           "\");'>&nbsp;" +
           CURR +
@@ -3257,8 +3242,8 @@ function Xfp(i_obj) {
           "</TD><TD>" +
           FONT_A +
           "<INPUT type=text name='lim' size=10 value='" +
-          a_pment_action(system[ART][idx]["limit"]) +
-          "' onChange='parent.Xfq(this,\"" +
+          b_nzahl(system[ART][idx]["limit"]) +
+          "' onChange='parent.a_edit_vs(this,\"" +
           idx +
           "\");'>&nbsp;" +
           CURR +
@@ -3273,7 +3258,7 @@ function Xfp(i_obj) {
             FONT_A +
             "<INPUT type=checkbox name='mwst' size=10 value='" +
             system["areas"][idx]["mwst"] +
-            "' onClick='parent.Xfq(this,\"" +
+            "' onClick='parent.a_edit_vs(this,\"" +
             idx +
             "\");'",
         );
@@ -3290,7 +3275,7 @@ function Xfp(i_obj) {
       writeln(
         "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.Xfq(this,\"" +
+          "' onClick='parent.a_edit_vs(this,\"" +
           idx +
           "\");'>",
       );
@@ -3303,16 +3288,16 @@ function Xfp(i_obj) {
 function a_doEditArt(idx) {
   with (s.document.sysconfig) {
     if (idx == system[ART].length) system[ART][idx] = new Array();
-    system[ART][idx]["name"] = e_print_header(na.value);
-    system[ART][idx]["value"] = b_add_record(val.value);
-    system[ART][idx]["limit"] = b_add_record(lim.value);
+    system[ART][idx]["name"] = a_myEscape(na.value);
+    system[ART][idx]["value"] = a_2pf(val.value);
+    system[ART][idx]["limit"] = a_2pf(lim.value);
     if (ART == "areas") {
-      if (mwst.checked == "true") system[ART][idx]["mwst"] = "yes";
+      if (n.checked == "true") system[ART][idx]["mwst"] = "yes";
       else system[ART][idx]["mwst"] = "no";
     }
   }
 }
-function Xfq(i_obj, idx) {
+function a_edit_vs(i_obj, idx) {
   if (!i_obj.value) {
     if (ART == "freight") alert(A_CONFIG_SYSTEM_SFR_B);
     else alert(A_CONFIG_SYSTEM_SLG_B);
@@ -3321,20 +3306,20 @@ function Xfq(i_obj, idx) {
   with (s.document.sysconfig) {
     if (i_obj.type == "button") {
       if (idx == "neu") a_doEditArt(system[ART].length);
-      else Xey(ART, idx);
+      else a_delete_sys(ART, idx);
     }
     if (i_obj.type == "text") a_doEditArt(idx);
     if (i_obj.type == "checkbox") {
       if (system[ART][idx]["mwst"] == "no") system[ART][idx]["mwst"] = "yes";
       else system[ART][idx]["mwst"] = "no";
     }
-    a_myEscape();
+    E_init_shipping();
     E_go("data");
-    if (i_obj.type == "button") Xfp("-1");
-    if (i_obj.name == "na") Xfp(idx);
+    if (i_obj.type == "button") a_vs("-1");
+    if (i_obj.name == "na") a_vs(idx);
   }
 }
-function XewAction(pix) {
+function a_paymentAction(pix) {
   var action = "" + unescape(system["action"]);
   var enc = "" + unescape(system["enctype"]);
   var zit = "";
@@ -3342,7 +3327,7 @@ function XewAction(pix) {
   var ziv = "";
   var eva = "";
   if (!system["payment"][pix]) {
-    alert("There is no payment idx = " + pix);
+    alert("There is no x idx = " + pix);
     return;
   }
   if (system["payment"][pix]["action"])
@@ -3373,18 +3358,18 @@ function XewAction(pix) {
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
     writeln("<TR><TD>" + FONT_A + A_CONFIG_SYSTEM_SL_A + "</TD><TD>");
     writeln(
-      "<INPUT type=text name='action' size=40 onChange='parent.e_printFeaturesText(this," +
+      "<INPUT type=text name='action' size=40 onChange='parent.a_do_paymentAction(this," +
         pix +
         ");'></TD></TR>",
     );
     writeln("<TR><TD>" + FONT_A + A_CONFIG_SYSTEM_SL_E + "</TD><TD>" + FONT_A);
     write("<SELECT name='enctype' ");
-    writeln(" onChange='parent.e_printFeaturesText(this," + pix + ");'>");
+    writeln(" onChange='parent.a_do_paymentAction(this," + pix + ");'>");
     write("<OPTION value='text/plain'");
     if ("text/plain" == enc) write(" selected ");
     writeln(">" + A_CONFIG_SYSTEM_SL_MAIL);
-    write("<OPTION value='application/payment-www-form-urlencoded'");
-    if ("application/payment-www-form-urlencoded" == enc) write(" selected ");
+    write("<OPTION value='application/x-www-form-urlencoded'");
+    if ("application/x-www-form-urlencoded" == enc) write(" selected ");
     writeln(">" + A_CONFIG_SYSTEM_SL_CGI);
     write("<OPTION value='enter'>");
     writeln(A_CONFIG_SYSTEM_SL_OWN);
@@ -3393,19 +3378,19 @@ function XewAction(pix) {
     writeln(
       FONT_A +
         A_CONFIG_SYSTEM_SL_ZIT +
-        "&nbsp;&nbsp;<INPUT type=text name='zit' size=15 onChange='parent.e_printFeaturesText(this," +
+        "&nbsp;&nbsp;<INPUT type=text name='zit' size=15 onChange='parent.a_do_paymentAction(this," +
         pix +
         ");'><BR>&nbsp;&nbsp;",
     );
     writeln(
       A_CONFIG_SYSTEM_SL_ZIN +
-        " &nbsp;&nbsp;<INPUT type=text name='zin' size=15 onChange='parent.e_printFeaturesText(this," +
+        " &nbsp;&nbsp;<INPUT type=text name='zin' size=15 onChange='parent.a_do_paymentAction(this," +
         pix +
         ");'><BR>",
     );
     writeln(
       A_CONFIG_SYSTEM_SL_ZIV +
-        "&nbsp;<INPUT type=text name='ziv' size=35 onChange='parent.e_printFeaturesText(this," +
+        "&nbsp;<INPUT type=text name='ziv' size=35 onChange='parent.a_do_paymentAction(this," +
         pix +
         ");'></TD></TR>",
     );
@@ -3413,7 +3398,7 @@ function XewAction(pix) {
       "<TR><TD colspan=4>" +
         FONT_A +
         A_CONFIG_SYSTEM_SL_EVA +
-        "<INPUT type=text size=40 name=eva onChange='parent.e_printFeaturesText(this," +
+        "<INPUT type=text size=40 name=eva onChange='parent.a_do_paymentAction(this," +
         pix +
         ");'></TD></TR>",
     );
@@ -3429,7 +3414,7 @@ function XewAction(pix) {
         FONT_A_SMALL +
         "<INPUT type=button value='" +
         A_LEAVE +
-        "' onClick='parent.B_setCom(\"" +
+        "' onClick='parent.a_payment(\"" +
         pix +
         "\");'></TD></TR>",
     );
@@ -3444,30 +3429,29 @@ function XewAction(pix) {
   s.document.sysedit.ziv.value = ziv;
   s.document.sysedit.eva.value = eva;
 }
-function e_printFeaturesText(io, pix) {
+function a_do_paymentAction(io, pix) {
   if (!system["payment"][pix]) {
-    alert("There is no payment idx = " + pix);
+    alert("There is no x idx = " + pix);
     return;
   }
-  if (io.type == "text")
-    system["payment"][pix][io.name] = e_print_header(io.value);
+  if (io.type == "text") system["payment"][pix][io.name] = a_myEscape(io.value);
   else if (io.type == "select-one") {
     var wert = "" + io.options[io.selectedIndex].value;
     if (wert == "enter") {
       wert = prompt(A_CONFIG_SYSTEM_SL_ASK, "");
       if (wert.length == 0) return;
     }
-    system["payment"][pix][io.name] = e_print_header(wert);
+    system["payment"][pix][io.name] = a_myEscape(wert);
   } else if (io.type == "checkbox") {
     if (io.checked) system["payment"][pix][io.name] = "on";
     else system["payment"][pix][io.name] = "off";
   } else if (io.type == "textarea")
-    system["payment"][pix][io.name] = e_print_header(io.value);
+    system["payment"][pix][io.name] = a_myEscape(io.value);
   else alert("NOT DEFINED! " + io.type);
-  a_myEscape();
+  E_init_shipping();
   E_go("refresh");
 }
-function Xfr(i_ob, color) {
+function a_edit_font(i_ob, color) {
   var fnt_font = "",
     fnt_size = "",
     fnt_color = "",
@@ -3499,11 +3483,11 @@ function Xfr(i_ob, color) {
     "%20" +
     fnt_color +
     ">";
-  a_edit_border();
+  E_init_font();
   LEFT = false;
   E_go("refresh");
 }
-function Xfs(i_obj) {
+function a_font(i_obj) {
   var fnt_name,
     fnt_face = "";
   if (i_obj != "-1")
@@ -3524,15 +3508,16 @@ function Xfs(i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#schriften');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top width=35% rowspan=12>");
+    writeln("<TR>\n<TD valign=top width=35% rowspan=12>");
     writeln(
-      FONT_A + "<SELECT name=\"fonts\" onChange='parent.Xft(this);' size=8>",
+      FONT_A +
+        "<SELECT name=\"fonts\" onChange='parent.a_choose_font(this);' size=8>",
     );
     write("<OPTION value='font'>" + A_CONFIG_SYSTEM_SF_B + "");
     write("<OPTION value='font_navigation'>" + A_CONFIG_SYSTEM_SF_N + "");
-    write("<OPTION value='au_h'>" + A_CONFIG_SYSTEM_SF_NH + "");
+    write("<OPTION value='font_navigation_h'>" + A_CONFIG_SYSTEM_SF_NH + "");
     write("<OPTION value='font_right_head'>" + A_CONFIG_SYSTEM_SF_S + "");
-    write("<OPTION value='font_e'>" + A_CONFIG_SYSTEM_SF_E + "");
+    write("<OPTION value='font_top_text'>" + A_CONFIG_SYSTEM_SF_E + "");
     write("<OPTION value='font_send'>" + A_CONFIG_SYSTEM_SF_A + "");
     writeln("</SELECT></FONT><P><BR>");
     writeln(
@@ -3549,7 +3534,7 @@ function Xfs(i_obj) {
         FONT_A +
         "<INPUT type=text name=fnt_face size=20 value='" +
         fnt_face +
-        "' onChange='parent.Xfr(this,\"\");'></TD></TR>",
+        "' onChange='parent.a_edit_font(this,\"\");'></TD></TR>",
     );
     writeln(
       "<TR><TD>" +
@@ -3557,12 +3542,12 @@ function Xfs(i_obj) {
         A_CONFIG_SYSTEM_SF_G +
         ": </TD><TD>" +
         FONT_A +
-        "<SELECT name=gr onChange='parent.Xfr(this,\"\");'>",
+        "<SELECT name=gr onChange='parent.a_edit_font(this,\"\");'>",
     );
     writeln(
       "<OPTION value='+4'> +4<OPTION value='+3'> +3<OPTION value='+2'> +2<OPTION value='+1'> +1<OPTION selected value=''> +-0<OPTION value='-1'> -1<OPTION value='-2'> -2<OPTION value='-3'> -3<OPTION value='-4'> -4</SELECT></TD>",
     );
-    e_init_gif("sf");
+    a_print_colormap("sf");
     writeln(
       "<TR><TD valign=top>" +
         FONT_A +
@@ -3573,7 +3558,7 @@ function Xfs(i_obj) {
     close();
   } //with
 }
-function Xft(i_obj) {
+function a_choose_font(i_obj) {
   var fnt_size = "";
   with (s.document.sysfonts) {
     fnt_name = fonts[fonts.selectedIndex].value;
@@ -3590,7 +3575,7 @@ function Xft(i_obj) {
       }
   }
 }
-function Xfu(i_obj) {
+function a_color(i_obj) {
   var idx = "",
     na = "";
   if (i_obj && i_obj.type == "select-multiple") {
@@ -3610,10 +3595,10 @@ function Xfu(i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#farben');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top width=35% rowspan=12>");
+    writeln("<TR>\n<TD valign=top width=35% rowspan=12>");
     writeln(
       FONT_A +
-        "<SELECT name=\"colors\" size=8 onChange='parent.Xfu(this);'></FONT>",
+        "<SELECT name=\"colors\" size=8 onChange='parent.a_color(this);'></FONT>",
     );
     write("<OPTION value='pt_bgc'");
     if (idx == "pt_bgc") write("selected");
@@ -3671,15 +3656,15 @@ function Xfu(i_obj) {
         FONT_A +
         "<INPUT type=text name='farbe' value='" +
         na +
-        "' size=12 onChange='parent.Xfv(this.value);'></FONT>",
+        "' size=12 onChange='parent.a_edit_color(this.value);'></FONT>",
     );
     writeln(
       FONT_A +
         "<INPUT type=button value='" +
         A_NOCOLOR +
-        "' onClick='parent.Xfv(this.value);'></FONT><BR>",
+        "' onClick='parent.a_edit_color(this.value);'></FONT><BR>",
     );
-    e_init_gif("tbl");
+    a_print_colormap("tbl");
     writeln(
       "<IMG SRC='../gif/cube.gif' align=texttop WIDTH=292 HEIGHT=196 BORDER=0 USEMAP=\"#map_webpal\" ISMAP></TD></TR>",
     );
@@ -3687,7 +3672,7 @@ function Xfu(i_obj) {
     close();
   } //with
 }
-function Xfv(i_obj) {
+function a_edit_color(i_obj) {
   var na = "",
     fnd = false;
   with (s.document.sys_tables) {
@@ -3704,13 +3689,13 @@ function Xfv(i_obj) {
     system[na] = "";
     if (i_obj.indexOf("#") != "-1") system[na] = escape(i_obj);
     farbe.value = unescape(system[na]);
-    a_edit_border();
-    E_init_C();
+    E_init_font();
+    E_init_page();
     LEFT = false;
     E_go("refresh");
   }
 }
-function Xfx(i_obj) {
+function a_border(i_obj) {
   var idx = "-1",
     na = "",
     indx = "-1",
@@ -3739,9 +3724,10 @@ function Xfx(i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#rahmen');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top width=35% rowspan=12>");
+    writeln("<TR>\n<TD valign=top width=35% rowspan=12>");
     writeln(
-      FONT_A + "<SELECT name=\"borders\" size=4 onChange='parent.Xfx(this);'>",
+      FONT_A +
+        "<SELECT name=\"borders\" size=4 onChange='parent.a_border(this);'>",
     );
     write("<OPTION value='tb_pt'");
     if (idx == "tb_pt") write("selected");
@@ -3760,7 +3746,7 @@ function Xfx(i_obj) {
       A_CONFIG_SYSTEM_TBL_T_W +
         ": <BR><INPUT type=text size=8 name='t_w' value='" +
         unescape(system["t_w"]) +
-        "' onChange='parent.B_del(this);'>",
+        "' onChange='parent.a_set_config(this);'>",
     );
     writeln("</TD></TR>");
     writeln(
@@ -3771,7 +3757,7 @@ function Xfx(i_obj) {
         FONT_A +
         "<INPUT type=text name=na size=6 value='" +
         na +
-        "' onChange='parent.Xfw(this.value,\"" +
+        "' onChange='parent.a_edit_border(this.value,\"" +
         idx +
         "\");'></TD></TR>",
     );
@@ -3783,7 +3769,7 @@ function Xfx(i_obj) {
         FONT_A +
         "<INPUT type=text name=tp size=6 value='" +
         tp +
-        "' onChange='parent.Xfw(this.value,\"" +
+        "' onChange='parent.a_edit_border(this.value,\"" +
         indx +
         "\");'></TD></TR>",
     );
@@ -3798,7 +3784,7 @@ function Xfx(i_obj) {
     close();
   } //with
 }
-function Xfw(i_obj, idx) {
+function a_edit_border(i_obj, idx) {
   with (s.document.sys_borders) {
     if (!i_obj.length) return;
     if (idx == "-1") {
@@ -3814,16 +3800,16 @@ function Xfw(i_obj, idx) {
       return;
     }
     system[idx] = i_obj;
-    a_edit_border();
-    E_init_C();
-    //a_doSetEuroland();
+    E_init_font();
+    E_init_page();
+    //Xcq();
     LEFT = false;
     E_go("refresh");
   } //with
 }
-function Xfy(i_obj) {
+function a_config(i_obj) {
   var idx = "";
-  if (i_obj == "-1") idx = "aq_file";
+  if (i_obj == "-1") idx = "start_file";
   else if (i_obj.type == "select-multiple")
     idx = i_obj.options[i_obj.selectedIndex].value;
   with (s.document) {
@@ -3839,27 +3825,27 @@ function Xfy(i_obj) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#vorschaltseite');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top rowspan=12>");
+    writeln("<TR>\n<TD valign=top rowspan=12>");
     writeln(
-      FONT_A + "<SELECT name=\"vss\" onChange='parent.Xfy(this);' size=5>",
+      FONT_A + "<SELECT name=\"vss\" onChange='parent.a_config(this);' size=5>",
     );
-    write("<OPTION value='aq_file'");
-    if (idx == "aq_file") write("selected");
+    write("<OPTION value='start_file'");
+    if (idx == "start_file") write("selected");
     writeln(">" + A_CONFIG_SYSTEM_VS_DAT);
-    write("<OPTION value='aq_ok1'");
-    if (idx == "aq_ok1") write("selected");
+    write("<OPTION value='start_ok1'");
+    if (idx == "start_ok1") write("selected");
     writeln(">" + A_CONFIG_SYSTEM_VS_OK1);
-    write("<OPTION value='aq_ok2'");
-    if (idx == "aq_ok2") write("selected");
+    write("<OPTION value='start_ok2'");
+    if (idx == "start_ok2") write("selected");
     writeln(">" + A_CONFIG_SYSTEM_VS_OK2);
-    write("<OPTION value='aq_noscript'");
-    if (idx == "aq_noscript") write("selected");
+    write("<OPTION value='start_noscript'");
+    if (idx == "start_noscript") write("selected");
     writeln(">" + A_CONFIG_SYSTEM_VS_NOS);
-    write("<OPTION value='aq_old'");
-    if (idx == "aq_old") write("selected");
+    write("<OPTION value='start_old'");
+    if (idx == "start_old") write("selected");
     writeln(">" + A_CONFIG_SYSTEM_VS_OLD);
     writeln("</SELECT></FONT></TD></TR>");
-    if (idx == "aq_file") {
+    if (idx == "start_file") {
       writeln(
         "<TR><TD>" +
           FONT_A +
@@ -3868,7 +3854,7 @@ function Xfy(i_obj) {
           FONT_A +
           "<INPUT type=text name='ind' size=15 value='" +
           unescape(admin["ind"]) +
-          "' onChange='parent.Xfz(this);'></TD></TR>",
+          "' onChange='parent.a_edit_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -3876,9 +3862,9 @@ function Xfy(i_obj) {
           A_CONFIG_SYSTEM_VS_DAT +
           "</TD><TD>" +
           FONT_A +
-          "<INPUT type=text name='aq_file' size=15 value='" +
-          unescape(admin["aq_file"]) +
-          "' onChange='parent.Xfz(this);'></TD></TR>",
+          "<INPUT type=text name='start_file' size=15 value='" +
+          unescape(admin["start_file"]) +
+          "' onChange='parent.a_edit_config(this);'></TD></TR>",
       );
       writeln(
         "<TR><TD>" +
@@ -3886,7 +3872,7 @@ function Xfy(i_obj) {
           A_CONFIG_SYSTEM_VS_PWD +
           "</TD><TD>" +
           FONT_A +
-          "<INPUT type=checkbox name='pwd' onClick='parent.Xfz(this);'",
+          "<INPUT type=checkbox name='pwd' onClick='parent.a_edit_config(this);'",
       );
       if (admin["password"] == "on") writeln("checked");
       writeln("></TD></TR>");
@@ -3912,7 +3898,7 @@ function Xfy(i_obj) {
     close();
   }
 }
-function Xfz(io) {
+function a_edit_config(io) {
   if (io.type == "text") admin[io.name] = escape(io.value);
   if (io.name == "pwd") {
     if (admin["password"] == "on") admin["password"] = "off";
@@ -3920,1114 +3906,1114 @@ function Xfz(io) {
   }
 }
 function a_doEditVSC(io, idx) {
-  admin[idx] = e_print_header(io.value);
+  admin[idx] = a_myEscape(io.value);
 }
-function e_init_gif(i_obj) {
+function a_print_colormap(i_obj) {
   with (s.document) {
     writeln('<MAP NAME="map_webpal">');
     writeln("<!--- Row 1 --->");
     writeln(
-      "<AREA COORDS=\"2,2,18,18\" HREF=\"javascript:parent.e_init_strings('#330000','" +
+      "<AREA COORDS=\"2,2,18,18\" HREF=\"javascript:parent.a_choose_color('#330000','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,2,34,18\" HREF=\"javascript:parent.e_init_strings('#333300','" +
+      "<AREA COORDS=\"18,2,34,18\" HREF=\"javascript:parent.a_choose_color('#333300','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,2,50,18\" HREF=\"javascript:parent.e_init_strings('#336600','" +
+      "<AREA COORDS=\"34,2,50,18\" HREF=\"javascript:parent.a_choose_color('#336600','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,2,66,18\" HREF=\"javascript:parent.e_init_strings('#339900','" +
+      "<AREA COORDS=\"50,2,66,18\" HREF=\"javascript:parent.a_choose_color('#339900','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,2,82,18\" HREF=\"javascript:parent.e_init_strings('#33CC00','" +
+      "<AREA COORDS=\"66,2,82,18\" HREF=\"javascript:parent.a_choose_color('#33CC00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,2,98,18\" HREF=\"javascript:parent.e_init_strings('#33FF00','" +
+      "<AREA COORDS=\"82,2,98,18\" HREF=\"javascript:parent.a_choose_color('#33FF00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,2,114,18\" HREF=\"javascript:parent.e_init_strings('#66FF00','" +
+      "<AREA COORDS=\"98,2,114,18\" HREF=\"javascript:parent.a_choose_color('#66FF00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,2,130,18\" HREF=\"javascript:parent.e_init_strings('#66CC00','" +
+      "<AREA COORDS=\"114,2,130,18\" HREF=\"javascript:parent.a_choose_color('#66CC00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,2,146,18\" HREF=\"javascript:parent.e_init_strings('#669900','" +
+      "<AREA COORDS=\"130,2,146,18\" HREF=\"javascript:parent.a_choose_color('#669900','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,2,162,18\" HREF=\"javascript:parent.e_init_strings('#666600','" +
+      "<AREA COORDS=\"146,2,162,18\" HREF=\"javascript:parent.a_choose_color('#666600','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,2,178,18\" HREF=\"javascript:parent.e_init_strings('#663300','" +
+      "<AREA COORDS=\"162,2,178,18\" HREF=\"javascript:parent.a_choose_color('#663300','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,2,194,18\" HREF=\"javascript:parent.e_init_strings('#660000','" +
+      "<AREA COORDS=\"178,2,194,18\" HREF=\"javascript:parent.a_choose_color('#660000','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,2,210,18\" HREF=\"javascript:parent.e_init_strings('#FF0000','" +
+      "<AREA COORDS=\"194,2,210,18\" HREF=\"javascript:parent.a_choose_color('#FF0000','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,2,226,18\" HREF=\"javascript:parent.e_init_strings('#FF3300','" +
+      "<AREA COORDS=\"210,2,226,18\" HREF=\"javascript:parent.a_choose_color('#FF3300','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,2,242,18\" HREF=\"javascript:parent.e_init_strings('#FF6600','" +
+      "<AREA COORDS=\"226,2,242,18\" HREF=\"javascript:parent.a_choose_color('#FF6600','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,2,258,18\" HREF=\"javascript:parent.e_init_strings('#FF9900','" +
+      "<AREA COORDS=\"242,2,258,18\" HREF=\"javascript:parent.a_choose_color('#FF9900','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,2,274,18\" HREF=\"javascript:parent.e_init_strings('#FFCC00','" +
+      "<AREA COORDS=\"258,2,274,18\" HREF=\"javascript:parent.a_choose_color('#FFCC00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,2,290,18\" HREF=\"javascript:parent.e_init_strings('#FFFF00','" +
+      "<AREA COORDS=\"274,2,290,18\" HREF=\"javascript:parent.a_choose_color('#FFFF00','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 2 --->");
     writeln(
-      "<AREA COORDS=\"2,18,18,34\" HREF=\"javascript:parent.e_init_strings('#330033','" +
+      "<AREA COORDS=\"2,18,18,34\" HREF=\"javascript:parent.a_choose_color('#330033','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,18,34,34\" HREF=\"javascript:parent.e_init_strings('#333333','" +
+      "<AREA COORDS=\"18,18,34,34\" HREF=\"javascript:parent.a_choose_color('#333333','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,18,50,34\" HREF=\"javascript:parent.e_init_strings('#336633','" +
+      "<AREA COORDS=\"34,18,50,34\" HREF=\"javascript:parent.a_choose_color('#336633','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,18,66,34\" HREF=\"javascript:parent.e_init_strings('#339933','" +
+      "<AREA COORDS=\"50,18,66,34\" HREF=\"javascript:parent.a_choose_color('#339933','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,18,82,34\" HREF=\"javascript:parent.e_init_strings('#33CC33','" +
+      "<AREA COORDS=\"66,18,82,34\" HREF=\"javascript:parent.a_choose_color('#33CC33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,18,98,34\" HREF=\"javascript:parent.e_init_strings('#33FF33','" +
+      "<AREA COORDS=\"82,18,98,34\" HREF=\"javascript:parent.a_choose_color('#33FF33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,18,114,34\" HREF=\"javascript:parent.e_init_strings('#66FF33','" +
+      "<AREA COORDS=\"98,18,114,34\" HREF=\"javascript:parent.a_choose_color('#66FF33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,18,130,34\" HREF=\"javascript:parent.e_init_strings('#66CC33','" +
+      "<AREA COORDS=\"114,18,130,34\" HREF=\"javascript:parent.a_choose_color('#66CC33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,18,146,34\" HREF=\"javascript:parent.e_init_strings('#669933','" +
+      "<AREA COORDS=\"130,18,146,34\" HREF=\"javascript:parent.a_choose_color('#669933','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,18,162,34\" HREF=\"javascript:parent.e_init_strings('#666633','" +
+      "<AREA COORDS=\"146,18,162,34\" HREF=\"javascript:parent.a_choose_color('#666633','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,18,178,34\" HREF=\"javascript:parent.e_init_strings('#663333','" +
+      "<AREA COORDS=\"162,18,178,34\" HREF=\"javascript:parent.a_choose_color('#663333','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,18,194,34\" HREF=\"javascript:parent.e_init_strings('#660033','" +
+      "<AREA COORDS=\"178,18,194,34\" HREF=\"javascript:parent.a_choose_color('#660033','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,18,210,34\" HREF=\"javascript:parent.e_init_strings('#FF0033','" +
+      "<AREA COORDS=\"194,18,210,34\" HREF=\"javascript:parent.a_choose_color('#FF0033','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,18,226,34\" HREF=\"javascript:parent.e_init_strings('#FF3333','" +
+      "<AREA COORDS=\"210,18,226,34\" HREF=\"javascript:parent.a_choose_color('#FF3333','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,18,242,34\" HREF=\"javascript:parent.e_init_strings('#FF6633','" +
+      "<AREA COORDS=\"226,18,242,34\" HREF=\"javascript:parent.a_choose_color('#FF6633','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,18,258,34\" HREF=\"javascript:parent.e_init_strings('#FF9933','" +
+      "<AREA COORDS=\"242,18,258,34\" HREF=\"javascript:parent.a_choose_color('#FF9933','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,18,274,34\" HREF=\"javascript:parent.e_init_strings('#FFCC33','" +
+      "<AREA COORDS=\"258,18,274,34\" HREF=\"javascript:parent.a_choose_color('#FFCC33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,18,290,34\" HREF=\"javascript:parent.e_init_strings('#FFFF33','" +
+      "<AREA COORDS=\"274,18,290,34\" HREF=\"javascript:parent.a_choose_color('#FFFF33','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 3 --->");
     writeln(
-      "<AREA COORDS=\"2,34,18,50\" HREF=\"javascript:parent.e_init_strings('#330066','" +
+      "<AREA COORDS=\"2,34,18,50\" HREF=\"javascript:parent.a_choose_color('#330066','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,34,34,50\" HREF=\"javascript:parent.e_init_strings('#333366','" +
+      "<AREA COORDS=\"18,34,34,50\" HREF=\"javascript:parent.a_choose_color('#333366','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,34,50,50\" HREF=\"javascript:parent.e_init_strings('#336666','" +
+      "<AREA COORDS=\"34,34,50,50\" HREF=\"javascript:parent.a_choose_color('#336666','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,34,66,50\" HREF=\"javascript:parent.e_init_strings('#339966','" +
+      "<AREA COORDS=\"50,34,66,50\" HREF=\"javascript:parent.a_choose_color('#339966','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,34,82,50\" HREF=\"javascript:parent.e_init_strings('#33CC66','" +
+      "<AREA COORDS=\"66,34,82,50\" HREF=\"javascript:parent.a_choose_color('#33CC66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,34,98,50\" HREF=\"javascript:parent.e_init_strings('#33FF66','" +
+      "<AREA COORDS=\"82,34,98,50\" HREF=\"javascript:parent.a_choose_color('#33FF66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,34,114,50\" HREF=\"javascript:parent.e_init_strings('#66FF66','" +
+      "<AREA COORDS=\"98,34,114,50\" HREF=\"javascript:parent.a_choose_color('#66FF66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,34,130,50\" HREF=\"javascript:parent.e_init_strings('#66CC66','" +
+      "<AREA COORDS=\"114,34,130,50\" HREF=\"javascript:parent.a_choose_color('#66CC66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,34,146,50\" HREF=\"javascript:parent.e_init_strings('#669966','" +
+      "<AREA COORDS=\"130,34,146,50\" HREF=\"javascript:parent.a_choose_color('#669966','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,34,162,50\" HREF=\"javascript:parent.e_init_strings('#666666','" +
+      "<AREA COORDS=\"146,34,162,50\" HREF=\"javascript:parent.a_choose_color('#666666','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,34,178,50\" HREF=\"javascript:parent.e_init_strings('#663366','" +
+      "<AREA COORDS=\"162,34,178,50\" HREF=\"javascript:parent.a_choose_color('#663366','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,34,194,50\" HREF=\"javascript:parent.e_init_strings('#660066','" +
+      "<AREA COORDS=\"178,34,194,50\" HREF=\"javascript:parent.a_choose_color('#660066','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,34,210,50\" HREF=\"javascript:parent.e_init_strings('#FF0066','" +
+      "<AREA COORDS=\"194,34,210,50\" HREF=\"javascript:parent.a_choose_color('#FF0066','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,34,226,50\" HREF=\"javascript:parent.e_init_strings('#FF3366','" +
+      "<AREA COORDS=\"210,34,226,50\" HREF=\"javascript:parent.a_choose_color('#FF3366','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,34,242,50\" HREF=\"javascript:parent.e_init_strings('#FF6666','" +
+      "<AREA COORDS=\"226,34,242,50\" HREF=\"javascript:parent.a_choose_color('#FF6666','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,34,258,50\" HREF=\"javascript:parent.e_init_strings('#FF9966','" +
+      "<AREA COORDS=\"242,34,258,50\" HREF=\"javascript:parent.a_choose_color('#FF9966','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,34,274,50\" HREF=\"javascript:parent.e_init_strings('#FFCC66','" +
+      "<AREA COORDS=\"258,34,274,50\" HREF=\"javascript:parent.a_choose_color('#FFCC66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,34,290,50\" HREF=\"javascript:parent.e_init_strings('#FFFF66','" +
+      "<AREA COORDS=\"274,34,290,50\" HREF=\"javascript:parent.a_choose_color('#FFFF66','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 4 --->");
     writeln(
-      "<AREA COORDS=\"2,50,18,66\" HREF=\"javascript:parent.e_init_strings('#330099','" +
+      "<AREA COORDS=\"2,50,18,66\" HREF=\"javascript:parent.a_choose_color('#330099','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,50,34,66\" HREF=\"javascript:parent.e_init_strings('#333399','" +
+      "<AREA COORDS=\"18,50,34,66\" HREF=\"javascript:parent.a_choose_color('#333399','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,50,50,66\" HREF=\"javascript:parent.e_init_strings('#336699','" +
+      "<AREA COORDS=\"34,50,50,66\" HREF=\"javascript:parent.a_choose_color('#336699','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,50,66,66\" HREF=\"javascript:parent.e_init_strings('#339999','" +
+      "<AREA COORDS=\"50,50,66,66\" HREF=\"javascript:parent.a_choose_color('#339999','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,50,82,66\" HREF=\"javascript:parent.e_init_strings('#33CC99','" +
+      "<AREA COORDS=\"66,50,82,66\" HREF=\"javascript:parent.a_choose_color('#33CC99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,50,98,66\" HREF=\"javascript:parent.e_init_strings('#33FF99','" +
+      "<AREA COORDS=\"82,50,98,66\" HREF=\"javascript:parent.a_choose_color('#33FF99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,50,114,66\" HREF=\"javascript:parent.e_init_strings('#66FF99','" +
+      "<AREA COORDS=\"98,50,114,66\" HREF=\"javascript:parent.a_choose_color('#66FF99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,50,130,66\" HREF=\"javascript:parent.e_init_strings('#66CC99','" +
+      "<AREA COORDS=\"114,50,130,66\" HREF=\"javascript:parent.a_choose_color('#66CC99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,50,146,66\" HREF=\"javascript:parent.e_init_strings('#669999','" +
+      "<AREA COORDS=\"130,50,146,66\" HREF=\"javascript:parent.a_choose_color('#669999','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,50,162,66\" HREF=\"javascript:parent.e_init_strings('#666699','" +
+      "<AREA COORDS=\"146,50,162,66\" HREF=\"javascript:parent.a_choose_color('#666699','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,50,178,66\" HREF=\"javascript:parent.e_init_strings('#663399','" +
+      "<AREA COORDS=\"162,50,178,66\" HREF=\"javascript:parent.a_choose_color('#663399','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,50,194,66\" HREF=\"javascript:parent.e_init_strings('#660099','" +
+      "<AREA COORDS=\"178,50,194,66\" HREF=\"javascript:parent.a_choose_color('#660099','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,50,210,66\" HREF=\"javascript:parent.e_init_strings('#FF0099','" +
+      "<AREA COORDS=\"194,50,210,66\" HREF=\"javascript:parent.a_choose_color('#FF0099','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,50,226,66\" HREF=\"javascript:parent.e_init_strings('#FF3399','" +
+      "<AREA COORDS=\"210,50,226,66\" HREF=\"javascript:parent.a_choose_color('#FF3399','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,50,242,66\" HREF=\"javascript:parent.e_init_strings('#FF6699','" +
+      "<AREA COORDS=\"226,50,242,66\" HREF=\"javascript:parent.a_choose_color('#FF6699','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,50,258,66\" HREF=\"javascript:parent.e_init_strings('#FF9999','" +
+      "<AREA COORDS=\"242,50,258,66\" HREF=\"javascript:parent.a_choose_color('#FF9999','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,50,274,66\" HREF=\"javascript:parent.e_init_strings('#FFCC99','" +
+      "<AREA COORDS=\"258,50,274,66\" HREF=\"javascript:parent.a_choose_color('#FFCC99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,50,290,66\" HREF=\"javascript:parent.e_init_strings('#FFFF99','" +
+      "<AREA COORDS=\"274,50,290,66\" HREF=\"javascript:parent.a_choose_color('#FFFF99','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 5 --->");
     writeln(
-      "<AREA COORDS=\"2,66,18,82\" HREF=\"javascript:parent.e_init_strings('#3300CC','" +
+      "<AREA COORDS=\"2,66,18,82\" HREF=\"javascript:parent.a_choose_color('#3300CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,66,34,82\" HREF=\"javascript:parent.e_init_strings('#3333CC','" +
+      "<AREA COORDS=\"18,66,34,82\" HREF=\"javascript:parent.a_choose_color('#3333CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,66,50,82\" HREF=\"javascript:parent.e_init_strings('#3366CC','" +
+      "<AREA COORDS=\"34,66,50,82\" HREF=\"javascript:parent.a_choose_color('#3366CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,66,66,82\" HREF=\"javascript:parent.e_init_strings('#3399CC','" +
+      "<AREA COORDS=\"50,66,66,82\" HREF=\"javascript:parent.a_choose_color('#3399CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,66,82,82\" HREF=\"javascript:parent.e_init_strings('#33CCCC','" +
+      "<AREA COORDS=\"66,66,82,82\" HREF=\"javascript:parent.a_choose_color('#33CCCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,66,98,82\" HREF=\"javascript:parent.e_init_strings('#33FFCC','" +
+      "<AREA COORDS=\"82,66,98,82\" HREF=\"javascript:parent.a_choose_color('#33FFCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,66,114,82\" HREF=\"javascript:parent.e_init_strings('#66FFCC','" +
+      "<AREA COORDS=\"98,66,114,82\" HREF=\"javascript:parent.a_choose_color('#66FFCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,66,130,82\" HREF=\"javascript:parent.e_init_strings('#66CCCC','" +
+      "<AREA COORDS=\"114,66,130,82\" HREF=\"javascript:parent.a_choose_color('#66CCCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,66,146,82\" HREF=\"javascript:parent.e_init_strings('#6699CC','" +
+      "<AREA COORDS=\"130,66,146,82\" HREF=\"javascript:parent.a_choose_color('#6699CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,66,162,82\" HREF=\"javascript:parent.e_init_strings('#6666CC','" +
+      "<AREA COORDS=\"146,66,162,82\" HREF=\"javascript:parent.a_choose_color('#6666CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,66,178,82\" HREF=\"javascript:parent.e_init_strings('#6633CC','" +
+      "<AREA COORDS=\"162,66,178,82\" HREF=\"javascript:parent.a_choose_color('#6633CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,66,194,82\" HREF=\"javascript:parent.e_init_strings('#6600CC','" +
+      "<AREA COORDS=\"178,66,194,82\" HREF=\"javascript:parent.a_choose_color('#6600CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,66,210,82\" HREF=\"javascript:parent.e_init_strings('#FF00CC','" +
+      "<AREA COORDS=\"194,66,210,82\" HREF=\"javascript:parent.a_choose_color('#FF00CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,66,226,82\" HREF=\"javascript:parent.e_init_strings('#FF33CC','" +
+      "<AREA COORDS=\"210,66,226,82\" HREF=\"javascript:parent.a_choose_color('#FF33CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,66,242,82\" HREF=\"javascript:parent.e_init_strings('#FF66CC','" +
+      "<AREA COORDS=\"226,66,242,82\" HREF=\"javascript:parent.a_choose_color('#FF66CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,66,258,82\" HREF=\"javascript:parent.e_init_strings('#FF99CC','" +
+      "<AREA COORDS=\"242,66,258,82\" HREF=\"javascript:parent.a_choose_color('#FF99CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,66,274,82\" HREF=\"javascript:parent.e_init_strings('#FFCCCC','" +
+      "<AREA COORDS=\"258,66,274,82\" HREF=\"javascript:parent.a_choose_color('#FFCCCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,66,290,82\" HREF=\"javascript:parent.e_init_strings('#FFFFCC','" +
+      "<AREA COORDS=\"274,66,290,82\" HREF=\"javascript:parent.a_choose_color('#FFFFCC','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 6 --->");
     writeln(
-      "<AREA COORDS=\"2,82,18,98\" HREF=\"javascript:parent.e_init_strings('#3300FF','" +
+      "<AREA COORDS=\"2,82,18,98\" HREF=\"javascript:parent.a_choose_color('#3300FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,82,34,98\" HREF=\"javascript:parent.e_init_strings('#3333FF','" +
+      "<AREA COORDS=\"18,82,34,98\" HREF=\"javascript:parent.a_choose_color('#3333FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,82,50,98\" HREF=\"javascript:parent.e_init_strings('#3366FF','" +
+      "<AREA COORDS=\"34,82,50,98\" HREF=\"javascript:parent.a_choose_color('#3366FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,82,66,98\" HREF=\"javascript:parent.e_init_strings('#3399FF','" +
+      "<AREA COORDS=\"50,82,66,98\" HREF=\"javascript:parent.a_choose_color('#3399FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,82,82,98\" HREF=\"javascript:parent.e_init_strings('#33CCFF','" +
+      "<AREA COORDS=\"66,82,82,98\" HREF=\"javascript:parent.a_choose_color('#33CCFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,82,98,98\" HREF=\"javascript:parent.e_init_strings('#33FFFF','" +
+      "<AREA COORDS=\"82,82,98,98\" HREF=\"javascript:parent.a_choose_color('#33FFFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,82,114,98\" HREF=\"javascript:parent.e_init_strings('#66FFFF','" +
+      "<AREA COORDS=\"98,82,114,98\" HREF=\"javascript:parent.a_choose_color('#66FFFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,82,130,98\" HREF=\"javascript:parent.e_init_strings('#66CCFF','" +
+      "<AREA COORDS=\"114,82,130,98\" HREF=\"javascript:parent.a_choose_color('#66CCFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,82,146,98\" HREF=\"javascript:parent.e_init_strings('#6699FF','" +
+      "<AREA COORDS=\"130,82,146,98\" HREF=\"javascript:parent.a_choose_color('#6699FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,82,162,98\" HREF=\"javascript:parent.e_init_strings('#6666FF','" +
+      "<AREA COORDS=\"146,82,162,98\" HREF=\"javascript:parent.a_choose_color('#6666FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,82,178,98\" HREF=\"javascript:parent.e_init_strings('#6633FF','" +
+      "<AREA COORDS=\"162,82,178,98\" HREF=\"javascript:parent.a_choose_color('#6633FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,82,194,98\" HREF=\"javascript:parent.e_init_strings('#6600FF','" +
+      "<AREA COORDS=\"178,82,194,98\" HREF=\"javascript:parent.a_choose_color('#6600FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,82,210,98\" HREF=\"javascript:parent.e_init_strings('#FF00FF','" +
+      "<AREA COORDS=\"194,82,210,98\" HREF=\"javascript:parent.a_choose_color('#FF00FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,82,226,98\" HREF=\"javascript:parent.e_init_strings('#FF33FF','" +
+      "<AREA COORDS=\"210,82,226,98\" HREF=\"javascript:parent.a_choose_color('#FF33FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,82,242,98\" HREF=\"javascript:parent.e_init_strings('#FF66FF','" +
+      "<AREA COORDS=\"226,82,242,98\" HREF=\"javascript:parent.a_choose_color('#FF66FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,82,258,98\" HREF=\"javascript:parent.e_init_strings('#FF99FF','" +
+      "<AREA COORDS=\"242,82,258,98\" HREF=\"javascript:parent.a_choose_color('#FF99FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,82,274,98\" HREF=\"javascript:parent.e_init_strings('#FFCCFF','" +
+      "<AREA COORDS=\"258,82,274,98\" HREF=\"javascript:parent.a_choose_color('#FFCCFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,82,290,98\" HREF=\"javascript:parent.e_init_strings('#FFFFFF','" +
+      "<AREA COORDS=\"274,82,290,98\" HREF=\"javascript:parent.a_choose_color('#FFFFFF','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 7 --->");
     writeln(
-      "<AREA COORDS=\"2,98,18,114\" HREF=\"javascript:parent.e_init_strings('#0000FF','" +
+      "<AREA COORDS=\"2,98,18,114\" HREF=\"javascript:parent.a_choose_color('#0000FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,98,34,114\" HREF=\"javascript:parent.e_init_strings('#0033FF','" +
+      "<AREA COORDS=\"18,98,34,114\" HREF=\"javascript:parent.a_choose_color('#0033FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,98,50,114\" HREF=\"javascript:parent.e_init_strings('#0066FF','" +
+      "<AREA COORDS=\"34,98,50,114\" HREF=\"javascript:parent.a_choose_color('#0066FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,98,66,114\" HREF=\"javascript:parent.e_init_strings('#0099FF','" +
+      "<AREA COORDS=\"50,98,66,114\" HREF=\"javascript:parent.a_choose_color('#0099FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,98,82,114\" HREF=\"javascript:parent.e_init_strings('#00CCFF','" +
+      "<AREA COORDS=\"66,98,82,114\" HREF=\"javascript:parent.a_choose_color('#00CCFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,98,98,114\" HREF=\"javascript:parent.e_init_strings('#00FFFF','" +
+      "<AREA COORDS=\"82,98,98,114\" HREF=\"javascript:parent.a_choose_color('#00FFFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,98,114,114\" HREF=\"javascript:parent.e_init_strings('#99FFFF','" +
+      "<AREA COORDS=\"98,98,114,114\" HREF=\"javascript:parent.a_choose_color('#99FFFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,98,130,114\" HREF=\"javascript:parent.e_init_strings('#99CCFF','" +
+      "<AREA COORDS=\"114,98,130,114\" HREF=\"javascript:parent.a_choose_color('#99CCFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,98,146,114\" HREF=\"javascript:parent.e_init_strings('#9999FF','" +
+      "<AREA COORDS=\"130,98,146,114\" HREF=\"javascript:parent.a_choose_color('#9999FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,98,162,114\" HREF=\"javascript:parent.e_init_strings('#9966FF','" +
+      "<AREA COORDS=\"146,98,162,114\" HREF=\"javascript:parent.a_choose_color('#9966FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,98,178,114\" HREF=\"javascript:parent.e_init_strings('#9933FF','" +
+      "<AREA COORDS=\"162,98,178,114\" HREF=\"javascript:parent.a_choose_color('#9933FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,98,194,114\" HREF=\"javascript:parent.e_init_strings('#9900FF','" +
+      "<AREA COORDS=\"178,98,194,114\" HREF=\"javascript:parent.a_choose_color('#9900FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,98,210,114\" HREF=\"javascript:parent.e_init_strings('#CC00FF','" +
+      "<AREA COORDS=\"194,98,210,114\" HREF=\"javascript:parent.a_choose_color('#CC00FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,98,226,114\" HREF=\"javascript:parent.e_init_strings('#CC33FF','" +
+      "<AREA COORDS=\"210,98,226,114\" HREF=\"javascript:parent.a_choose_color('#CC33FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,98,242,114\" HREF=\"javascript:parent.e_init_strings('#CC66FF','" +
+      "<AREA COORDS=\"226,98,242,114\" HREF=\"javascript:parent.a_choose_color('#CC66FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,98,258,114\" HREF=\"javascript:parent.e_init_strings('#CC99FF','" +
+      "<AREA COORDS=\"242,98,258,114\" HREF=\"javascript:parent.a_choose_color('#CC99FF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,98,274,114\" HREF=\"javascript:parent.e_init_strings('#CCCCFF','" +
+      "<AREA COORDS=\"258,98,274,114\" HREF=\"javascript:parent.a_choose_color('#CCCCFF','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,98,290,114\" HREF=\"javascript:parent.e_init_strings('#CCFFFF','" +
+      "<AREA COORDS=\"274,98,290,114\" HREF=\"javascript:parent.a_choose_color('#CCFFFF','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 8 --->");
     writeln(
-      "<AREA COORDS=\"2,114,18,130\" HREF=\"javascript:parent.e_init_strings('#0000CC','" +
+      "<AREA COORDS=\"2,114,18,130\" HREF=\"javascript:parent.a_choose_color('#0000CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,114,34,130\" HREF=\"javascript:parent.e_init_strings('#0033CC','" +
+      "<AREA COORDS=\"18,114,34,130\" HREF=\"javascript:parent.a_choose_color('#0033CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,114,50,130\" HREF=\"javascript:parent.e_init_strings('#0066CC','" +
+      "<AREA COORDS=\"34,114,50,130\" HREF=\"javascript:parent.a_choose_color('#0066CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,114,66,130\" HREF=\"javascript:parent.e_init_strings('#0099CC','" +
+      "<AREA COORDS=\"50,114,66,130\" HREF=\"javascript:parent.a_choose_color('#0099CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,114,82,130\" HREF=\"javascript:parent.e_init_strings('#00CCCC','" +
+      "<AREA COORDS=\"66,114,82,130\" HREF=\"javascript:parent.a_choose_color('#00CCCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,114,98,130\" HREF=\"javascript:parent.e_init_strings('#00FFCC','" +
+      "<AREA COORDS=\"82,114,98,130\" HREF=\"javascript:parent.a_choose_color('#00FFCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,114,114,130\" HREF=\"javascript:parent.e_init_strings('#99FFCC','" +
+      "<AREA COORDS=\"98,114,114,130\" HREF=\"javascript:parent.a_choose_color('#99FFCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,114,130,130\" HREF=\"javascript:parent.e_init_strings('#99CCCC','" +
+      "<AREA COORDS=\"114,114,130,130\" HREF=\"javascript:parent.a_choose_color('#99CCCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,114,146,130\" HREF=\"javascript:parent.e_init_strings('#9999CC','" +
+      "<AREA COORDS=\"130,114,146,130\" HREF=\"javascript:parent.a_choose_color('#9999CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,114,162,130\" HREF=\"javascript:parent.e_init_strings('#9966CC','" +
+      "<AREA COORDS=\"146,114,162,130\" HREF=\"javascript:parent.a_choose_color('#9966CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,114,178,130\" HREF=\"javascript:parent.e_init_strings('#9933CC','" +
+      "<AREA COORDS=\"162,114,178,130\" HREF=\"javascript:parent.a_choose_color('#9933CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,114,194,130\" HREF=\"javascript:parent.e_init_strings('#9900CC','" +
+      "<AREA COORDS=\"178,114,194,130\" HREF=\"javascript:parent.a_choose_color('#9900CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,114,210,130\" HREF=\"javascript:parent.e_init_strings('#CC00CC','" +
+      "<AREA COORDS=\"194,114,210,130\" HREF=\"javascript:parent.a_choose_color('#CC00CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,114,226,130\" HREF=\"javascript:parent.e_init_strings('#CC33CC','" +
+      "<AREA COORDS=\"210,114,226,130\" HREF=\"javascript:parent.a_choose_color('#CC33CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,114,242,130\" HREF=\"javascript:parent.e_init_strings('#CC66CC','" +
+      "<AREA COORDS=\"226,114,242,130\" HREF=\"javascript:parent.a_choose_color('#CC66CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,114,258,130\" HREF=\"javascript:parent.e_init_strings('#CC99CC','" +
+      "<AREA COORDS=\"242,114,258,130\" HREF=\"javascript:parent.a_choose_color('#CC99CC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,114,274,130\" HREF=\"javascript:parent.e_init_strings('#CCCCCC','" +
+      "<AREA COORDS=\"258,114,274,130\" HREF=\"javascript:parent.a_choose_color('#CCCCCC','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,114,290,130\" HREF=\"javascript:parent.e_init_strings('#CCFFCC','" +
+      "<AREA COORDS=\"274,114,290,130\" HREF=\"javascript:parent.a_choose_color('#CCFFCC','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 9 --->");
     writeln(
-      "<AREA COORDS=\"2,130,18,146\" HREF=\"javascript:parent.e_init_strings('#000099','" +
+      "<AREA COORDS=\"2,130,18,146\" HREF=\"javascript:parent.a_choose_color('#000099','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,130,34,146\" HREF=\"javascript:parent.e_init_strings('#003399','" +
+      "<AREA COORDS=\"18,130,34,146\" HREF=\"javascript:parent.a_choose_color('#003399','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,130,50,146\" HREF=\"javascript:parent.e_init_strings('#006699','" +
+      "<AREA COORDS=\"34,130,50,146\" HREF=\"javascript:parent.a_choose_color('#006699','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,130,66,146\" HREF=\"javascript:parent.e_init_strings('#009999','" +
+      "<AREA COORDS=\"50,130,66,146\" HREF=\"javascript:parent.a_choose_color('#009999','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,130,82,146\" HREF=\"javascript:parent.e_init_strings('#00CC99','" +
+      "<AREA COORDS=\"66,130,82,146\" HREF=\"javascript:parent.a_choose_color('#00CC99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,130,98,146\" HREF=\"javascript:parent.e_init_strings('#00FF99','" +
+      "<AREA COORDS=\"82,130,98,146\" HREF=\"javascript:parent.a_choose_color('#00FF99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,130,114,146\" HREF=\"javascript:parent.e_init_strings('#99FF99','" +
+      "<AREA COORDS=\"98,130,114,146\" HREF=\"javascript:parent.a_choose_color('#99FF99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,130,130,146\" HREF=\"javascript:parent.e_init_strings('#99CC99','" +
+      "<AREA COORDS=\"114,130,130,146\" HREF=\"javascript:parent.a_choose_color('#99CC99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,130,146,146\" HREF=\"javascript:parent.e_init_strings('#999999','" +
+      "<AREA COORDS=\"130,130,146,146\" HREF=\"javascript:parent.a_choose_color('#999999','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,130,162,146\" HREF=\"javascript:parent.e_init_strings('#996699','" +
+      "<AREA COORDS=\"146,130,162,146\" HREF=\"javascript:parent.a_choose_color('#996699','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,130,178,146\" HREF=\"javascript:parent.e_init_strings('#993399','" +
+      "<AREA COORDS=\"162,130,178,146\" HREF=\"javascript:parent.a_choose_color('#993399','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,130,194,146\" HREF=\"javascript:parent.e_init_strings('#990099','" +
+      "<AREA COORDS=\"178,130,194,146\" HREF=\"javascript:parent.a_choose_color('#990099','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,130,210,146\" HREF=\"javascript:parent.e_init_strings('#CC0099','" +
+      "<AREA COORDS=\"194,130,210,146\" HREF=\"javascript:parent.a_choose_color('#CC0099','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,130,226,146\" HREF=\"javascript:parent.e_init_strings('#CC3399','" +
+      "<AREA COORDS=\"210,130,226,146\" HREF=\"javascript:parent.a_choose_color('#CC3399','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,130,242,146\" HREF=\"javascript:parent.e_init_strings('#CC6699','" +
+      "<AREA COORDS=\"226,130,242,146\" HREF=\"javascript:parent.a_choose_color('#CC6699','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,130,258,146\" HREF=\"javascript:parent.e_init_strings('#CC9999','" +
+      "<AREA COORDS=\"242,130,258,146\" HREF=\"javascript:parent.a_choose_color('#CC9999','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,130,274,146\" HREF=\"javascript:parent.e_init_strings('#CCCC99','" +
+      "<AREA COORDS=\"258,130,274,146\" HREF=\"javascript:parent.a_choose_color('#CCCC99','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,130,290,146\" HREF=\"javascript:parent.e_init_strings('#CCFF99','" +
+      "<AREA COORDS=\"274,130,290,146\" HREF=\"javascript:parent.a_choose_color('#CCFF99','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 10 --->");
     writeln(
-      "<AREA COORDS=\"2,146,18,162\" HREF=\"javascript:parent.e_init_strings('#000066','" +
+      "<AREA COORDS=\"2,146,18,162\" HREF=\"javascript:parent.a_choose_color('#000066','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,146,34,162\" HREF=\"javascript:parent.e_init_strings('#003366','" +
+      "<AREA COORDS=\"18,146,34,162\" HREF=\"javascript:parent.a_choose_color('#003366','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,146,50,162\" HREF=\"javascript:parent.e_init_strings('#006666','" +
+      "<AREA COORDS=\"34,146,50,162\" HREF=\"javascript:parent.a_choose_color('#006666','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,146,66,162\" HREF=\"javascript:parent.e_init_strings('#009966','" +
+      "<AREA COORDS=\"50,146,66,162\" HREF=\"javascript:parent.a_choose_color('#009966','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,146,82,162\" HREF=\"javascript:parent.e_init_strings('#00CC66','" +
+      "<AREA COORDS=\"66,146,82,162\" HREF=\"javascript:parent.a_choose_color('#00CC66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,146,98,162\" HREF=\"javascript:parent.e_init_strings('#00FF66','" +
+      "<AREA COORDS=\"82,146,98,162\" HREF=\"javascript:parent.a_choose_color('#00FF66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,146,114,162\" HREF=\"javascript:parent.e_init_strings('#99FF66','" +
+      "<AREA COORDS=\"98,146,114,162\" HREF=\"javascript:parent.a_choose_color('#99FF66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,146,130,162\" HREF=\"javascript:parent.e_init_strings('#99CC66','" +
+      "<AREA COORDS=\"114,146,130,162\" HREF=\"javascript:parent.a_choose_color('#99CC66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,146,146,162\" HREF=\"javascript:parent.e_init_strings('#999966','" +
+      "<AREA COORDS=\"130,146,146,162\" HREF=\"javascript:parent.a_choose_color('#999966','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,146,162,162\" HREF=\"javascript:parent.e_init_strings('#996666','" +
+      "<AREA COORDS=\"146,146,162,162\" HREF=\"javascript:parent.a_choose_color('#996666','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,146,178,162\" HREF=\"javascript:parent.e_init_strings('#993366','" +
+      "<AREA COORDS=\"162,146,178,162\" HREF=\"javascript:parent.a_choose_color('#993366','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,146,194,162\" HREF=\"javascript:parent.e_init_strings('#990066','" +
+      "<AREA COORDS=\"178,146,194,162\" HREF=\"javascript:parent.a_choose_color('#990066','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,146,210,162\" HREF=\"javascript:parent.e_init_strings('#CC0066','" +
+      "<AREA COORDS=\"194,146,210,162\" HREF=\"javascript:parent.a_choose_color('#CC0066','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,146,226,162\" HREF=\"javascript:parent.e_init_strings('#CC3366','" +
+      "<AREA COORDS=\"210,146,226,162\" HREF=\"javascript:parent.a_choose_color('#CC3366','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,146,242,162\" HREF=\"javascript:parent.e_init_strings('#CC6666','" +
+      "<AREA COORDS=\"226,146,242,162\" HREF=\"javascript:parent.a_choose_color('#CC6666','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,146,258,162\" HREF=\"javascript:parent.e_init_strings('#CC9966','" +
+      "<AREA COORDS=\"242,146,258,162\" HREF=\"javascript:parent.a_choose_color('#CC9966','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,146,274,162\" HREF=\"javascript:parent.e_init_strings('#CCCC66','" +
+      "<AREA COORDS=\"258,146,274,162\" HREF=\"javascript:parent.a_choose_color('#CCCC66','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,146,290,162\" HREF=\"javascript:parent.e_init_strings('#CCFF66','" +
+      "<AREA COORDS=\"274,146,290,162\" HREF=\"javascript:parent.a_choose_color('#CCFF66','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 11 --->");
     writeln(
-      "<AREA COORDS=\"2,162,18,178\" HREF=\"javascript:parent.e_init_strings('#000033','" +
+      "<AREA COORDS=\"2,162,18,178\" HREF=\"javascript:parent.a_choose_color('#000033','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,162,34,178\" HREF=\"javascript:parent.e_init_strings('#003333','" +
+      "<AREA COORDS=\"18,162,34,178\" HREF=\"javascript:parent.a_choose_color('#003333','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,162,50,178\" HREF=\"javascript:parent.e_init_strings('#006633','" +
+      "<AREA COORDS=\"34,162,50,178\" HREF=\"javascript:parent.a_choose_color('#006633','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,162,66,178\" HREF=\"javascript:parent.e_init_strings('#009933','" +
+      "<AREA COORDS=\"50,162,66,178\" HREF=\"javascript:parent.a_choose_color('#009933','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,162,82,178\" HREF=\"javascript:parent.e_init_strings('#00CC33','" +
+      "<AREA COORDS=\"66,162,82,178\" HREF=\"javascript:parent.a_choose_color('#00CC33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,162,98,178\" HREF=\"javascript:parent.e_init_strings('#00FF33','" +
+      "<AREA COORDS=\"82,162,98,178\" HREF=\"javascript:parent.a_choose_color('#00FF33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,162,114,178\" HREF=\"javascript:parent.e_init_strings('#99FF33','" +
+      "<AREA COORDS=\"98,162,114,178\" HREF=\"javascript:parent.a_choose_color('#99FF33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,162,130,178\" HREF=\"javascript:parent.e_init_strings('#99CC33','" +
+      "<AREA COORDS=\"114,162,130,178\" HREF=\"javascript:parent.a_choose_color('#99CC33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,162,146,178\" HREF=\"javascript:parent.e_init_strings('#999933','" +
+      "<AREA COORDS=\"130,162,146,178\" HREF=\"javascript:parent.a_choose_color('#999933','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,162,162,178\" HREF=\"javascript:parent.e_init_strings('#996633','" +
+      "<AREA COORDS=\"146,162,162,178\" HREF=\"javascript:parent.a_choose_color('#996633','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,162,178,178\" HREF=\"javascript:parent.e_init_strings('#993333','" +
+      "<AREA COORDS=\"162,162,178,178\" HREF=\"javascript:parent.a_choose_color('#993333','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,162,194,178\" HREF=\"javascript:parent.e_init_strings('#990033','" +
+      "<AREA COORDS=\"178,162,194,178\" HREF=\"javascript:parent.a_choose_color('#990033','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,162,210,178\" HREF=\"javascript:parent.e_init_strings('#CC0033','" +
+      "<AREA COORDS=\"194,162,210,178\" HREF=\"javascript:parent.a_choose_color('#CC0033','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,162,226,178\" HREF=\"javascript:parent.e_init_strings('#CC3333','" +
+      "<AREA COORDS=\"210,162,226,178\" HREF=\"javascript:parent.a_choose_color('#CC3333','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,162,242,178\" HREF=\"javascript:parent.e_init_strings('#CC6633','" +
+      "<AREA COORDS=\"226,162,242,178\" HREF=\"javascript:parent.a_choose_color('#CC6633','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,162,258,178\" HREF=\"javascript:parent.e_init_strings('#CC9933','" +
+      "<AREA COORDS=\"242,162,258,178\" HREF=\"javascript:parent.a_choose_color('#CC9933','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,162,274,178\" HREF=\"javascript:parent.e_init_strings('#CCCC33','" +
+      "<AREA COORDS=\"258,162,274,178\" HREF=\"javascript:parent.a_choose_color('#CCCC33','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,162,290,178\" HREF=\"javascript:parent.e_init_strings('#CCFF33','" +
+      "<AREA COORDS=\"274,162,290,178\" HREF=\"javascript:parent.a_choose_color('#CCFF33','" +
         i_obj +
         "')\">",
     );
     writeln("<!--- Row 12 --->");
     writeln(
-      "<AREA COORDS=\"2,178,18,194\" HREF=\"javascript:parent.e_init_strings('#000000','" +
+      "<AREA COORDS=\"2,178,18,194\" HREF=\"javascript:parent.a_choose_color('#000000','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"18,178,34,194\" HREF=\"javascript:parent.e_init_strings('#003300','" +
+      "<AREA COORDS=\"18,178,34,194\" HREF=\"javascript:parent.a_choose_color('#003300','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"34,178,50,194\" HREF=\"javascript:parent.e_init_strings('#006600','" +
+      "<AREA COORDS=\"34,178,50,194\" HREF=\"javascript:parent.a_choose_color('#006600','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"50,178,66,194\" HREF=\"javascript:parent.e_init_strings('#009900','" +
+      "<AREA COORDS=\"50,178,66,194\" HREF=\"javascript:parent.a_choose_color('#009900','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"66,178,82,194\" HREF=\"javascript:parent.e_init_strings('#00CC00','" +
+      "<AREA COORDS=\"66,178,82,194\" HREF=\"javascript:parent.a_choose_color('#00CC00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"82,178,98,194\" HREF=\"javascript:parent.e_init_strings('#00FF00','" +
+      "<AREA COORDS=\"82,178,98,194\" HREF=\"javascript:parent.a_choose_color('#00FF00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"98,178,114,194\" HREF=\"javascript:parent.e_init_strings('#99FF00','" +
+      "<AREA COORDS=\"98,178,114,194\" HREF=\"javascript:parent.a_choose_color('#99FF00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"114,178,130,194\" HREF=\"javascript:parent.e_init_strings('#99CC00','" +
+      "<AREA COORDS=\"114,178,130,194\" HREF=\"javascript:parent.a_choose_color('#99CC00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"130,178,146,194\" HREF=\"javascript:parent.e_init_strings('#999900','" +
+      "<AREA COORDS=\"130,178,146,194\" HREF=\"javascript:parent.a_choose_color('#999900','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"146,178,162,194\" HREF=\"javascript:parent.e_init_strings('#996600','" +
+      "<AREA COORDS=\"146,178,162,194\" HREF=\"javascript:parent.a_choose_color('#996600','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"162,178,178,194\" HREF=\"javascript:parent.e_init_strings('#993300','" +
+      "<AREA COORDS=\"162,178,178,194\" HREF=\"javascript:parent.a_choose_color('#993300','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"178,178,194,194\" HREF=\"javascript:parent.e_init_strings('#990000','" +
+      "<AREA COORDS=\"178,178,194,194\" HREF=\"javascript:parent.a_choose_color('#990000','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"194,178,210,194\" HREF=\"javascript:parent.e_init_strings('#CC0000','" +
+      "<AREA COORDS=\"194,178,210,194\" HREF=\"javascript:parent.a_choose_color('#CC0000','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"210,178,226,194\" HREF=\"javascript:parent.e_init_strings('#CC3300','" +
+      "<AREA COORDS=\"210,178,226,194\" HREF=\"javascript:parent.a_choose_color('#CC3300','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"226,178,242,194\" HREF=\"javascript:parent.e_init_strings('#CC6600','" +
+      "<AREA COORDS=\"226,178,242,194\" HREF=\"javascript:parent.a_choose_color('#CC6600','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"242,178,258,194\" HREF=\"javascript:parent.e_init_strings('#CC9900','" +
+      "<AREA COORDS=\"242,178,258,194\" HREF=\"javascript:parent.a_choose_color('#CC9900','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"258,178,274,194\" HREF=\"javascript:parent.e_init_strings('#CCCC00','" +
+      "<AREA COORDS=\"258,178,274,194\" HREF=\"javascript:parent.a_choose_color('#CCCC00','" +
         i_obj +
         "')\">",
     );
     writeln(
-      "<AREA COORDS=\"274,178,290,194\" HREF=\"javascript:parent.e_init_strings('#CCFF00','" +
+      "<AREA COORDS=\"274,178,290,194\" HREF=\"javascript:parent.a_choose_color('#CCFF00','" +
         i_obj +
         "')\">",
     );
     writeln("</MAP>");
   } //end with
 }
-function e_init_strings(color, i_obj) {
-  if (i_obj == "sf") Xfr(i_obj, color);
-  if (i_obj == "tbl") Xfv(color);
+function a_choose_color(color, i_obj) {
+  if (i_obj == "sf") a_edit_font(i_obj, color);
+  if (i_obj == "tbl") a_edit_color(color);
 }
-function e_init_mwst(hash) {
+function a_edit_product(hash) {
   with (s.document.insert) {
     type = typ.options[typ.selectedIndex].value;
-    he = htmltyp.options[htmltyp.selectedIndex].value;
+    he = h.options[h.selectedIndex].value;
     save = new Array();
     if (artikel[hash])
       for (si in system["features"]) {
@@ -5036,20 +5022,18 @@ function e_init_mwst(hash) {
     artikel[hash] = new Array();
     artikel[hash]["htmltyp"] = he;
     artikel[hash]["typ"] = type;
-    if (type != "txt") if (menge.checked) artikel[hash]["menge"] = true;
-    if (preisa.checked) artikel[hash]["preisa"] = true;
-    artikel[hash]["name"] = e_print_header(nname.value);
-    artikel[hash]["titel"] = e_print_header(titel.value);
+    if (type != "txt") if (j.checked) artikel[hash]["menge"] = true;
+    if (k.checked) artikel[hash]["preisa"] = true;
+    artikel[hash]["name"] = a_myEscape(nname.value);
+    artikel[hash]["titel"] = a_myEscape(l.value);
     if (image.value.length != 0)
-      artikel[hash]["image"] = e_print_header(image.value);
-    if (desc.value.length != 0)
-      artikel[hash]["desc"] = e_print_header(desc.value);
-    if (url.value.length != 0) artikel[hash]["url"] = e_print_header(url.value);
-    if (gpreis.value.length != 0)
-      if (b_add_record(gpreis.value) != 0)
-        artikel[hash]["gpreis"] = b_add_record(gpreis.value);
-    artikel[hash]["preis"] = b_add_record(preis.value);
-    artikel[hash]["mwst"] = mwst.options[mwst.selectedIndex].value;
+      artikel[hash]["image"] = a_myEscape(image.value);
+    if (o.value.length != 0) artikel[hash]["desc"] = a_myEscape(o.value);
+    if (url.value.length != 0) artikel[hash]["url"] = a_myEscape(url.value);
+    if (gm.value.length != 0)
+      if (a_2pf(gm.value) != 0) artikel[hash]["gpreis"] = a_2pf(gm.value);
+    artikel[hash]["preis"] = a_2pf(m.value);
+    artikel[hash]["mwst"] = n.options[n.selectedIndex].value;
     artikel[hash]["features"] = "";
     for (i in system["features"]) {
       if (!system["features"][i]) continue;
@@ -5061,18 +5045,18 @@ function e_init_mwst(hash) {
     }
   } // end with
 }
-function E_init_font() {
+function a_save_product() {
   var ha;
   ha = s.document.insert.ha.value;
-  e_init_mwst(ha);
-  B_auswertung("ed_art");
+  a_edit_product(ha);
+  A_doConfigSystem("ed_art");
   E_go("refresh");
 }
-function E_init_page() {
+function a_next_product_idx() {
   for (i = 0; i <= artikel.length; i++) {
     if (i > 10) {
       alert(A_DERR);
-      E_init_curr();
+      a_del_s();
       return;
     }
     if (!artikel[i]) {
@@ -5080,30 +5064,30 @@ function E_init_page() {
       break;
     }
   }
-  e_init_mwst(hash);
-  page[e_C_state]["artikel"] += hash + ",";
-  E_print_left_frame();
-  a_doEditCurrency();
+  a_edit_product(hash);
+  page[e_page_state]["artikel"] += hash + ",";
+  a_product();
+  E_print_right_frame();
 }
-function E_init_shipping() {
+function a_do_insert_page() {
   var nname;
   var art_tmp = "";
   hash = s.document.insert.hash.value;
-  nname = s.document.insert.titel.value;
+  nname = s.document.insert.l.value;
   while (nname.length == 0) {
     if (!(nname = prompt(A_DO_INSERT_PAGE_NNAME, ""))) {
-      e_insert_navgif();
+      a_page();
       return;
     }
   }
   art_tmp = page[hash]["artikel"];
   page[hash] = new Array();
-  page[hash]["name"] = e_print_header(nname);
-  page[hash]["top_text"] = e_print_header(s.document.insert.top_text.value);
+  page[hash]["name"] = a_myEscape(nname);
+  page[hash]["top_text"] = a_myEscape(s.document.insert.e.value);
   if (s.document.insert.url.value.length != 0) {
     page[hash]["url"] = escape(s.document.insert.url.value);
   } else {
-    if (s.document.insert.summen.checked == true) page[hash]["summen"] = "true";
+    if (s.document.insert.f.checked == true) page[hash]["summen"] = "true";
   }
   if (s.document.insert.bg.value.length != 0)
     page[hash]["bg"] = escape(s.document.insert.bg.value);
@@ -5112,11 +5096,11 @@ function E_init_shipping() {
   if (s.document.insert.ngs.value.length != 0)
     page[hash]["navgifs"] = escape(s.document.insert.ngs.value);
   page[hash]["artikel"] = art_tmp;
-  e_insert_navgif(hash);
+  a_page(hash);
   LEFT = false;
   E_go(parseInt(hash));
 }
-function E_init_curr() {
+function a_del_s() {
   with (s.document) {
     open();
     writeln(ADMIN_TOP);
@@ -5125,15 +5109,15 @@ function E_init_curr() {
     close();
   }
 }
-function e_check_browser() {
+function a_insert_page() {
   var nname;
-  if (e_C_state == "start") hash = 0;
-  else if (isNaN(e_C_state)) hash = page.length;
-  else hash = e_C_state + 1;
-  nname = s.document.insert.titel.value;
+  if (e_page_state == "start") hash = 0;
+  else if (isNaN(e_page_state)) hash = page.length;
+  else hash = e_page_state + 1;
+  nname = s.document.insert.l.value;
   while (nname.length == 0) {
     if (!(nname = prompt(A_DO_INSERT_PAGE_NNAME, ""))) {
-      e_insert_navgif();
+      a_page();
       return;
     }
   }
@@ -5145,12 +5129,11 @@ function e_check_browser() {
     page.length -= 1;
   }
   page[hash] = new Array();
-  page[hash]["name"] = e_print_header(nname);
-  page[hash]["top_text"] = e_print_header(s.document.insert.top_text.value);
+  page[hash]["name"] = a_myEscape(nname);
+  page[hash]["top_text"] = a_myEscape(s.document.insert.e.value);
   if (s.document.insert.url.value.length != 0)
     page[hash]["url"] = escape(s.document.insert.url.value);
-  else if (s.document.insert.summen.checked == true)
-    page[hash]["summen"] = "true";
+  else if (s.document.insert.f.checked == true) page[hash]["summen"] = "true";
   if (s.document.insert.bg.value.length != 0)
     page[hash]["bg"] = escape(s.document.insert.bg.value);
   if (s.document.insert.ng.value.length != 0)
@@ -5158,23 +5141,23 @@ function e_check_browser() {
   if (s.document.insert.ngs.value.length != 0)
     page[hash]["navgifs"] = escape(s.document.insert.ngs.value);
   page[hash]["artikel"] = "";
-  e_insert_navgif();
+  a_page();
   LEFT = false;
   E_go(hash);
 }
-function errorHandler(hash) {
+function a_delete_page(hash) {
   if (isNaN(hash)) {
     alert(A_DELPAGE_ERR);
-    e_insert_navgif(hash);
+    a_page(hash);
     return;
   }
   if (page.length == 1) {
     alert(A_DELPAGE_ERR2);
-    e_insert_navgif(hash);
+    a_page(hash);
     return;
   }
   if (!confirm(A_DELPAGE_ASK)) {
-    e_insert_navgif(hash);
+    a_page(hash);
     return;
   }
   var art = page[hash]["artikel"];
@@ -5190,56 +5173,56 @@ function errorHandler(hash) {
     page[i] = page[i + 1];
   }
   page.length -= 1;
-  E_init_curr();
+  a_del_s();
   LEFT = false;
   E_go(0);
 }
-function Xgk(hash) {
+function a_delete_product(hash) {
   if (isNaN(hash)) {
     alert(A_DELPROD_ERR);
-    E_init_curr();
+    a_del_s();
     return;
   }
   if (artikel.length == 1) {
     alert(A_DELPROD_ERR2);
-    E_init_curr();
+    a_del_s();
     return;
   }
   if (!confirm(A_DELPROD_ASK)) {
-    E_init_curr();
+    a_del_s();
     return;
   }
   artikel[hash] = false;
-  var art = page[e_C_state]["artikel"];
+  var art = page[e_page_state]["artikel"];
   if (art.length == 0) return;
   var arttmp = "";
   while ((i = art.substring(0, art.indexOf(","))) != "") {
     if (i != hash) arttmp += i + ",";
     art = art.substring(art.indexOf(",") + 1, art.length);
   }
-  page[e_C_state]["artikel"] = arttmp;
-  E_init_curr();
+  page[e_page_state]["artikel"] = arttmp;
+  a_del_s();
   E_go("refresh");
 }
-function E_print_left_frame(s_obj) {
+function a_product(s_obj) {
   var hash = -1;
-  var htmltyp = "1";
+  var h = "1";
   var typ = "checkbox";
-  var menge = false;
-  var preisa = false;
+  var j = false;
+  var k = false;
   var nname = "";
-  var titel = "";
-  var desc = "";
+  var l = "";
+  var o = "";
   var image = "";
   var url = "";
-  var gpreis = "";
-  var preis = "";
-  var mwst = 0;
+  var gm = "";
+  var m = "";
+  var n = 0;
   var su = false;
-  var d = "E_init_page()";
+  var d = "a_next_product_idx()";
   var ftrs = (feat = "");
   with (s.document) {
-    if (isNaN(e_C_state)) {
+    if (isNaN(e_page_state)) {
       open();
       writeln(ADMIN_TOP);
       writeln(FONT_A_BIG + A_INSERT_PROD_ERR + "</FONT>");
@@ -5251,19 +5234,19 @@ function E_print_left_frame(s_obj) {
       if (s_obj.type == "select-one")
         hash = s_obj.options[s_obj.selectedIndex].value;
       else hash = s_obj;
-      d = "E_init_font()";
-      htmltyp = artikel[hash]["htmltyp"];
+      d = "a_save_product()";
+      h = artikel[hash]["htmltyp"];
       typ = artikel[hash]["typ"];
-      if (artikel[hash]["menge"]) menge = true;
-      if (artikel[hash]["preisa"]) preisa = true;
+      if (artikel[hash]["menge"]) j = true;
+      if (artikel[hash]["preisa"]) k = true;
       nname = unescape(artikel[hash]["name"]);
-      titel = unescape(artikel[hash]["titel"]);
-      if (artikel[hash]["desc"]) desc = unescape(artikel[hash]["desc"]);
+      l = unescape(artikel[hash]["titel"]);
+      if (artikel[hash]["desc"]) o = unescape(artikel[hash]["desc"]);
       if (artikel[hash]["image"]) image = unescape(artikel[hash]["image"]);
       if (artikel[hash]["url"]) url = unescape(artikel[hash]["url"]);
-      if (artikel[hash]["gpreis"]) gpreis = artikel[hash]["gpreis"];
-      preis = artikel[hash]["preis"];
-      mwst = artikel[hash]["mwst"];
+      if (artikel[hash]["gpreis"]) gm = artikel[hash]["gpreis"];
+      m = artikel[hash]["preis"];
+      n = artikel[hash]["mwst"];
       if (artikel[hash]["p_feature"]) ftrs = artikel[hash]["p_feature"];
       if (artikel[hash]["features"]) feat = artikel[hash]["features"];
     }
@@ -5272,15 +5255,15 @@ function E_print_left_frame(s_obj) {
     writeln("<FORM name=insert onSubmit='parent." + d + ";'>");
     writeln("<TABLE width=560 border=0><TR><TD>" + FONT_A);
     if (hash >= 0) writeln("<INPUT type=hidden name=ha value='" + hash + "'>");
-    writeln("<SELECT name=htmltyp>");
+    writeln("<SELECT name=h>");
     write("<OPTION value='1' ");
-    if (htmltyp == "1") write(" selected ");
+    if (h == "1") write(" selected ");
     write(">" + A_INSERT_PROD_TAB);
     write("<OPTION value='2'");
-    if (htmltyp == "2") write(" selected ");
+    if (h == "2") write(" selected ");
     writeln(">" + A_INSERT_PROD_FLUF);
     write("<OPTION value='3'");
-    if (htmltyp == "3") write(" selected ");
+    if (h == "3") write(" selected ");
     writeln(">" + A_INSERT_PROD_BIG);
     writeln("</SELECT>");
     writeln("</FONT></TD><TD>" + FONT_A);
@@ -5297,10 +5280,10 @@ function E_print_left_frame(s_obj) {
     writeln("</SELECT>");
     writeln("</FONT></TD><TD>" + FONT_A);
     writeln(A_INSERT_PROD_MENGE + " <INPUT type=checkbox name='menge' ");
-    if (menge) write(" checked");
+    if (j) write(" checked");
     writeln("><BR>");
     writeln(A_INSERT_PROD_PREISA + "&nbsp;<INPUT type=checkbox name='preisa'");
-    if (preisa) write(" checked");
+    if (k) write(" checked");
     writeln(">");
     writeln("</TD><TD align=right>");
     writeln(
@@ -5331,7 +5314,7 @@ function E_print_left_frame(s_obj) {
         "</TD><TD colspan=3>" +
         FONT_A +
         "<INPUT type=text size=50 name='titel' value='" +
-        titel +
+        l +
         "'>",
     );
     writeln("</TD></TR>");
@@ -5341,7 +5324,7 @@ function E_print_left_frame(s_obj) {
         "</TD><TD colspan=3>" +
         FONT_A +
         "<TEXTAREA cols=50 wrap=virtual rows=3 name='desc'>" +
-        desc +
+        o +
         "</TEXTAREA>",
     );
     writeln("</TD></TR>");
@@ -5376,7 +5359,7 @@ function E_print_left_frame(s_obj) {
         "</TD><TD>" +
         FONT_A +
         "<INPUT type=text name='preis' size=8 value='" +
-        a_pment_action(preis) +
+        b_nzahl(m) +
         "'> " +
         CURR +
         "</TD><TD>" +
@@ -5390,16 +5373,16 @@ function E_print_left_frame(s_obj) {
         "</TD><TD>" +
         FONT_A +
         "<INPUT type=text name='gpreis' size=8 value='" +
-        a_pment_action(gpreis) +
+        b_nzahl(gm) +
         "'> " +
         CURR,
     );
     writeln("</TD></TR>");
     writeln("<TR><TD colspan=2>" + FONT_A);
-    writeln(A_INSERT_PROD_MWST + "<SELECT name=mwst>");
+    writeln(A_INSERT_PROD_MWST + "<SELECT name=n>");
     for (mw in system["mwst"]) {
       writeln("<OPTION value='" + mw + "' ");
-      if (mw == mwst) write(" selected ");
+      if (mw == n) write(" selected ");
       write(">" + system["mwst"][mw] + "%");
     }
     writeln("</SELECT></TD>");
@@ -5409,14 +5392,14 @@ function E_print_left_frame(s_obj) {
     write("<OPTION value='-1'");
     if (ftrs == "") write(" selected ");
     writeln(">" + A_CONFIG_SYSTEM_SFT_NO + "");
-    for (menge in system["features"]) {
-      if (!system["features"][menge]) continue;
-      if (system["features"][menge]["ftype"] == "multiple-select") continue;
-      if (system["features"][menge]["ftype"] == "text") continue;
-      if (system["features"][menge]["ftype"] == "checkbox") continue;
-      writeln("<OPTION value='" + menge + "' ");
-      if (menge == ftrs) write(" selected ");
-      write(">" + unescape(system["features"][menge]["name"]));
+    for (j in system["features"]) {
+      if (!system["features"][j]) continue;
+      if (system["features"][j]["ftype"] == "multiple-select") continue;
+      if (system["features"][j]["ftype"] == "text") continue;
+      if (system["features"][j]["ftype"] == "checkbox") continue;
+      writeln("<OPTION value='" + j + "' ");
+      if (j == ftrs) write(" selected ");
+      write(">" + unescape(system["features"][j]["name"]));
     }
     writeln("</SELECT></TD></TR>");
     writeln("<TR><TD colspan=4>");
@@ -5427,13 +5410,13 @@ function E_print_left_frame(s_obj) {
           if (feat.indexOf(i) >= 0) write("checked");
         }
         writeln(
-          "><artikel HREF='javascript:parent.e_printFeaturesRadio(" +
+          "><A HREF='javascript:parent.a_product_feature(" +
             i +
             ",-1," +
             hash +
             ")'>&nbsp;" +
             unescape(system["features"][i]["name"]) +
-            "</artikel>",
+            "</A>",
         );
       }
     }
@@ -5449,7 +5432,7 @@ function E_print_left_frame(s_obj) {
       writeln(
         "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.Xgk(" +
+          "' onClick='parent.a_delete_product(" +
           hash +
           ");'>",
       );
@@ -5457,14 +5440,14 @@ function E_print_left_frame(s_obj) {
       writeln(
         "<INPUT type=button value='" +
           A_UP +
-          "' name='up' onClick='parent.e_print_name(this, " +
+          "' name='up' onClick='parent.a_choose_prod(this, " +
           hash +
           ");'>",
       );
       writeln(
         "<INPUT type=button value='" +
           A_DOWN +
-          "' name ='down' onClick='parent.e_print_name(this, " +
+          "' name ='down' onClick='parent.a_choose_prod(this, " +
           hash +
           ");'>",
       );
@@ -5476,46 +5459,46 @@ function E_print_left_frame(s_obj) {
     close();
   }
 }
-function E_get_feature(hash, idx) {
-  var summen = new Array();
+function a_get_feature_val(hash, idx) {
+  var f = new Array();
   str = unescape(artikel[hash][idx]);
   if (str.indexOf("~") == -1) {
     var i = 0;
     while (str.length) {
-      summen[i] = new Array();
-      summen[i].name = str.substring(0, str.indexOf(","));
-      summen[i].preis = str.substring(str.indexOf(",") + 1, str.indexOf("|"));
+      f[i] = new Array();
+      f[i].name = str.substring(0, str.indexOf(","));
+      f[i].m = str.substring(str.indexOf(",") + 1, str.indexOf("|"));
       str = str.substring(str.indexOf("|") + 1, str.length);
       i++;
     }
   } else {
     for (i in system.features[idx]) {
       if (i == "name" || i == "required" || i == "ftype") continue;
-      summen[i] = new Array();
-      summen[i].name = unescape(system.features[idx][i]);
+      f[i] = new Array();
+      f[i].name = unescape(system.features[idx][i]);
       if (str.length) {
-        summen[i].preis = str.substring(0, str.indexOf("~"));
+        f[i].m = str.substring(0, str.indexOf("~"));
         str = str.substring(str.indexOf("~") + 1, str.length);
-      } else summen[i].preis = "";
+      } else f[i].m = "";
       i++;
     }
   }
-  return summen;
+  return f;
 }
-function e_printFeaturesCheck(idx) {
+function a_get_feature_names(idx) {
   var i,
-    summen = new Array();
-  var menge = 0;
+    f = new Array();
+  var j = 0;
   for (i in system.features[idx]) {
     if (i == "name" || i == "required" || i == "ftype") continue;
-    summen[menge] = new Array();
-    summen[menge].name = unescape(system.features[idx][i]);
-    summen[menge].preis = "";
-    menge++;
+    f[j] = new Array();
+    f[j].name = unescape(system.features[idx][i]);
+    f[j].m = "";
+    j++;
   }
-  return summen;
+  return f;
 }
-function e_printFeaturesRadio(idx, i_obj, ix) {
+function a_product_feature(idx, i_obj, ix) {
   var A_FTS = unescape(system["features"][idx]["name"]);
   var A_ARTIKEL = "Artikel : " + unescape(artikel[ix]["name"]);
   var i = "neu",
@@ -5528,11 +5511,11 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
   }
   var afs = new Array();
   if (artikel[hash][idx]) {
-    afs = E_get_feature(hash, idx);
-  } else afs = e_printFeaturesCheck(idx);
+    afs = a_get_feature_val(hash, idx);
+  } else afs = a_get_feature_names(idx);
   if (i != "neu") {
     fname = afs[i].name;
-    fm = a_pment_action(afs[i].preis);
+    fm = b_nzahl(afs[i].m);
   }
   with (s.document) {
     open();
@@ -5547,20 +5530,20 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
         "<INPUT type=button onClick=\"parent.r.document.location.replace('../help/index.htm#A_merkmale');\"",
     );
     writeln("value='" + A_NAME_HELP + "'></FONT></TD></TR>");
-    writeln("<TR>\mwst<TD valign=top rowspan=12>");
+    writeln("<TR>\n<TD valign=top rowspan=12>");
     writeln(
       FONT_A +
-        '<SELECT name="fts" onChange=\'parent.e_printFeaturesRadio("' +
+        '<SELECT name="fts" onChange=\'parent.a_product_feature("' +
         idx +
         '",this,"' +
         hash +
         "\");' size=8>",
     );
-    var preisa;
-    for (preisa in afs) {
-      write("<OPTION value='" + preisa + "'");
+    var k;
+    for (k in afs) {
+      write("<OPTION value='" + k + "'");
       if (afs == i) write("selected");
-      if (afs[preisa]) writeln(">" + afs[preisa].name);
+      if (afs[k]) writeln(">" + afs[k].name);
     }
     writeln("<OPTION value = 'neu'>" + A_CONFIG_SYSTEM_SFT_N);
     writeln("</SELECT></TD></TR>");
@@ -5577,7 +5560,7 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
     );
     if (i != "neu")
       write(
-        "onChange='parent.e_printFeaturesSelec(this,\"" +
+        "onChange='parent.a_edit_product_feature(this,\"" +
           idx +
           '","' +
           i +
@@ -5598,7 +5581,7 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
     );
     if (i != "neu")
       write(
-        "onChange='parent.e_printFeaturesSelec(this,\"" +
+        "onChange='parent.a_edit_product_feature(this,\"" +
           idx +
           '","' +
           i +
@@ -5612,7 +5595,7 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
         FONT_A_SMALL +
         "<INPUT type=button value='" +
         A_INSERT_PROD_DEFAULT +
-        "' onClick='parent.e_print_menge(\"" +
+        "' onClick='parent.a_click_feature(\"" +
         idx +
         '","' +
         hash +
@@ -5624,7 +5607,7 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
           FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_INSERT +
-          "' onClick='parent.e_printFeaturesSelec(this,\"" +
+          "' onClick='parent.a_edit_product_feature(this,\"" +
           idx +
           '","' +
           i +
@@ -5644,7 +5627,7 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
         FONT_A_SMALL +
           "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.e_printFeaturesMsele(\"" +
+          "' onClick='parent.a_reset_product_feature(\"" +
           idx +
           '","' +
           i +
@@ -5658,7 +5641,7 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
         FONT_A_SMALL +
         "<INPUT type=button value='" +
         A_LEAVE +
-        "' onClick='parent.E_print_left_frame(\"" +
+        "' onClick='parent.a_product(\"" +
         hash +
         "\")';></FONT></TD></TR>",
     );
@@ -5667,9 +5650,9 @@ function e_printFeaturesRadio(idx, i_obj, ix) {
     close();
   } //with
 }
-function e_print_menge(idx, hash) {
+function a_click_feature(idx, hash) {
   var old = "";
-  var summen = new Array();
+  var f = new Array();
   old += artikel[hash].features;
   str = old;
   while (str.length) {
@@ -5678,20 +5661,20 @@ function e_print_menge(idx, hash) {
       artikel[hash].features =
         old.substring(0, old.indexOf(num)) +
         old.substring(old.indexOf(num) + 2, old.length);
-      for (i in artikel[hash]) if (i != idx) summen[i] = artikel[hash][i];
-      artikel[hash] = summen;
+      for (i in artikel[hash]) if (i != idx) f[i] = artikel[hash][i];
+      artikel[hash] = f;
       break;
     }
     str = str.substring(str.indexOf(",") + 1, str.length);
   }
   if (str.length) {
     E_go("refresh");
-    e_printFeaturesRadio(idx, -1, hash);
+    a_product_feature(idx, -1, hash);
   }
 }
-function e_printFeaturesSelec(i_obj, idx, io, hash) {
+function a_edit_product_feature(i_obj, idx, io, hash) {
   var str,
-    summen = new Array();
+    f = new Array();
   var nurPr = "true";
   with (s.document.sys_persfts) {
     if (!fname.value) {
@@ -5701,9 +5684,9 @@ function e_printFeaturesSelec(i_obj, idx, io, hash) {
     if (artikel[hash][idx]) {
       str = unescape(artikel[hash][idx]);
       if (str.indexOf("~") == -1) nurPr = "false";
-      summen = E_get_feature(hash, idx);
+      f = a_get_feature_val(hash, idx);
     } else {
-      summen = e_printFeaturesCheck(idx);
+      f = a_get_feature_names(idx);
       str = idx + ",";
       if (!artikel[hash].features) artikel[hash].features = "";
       if (artikel[hash].features.indexOf(str) == "-1") {
@@ -5713,65 +5696,58 @@ function e_printFeaturesSelec(i_obj, idx, io, hash) {
     }
     if (i_obj.type == "text") {
       if (i_obj.name == "fname") nurPr = "false";
-      for (i in summen)
+      for (i in f)
         if (i == io) {
-          summen[i].name = fname.value;
-          summen[i].preis = b_add_record(fm.value);
+          f[i].name = fname.value;
+          f[i].m = a_2pf(fm.value);
         }
       artikel[hash][idx] = "";
-      for (i in summen) {
-        if (nurPr == "true")
-          artikel[hash][idx] += e_print_header(summen[i].preis + "~");
-        else
-          artikel[hash][idx] += e_print_header(
-            summen[i].name + "," + summen[i].preis + "|",
-          );
+      for (i in f) {
+        if (nurPr == "true") artikel[hash][idx] += a_myEscape(f[i].m + "~");
+        else artikel[hash][idx] += a_myEscape(f[i].name + "," + f[i].m + "|");
       }
     } else if (i_obj.type == "button") {
       if (nurPr == "true") {
         artikel[hash][idx] = "";
-        for (i in summen)
-          artikel[hash][idx] += e_print_header(
-            summen[i].name + "," + summen[i].preis + "|",
-          );
+        for (i in f)
+          artikel[hash][idx] += a_myEscape(f[i].name + "," + f[i].m + "|");
       }
       var fpr = parseInt(fm.value);
-      if (isNaN(fpr))
-        artikel[hash][idx] += e_print_header(fname.value + "," + "|");
+      if (isNaN(fpr)) artikel[hash][idx] += a_myEscape(fname.value + "," + "|");
       else
-        artikel[hash][idx] += e_print_header(
-          fname.value + "," + b_add_record(fm.value) + "|",
+        artikel[hash][idx] += a_myEscape(
+          fname.value + "," + a_2pf(fm.value) + "|",
         );
     }
     E_go("refresh");
-    e_printFeaturesRadio(idx, io, hash);
+    a_product_feature(idx, io, hash);
   }
 }
-function e_printFeaturesMsele(idx, io, hash) {
-  var summen,
+function a_reset_product_feature(idx, io, hash) {
+  var f,
     g = new Array();
   var str,
-    menge = 0;
+    j = 0;
   if (io == "neu") return;
   if (artikel[hash][idx]) {
-    summen = E_get_feature(hash, idx);
+    f = a_get_feature_val(hash, idx);
   } else {
-    summen = e_printFeaturesCheck(idx);
+    f = a_get_feature_names(idx);
     val = idx + ",";
     if (artikel[hash].features.indexOf(val) == "-1") {
       artikel[hash].features += idx + ",";
       artikel[hash][idx] = new Array();
     }
   }
-  for (i in summen) if (i != io) g[menge++] = summen[i];
+  for (i in f) if (i != io) g[j++] = f[i];
   artikel[hash][idx] = "";
   if (i > 0) {
     for (i in g) {
-      str = g[i].name + "," + g[i].preis + "|";
-      artikel[hash][idx] += e_print_header(str);
+      str = g[i].name + "," + g[i].m + "|";
+      artikel[hash][idx] += a_myEscape(str);
     }
     E_go("refresh");
-    e_printFeaturesRadio(idx, -1, hash);
+    a_product_feature(idx, -1, hash);
   } else {
     if (artikel[hash].p_feature == idx) artikel[hash].p_feature = "-1";
     val = idx + ",";
@@ -5779,49 +5755,49 @@ function e_printFeaturesMsele(idx, io, hash) {
       str = artikel[hash].features;
       i = 0;
       while (str.length) {
-        summen[i++] = str.substring(0, str.indexOf(","));
+        f[i++] = str.substring(0, str.indexOf(","));
         str = str.substring(str.indexOf(",") + 1, str.length);
       }
       artikel[hash].features = "";
-      for (i in summen) {
-        if (i != idx) artikel[hash].features += summen[i] + ",";
+      for (i in f) {
+        if (i != idx) artikel[hash].features += f[i] + ",";
       }
       E_go("refresh");
-      E_print_left_frame(hash);
+      a_product(hash);
     }
   }
 }
-function e_print_name(i_obj, hash) {
-  var summen = new Array();
+function a_choose_prod(i_obj, hash) {
+  var f = new Array();
   var i, str, pos;
-  if (page[e_C_state]["artikel"]) str = page[e_C_state]["artikel"];
+  if (page[e_page_state]["artikel"]) str = page[e_page_state]["artikel"];
   else return;
-  summen = str.split(",");
-  for (i in summen) {
-    if (parseInt(hash) == parseInt(summen[i])) {
+  f = str.split(",");
+  for (i in f) {
+    if (parseInt(hash) == parseInt(f[i])) {
       pos = i;
       break;
     }
   }
   if (i_obj.name == "up") {
     if (pos == 0) return;
-    tmp = summen[pos - 1];
-    summen[pos - 1] = summen[pos];
-    summen[pos] = tmp;
+    tmp = f[pos - 1];
+    f[pos - 1] = f[pos];
+    f[pos] = tmp;
   }
   if (i_obj.name == "down") {
-    if (pos == summen.length - 2) return;
-    tmp = summen[pos + 1];
-    summen[pos + 1] = summen[pos];
-    summen[pos] = tmp;
+    if (pos == f.length - 2) return;
+    tmp = f[pos + 1];
+    f[pos + 1] = f[pos];
+    f[pos] = tmp;
   }
-  page[e_C_state]["artikel"] = "" + summen.join();
+  page[e_page_state]["artikel"] = "" + f.join();
   E_go("refresh");
 }
 function a_editProd() {
-  if (isNaN(e_C_state)) {
+  if (isNaN(e_page_state)) {
     alert(A_EDIT_PROD_ERR);
-    E_init_curr();
+    a_del_s();
     return;
   }
   with (s.document) {
@@ -5829,11 +5805,9 @@ function a_editProd() {
     writeln(ADMIN_TOP);
     writeln("<FORM name=insert onSubmit='return false;'>");
     writeln(FONT_A + A_EDIT_PROD);
-    writeln(
-      "<BR><SELECT name=edit onChange='parent.E_print_left_frame(this);'>",
-    );
+    writeln("<BR><SELECT name=edit onChange='parent.a_product(this);'>");
     writeln("<OPTION value='' selected>" + A_EDIT_PROD_S);
-    var art = page[e_C_state]["artikel"];
+    var art = page[e_page_state]["artikel"];
     if (art.length == 0) return;
     while ((i = art.substring(0, art.indexOf(","))) != "") {
       writeln("<OPTION value='" + i + "'>" + unescape(artikel[i]["name"]));
@@ -5846,7 +5820,7 @@ function a_editProd() {
     close();
   }
 }
-function e_print_navigation() {
+function a_edit_start() {
   with (s.document) {
     open();
     writeln(ADMIN_TOP);
@@ -5856,9 +5830,9 @@ function e_print_navigation() {
       A_EDITSTART_URL + "<BR>" + FONT_A_SMALL + A_IF + "</FONT><BR>" + FONT_A,
     );
     writeln(
-      "<INPUT type=text name=start value='" +
+      "<INPUT type=text name=aq value='" +
         unescape(system["start"]) +
-        "' onChange='parent.B_del(this);'>",
+        "' onChange='parent.a_set_config(this);'>",
     );
     writeln("</TD></TR>");
     writeln("<TR><TD>" + FONT_A);
@@ -5866,7 +5840,7 @@ function e_print_navigation() {
     writeln(
       "</FONT><BR>" +
         FONT_A +
-        "<TEXTAREA cols='50' rows='10' name='startmsg' wrap=virtual onChange='parent.B_del(this);'>",
+        "<TEXTAREA cols='50' rows='10' name='startmsg' wrap=virtual onChange='parent.a_set_config(this);'>",
     );
     write(unescape(system["startmsg"]) + "</TEXTAREA>");
     writeln("</TD></TR>");
@@ -5878,13 +5852,13 @@ function e_print_navigation() {
     close();
   }
 }
-function Xif() {
+function a_import_first() {
   with (s.document) {
     open();
     writeln(ADMIN_TOP + FONT_A);
-    writeln("<FORM name=insert onSubmit='parent.Xig(this);'>");
+    writeln("<FORM name=insert onSubmit='parent.a_import_headline(this);'>");
     writeln("<TABLE width=560 border=0><TR><TD>" + FONT_A);
-    writeln("<SELECT name=htmltyp>");
+    writeln("<SELECT name=h>");
     writeln("<OPTION value='1' >" + A_INSERT_PROD_TAB);
     writeln("<OPTION value='2'>" + A_INSERT_PROD_FLUF);
     writeln("<OPTION value='3'>" + A_INSERT_PROD_BIG);
@@ -5985,7 +5959,7 @@ function Xif() {
     );
     writeln("</TD></TR>");
     writeln("<TR><TD colspan=2>" + FONT_A);
-    writeln(A_INSERT_PROD_MWST + "<SELECT name=mwst>");
+    writeln(A_INSERT_PROD_MWST + "<SELECT name=n>");
     for (mw in system["mwst"]) {
       writeln("<OPTION value='" + mw + "'>" + system["mwst"][mw] + "%");
     }
@@ -5995,13 +5969,13 @@ function Xif() {
     );
     write("<OPTION value='-1' selected");
     writeln(">" + A_CONFIG_SYSTEM_SFT_NO + "");
-    for (menge in system["features"]) {
-      if (!system["features"][menge]) continue;
-      if (system["features"][menge]["ftype"] == "multiple-select") continue;
-      if (system["features"][menge]["ftype"] == "text") continue;
-      if (system["features"][menge]["ftype"] == "checkbox") continue;
-      writeln("<OPTION value='" + menge + "' ");
-      write(">" + unescape(system["features"][menge]["name"]));
+    for (j in system["features"]) {
+      if (!system["features"][j]) continue;
+      if (system["features"][j]["ftype"] == "multiple-select") continue;
+      if (system["features"][j]["ftype"] == "text") continue;
+      if (system["features"][j]["ftype"] == "checkbox") continue;
+      writeln("<OPTION value='" + j + "' ");
+      write(">" + unescape(system["features"][j]["name"]));
     }
     writeln("</SELECT></TD></TR>");
     writeln("<TR><TD colspan=4>");
@@ -6009,9 +5983,9 @@ function Xif() {
       if (system["features"][i]) {
         writeln(FONT_A + " <INPUT type=checkbox name='feats" + i + "'");
         writeln(
-          "><artikel HREF='javascript:parent.e_printFeaturesRadio(,-1,)'>&nbsp;" +
+          "><A HREF='javascript:parent.a_product_feature(,-1,)'>&nbsp;" +
             unescape(system["features"][i]["name"]) +
-            "</artikel>",
+            "</A>",
         );
       }
     }
@@ -6027,28 +6001,28 @@ function Xif() {
     close();
   }
 }
-function Xig() {
+function a_import_headline() {
   spec = new Array();
   with (s.document.insert) {
     type = typ.options[typ.selectedIndex].value;
-    he = htmltyp.options[htmltyp.selectedIndex].value;
+    he = h.options[h.selectedIndex].value;
     rep = repl.options[repl.selectedIndex].value;
     spec = new Array();
     spec["repl"] = rep;
     spec["htmltyp"] = he;
     spec["typ"] = type;
-    if (type != "txt" && menge.checked) spec["menge"] = true;
+    if (type != "txt" && j.checked) spec["menge"] = true;
     else spec["menge"] = false;
-    if (preisa.checked) spec["preisa"] = true;
+    if (k.checked) spec["preisa"] = true;
     else spec["preisa"] = false;
     spec_fields = A_INSERT_PROD_NAME + "\t";
-    if (titel.checked) spec_fields += A_INSERT_PROD_TITEL + "\t";
+    if (l.checked) spec_fields += A_INSERT_PROD_TITEL + "\t";
     if (image.checked) spec_fields += A_INSERT_PROD_IMAGE + "\t";
-    if (desc.checked) spec_fields += A_INSERT_PROD_DESC + "\t";
+    if (o.checked) spec_fields += A_INSERT_PROD_DESC + "\t";
     if (url.checked) spec_fields += A_INSERT_PROD_URL + "\t";
-    if (gpreis.checked) spec_fields += A_INSERT_PROD_GPREIS + "\t";
-    if (preis.checked) spec_fields += A_INSERT_PROD_SPREIS + "\t";
-    spec["mwst"] = mwst.options[mwst.selectedIndex].value;
+    if (gm.checked) spec_fields += A_INSERT_PROD_GPREIS + "\t";
+    if (m.checked) spec_fields += A_INSERT_PROD_SPREIS + "\t";
+    spec["mwst"] = n.options[n.selectedIndex].value;
     spec["features"] = "";
     for (i in system["features"]) {
       if (!system["features"][i]) continue;
@@ -6070,7 +6044,7 @@ function Xig() {
     writeln("<TR><TD colspan=2>" + FONT_A_SMALL);
     writeln("<TEXTAREA cols=100 rows=4 name=imp>");
     for (si in spec) write(spec[si] + "\t");
-    writeln("\mwst" + spec_fields);
+    writeln("\n" + spec_fields);
     writeln("</TEXTAREA>");
     writeln("</FONT></TD></TR>");
     writeln("</TABLE>");
@@ -6079,9 +6053,9 @@ function Xig() {
     close();
   }
 }
-function Xih() {
+function a_import_pages() {
   with (s.document) {
-    if (isNaN(e_C_state)) {
+    if (isNaN(e_page_state)) {
       open();
       writeln(ADMIN_TOP);
       writeln(FONT_A_BIG + A_IMPORT_PAGE_ERR + "</FONT>");
@@ -6091,7 +6065,7 @@ function Xih() {
     }
     open();
     writeln(ADMIN_TOP + FONT_A);
-    writeln("<FORM name=insert onSubmit='parent.Xii()'>");
+    writeln("<FORM name=insert onSubmit='parent.a_do_import()'>");
     writeln("<TABLE width=560 border=0><TR><TD>" + FONT_A + A_IMPORT_PAGE);
     writeln("</TD><TD align=right>");
     writeln(
@@ -6111,20 +6085,20 @@ function Xih() {
     close();
   }
 }
-function Xii() {
+function a_do_import() {
   var val = "";
   if (!(s.document.insert.imp && s.document.insert)) {
-    E_init_curr();
+    a_del_s();
     alert("Form not found!");
     return;
   }
   if (!(val = s.document.insert.imp.value)) {
-    E_init_curr();
+    a_del_s();
     alert(A_IMPORT_PAGE_NODATA);
     return;
   }
   r_tmp = new Array();
-  r_tmp = val.split("\mwst");
+  r_tmp = val.split("\n");
   rows = new Array();
   for (tm in r_tmp) {
     rows[tm] = new Array();
@@ -6134,24 +6108,24 @@ function Xii() {
   firs = rows.shift();
   if (firs.length < 8) {
     alert(A_IMPORT_PAGE_NOADMIN);
-    E_init_curr();
+    a_del_s();
     return;
   }
   if (firs[0] == "repl") {
     if (!confirm(AA_IMPORT_PAGE_ASK_OVWR)) {
-      E_init_curr();
+      a_del_s();
       return;
     }
   } else if (firs[0] == "add") {
   } else {
     alert(A_IMPORT_PAGE_NOADMIN);
-    E_init_curr();
+    a_del_s();
     return;
   }
   fields = new Array();
   fields = rows.shift();
   for (fi in fields) {
-    field = unescape(e_print_header(fields[fi]));
+    field = unescape(a_myEscape(fields[fi]));
     if (field == A_INSERT_PROD_NAME) fields[fi] = "name";
     else if (field == A_INSERT_PROD_TITEL) fields[fi] = "titel";
     else if (field == A_INSERT_PROD_DESC) fields[fi] = "desc";
@@ -6163,16 +6137,16 @@ function Xii() {
   }
   if (fields.length < 1) {
     alert(A_IMPORT_PAGE_NOFIELDS);
-    E_init_curr();
+    a_del_s();
     return;
   }
-  if (firs[0] == "repl" && page[e_C_state]["artikel"]) {
+  if (firs[0] == "repl" && page[e_page_state]["artikel"]) {
     art = new Array();
-    art = page[e_C_state]["artikel"].split(",");
+    art = page[e_page_state]["artikel"].split(",");
     for (ai in art) {
       if (artikel[art[ai]]) artikel[art[ai]] = false;
     }
-    page[e_C_state]["artikel"] = "";
+    page[e_page_state]["artikel"] = "";
   }
   for (ro in rows) {
     if (!rows[ro][0]) continue;
@@ -6185,7 +6159,7 @@ function Xii() {
     }
     if (hash > 10) {
       alert(A_DERR);
-      E_init_curr();
+      a_del_s();
       return;
     }
     artikel[hash] = new Array();
@@ -6208,50 +6182,50 @@ function Xii() {
         else artikel[hash]["p_feature"] = "-1";
       }
     }
-    page[e_C_state]["artikel"] += hash + ",";
+    page[e_page_state]["artikel"] += hash + ",";
     for (fe in fields) {
       if (!fields[fe].length) continue;
       if (!rows[ro][fe]) continue;
       if (!rows[ro][fe].length) tmp = "";
       else if (fields[fe] == "preis" || fields[fe] == "gpreis")
-        tmp = b_add_record(rows[ro][fe]);
-      else tmp = e_print_header(rows[ro][fe]);
+        tmp = a_2pf(rows[ro][fe]);
+      else tmp = a_myEscape(rows[ro][fe]);
       artikel[hash][fields[fe]] = tmp;
     }
   }
-  E_init_curr();
+  a_del_s();
   E_go("refresh");
 }
-function e_insert_navgif(p) {
-  var freight = "";
-  var mwst = "";
+function a_page(p) {
+  var u = "";
+  var n = "";
   var tt = "";
   var ng = "";
   var ngs = "";
   var bg = "";
   var su = false;
-  var d = "e_check_browser()";
+  var d = "a_insert_page()";
   if (p == "start") {
-    e_print_navigation();
+    a_edit_start();
     return;
   }
   if (p == "basket" || p == "send" || p == "data") {
     alert(A_PAGE_ERR);
-    E_init_curr();
+    a_del_s();
     return;
   }
   if (p >= 0) {
-    d = "E_init_shipping()";
+    d = "a_do_insert_page()";
     if (isNaN(p)) {
       alert(A_PAGE_ERR1);
-      E_init_curr();
+      a_del_s();
       return;
     }
-    if (page[p]["url"]) freight = unescape(page[p]["url"]);
+    if (page[p]["url"]) u = unescape(page[p]["url"]);
     if (page[p]["navgif"]) ng = unescape(page[p]["navgif"]);
     if (page[p]["navgifs"]) ngs = unescape(page[p]["navgifs"]);
     if (page[p]["bg"]) bg = unescape(page[p]["bg"]);
-    mwst = unescape(page[p]["name"]);
+    n = unescape(page[p]["name"]);
     tt = unescape(page[p]["top_text"]);
     if (page[p]["summen"]) su = true;
   }
@@ -6267,7 +6241,7 @@ function e_insert_navgif(p) {
         ": </TD><TD>" +
         FONT_A +
         "<INPUT type=text size=15 name='titel' value='" +
-        mwst +
+        n +
         "'></TD><TD bgcolor=#cc5577>" +
         FONT_A +
         "<FONT color=black>",
@@ -6279,7 +6253,7 @@ function e_insert_navgif(p) {
         " </TD><TD bgcolor=#cc5577>" +
         FONT_A +
         "<FONT color=black><INPUT type=text name='url' size=15 value='" +
-        freight +
+        u +
         "'>",
     );
     writeln("</TD></TR>");
@@ -6361,7 +6335,7 @@ function e_insert_navgif(p) {
       writeln(
         "<INPUT type=button value='" +
           A_DELETE +
-          "' onClick='parent.errorHandler(" +
+          "' onClick='parent.a_delete_page(" +
           p +
           ");'>",
       );
@@ -6369,14 +6343,14 @@ function e_insert_navgif(p) {
       writeln(
         "<INPUT type=button value='" +
           A_UP +
-          "' onClick='parent.e_thanks(" +
+          "' onClick='parent.a_move_page_up(" +
           p +
           ");'>",
       );
       writeln(
         "<INPUT type=button value='" +
           A_DOWN +
-          "' onClick='parent.Xgv(" +
+          "' onClick='parent.a_move_page_down(" +
           p +
           ");'><BR>",
       );
@@ -6388,8 +6362,8 @@ function e_insert_navgif(p) {
     close();
   }
 }
-function Xgv(s_obj) {
-  if (page.length == e_C_state + 1) return;
+function a_move_page_down(s_obj) {
+  if (page.length == e_page_state + 1) return;
   for (i in page)
     if (i == s_obj) {
       hilf = page[i];
@@ -6397,12 +6371,12 @@ function Xgv(s_obj) {
       page[i + 1] = hilf;
       break;
     }
-  e_C_state += 1;
+  e_page_state += 1;
   LEFT = false;
   E_go("refresh");
-  e_insert_navgif(e_C_state);
+  a_page(e_page_state);
 }
-function e_thanks(s_obj) {
+function a_move_page_up(s_obj) {
   if (s_obj == "0") return;
   for (i in page)
     if (i == s_obj) {
@@ -6411,15 +6385,15 @@ function e_thanks(s_obj) {
       page[i - 1] = hilf;
       break;
     }
-  e_C_state -= 1;
+  e_page_state -= 1;
   LEFT = false;
   E_go("refresh");
-  e_insert_navgif(e_C_state);
+  a_page(e_page_state);
 }
 function A_main() {
-  e_print_features();
+  a_update();
   E_main();
   ADMIN = true;
-  B_lade_kunden();
-  B_toMWST();
+  a_init();
+  a_ln();
 }
